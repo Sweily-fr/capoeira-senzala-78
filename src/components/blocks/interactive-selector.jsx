@@ -3,7 +3,7 @@ import { FaCampground, FaFire, FaTint, FaHotTub, FaHiking } from 'react-icons/fa
 
 const InteractiveSelector = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [animatedOptions, setAnimatedOptions] = useState<number[]>([]);
+  const [animatedOptions, setAnimatedOptions] = useState([]);
   
   const options = [
     {
@@ -38,14 +38,14 @@ const InteractiveSelector = () => {
     }
   ];
 
-  const handleOptionClick = (index: number) => {
+  const handleOptionClick = (index) => {
     if (index !== activeIndex) {
       setActiveIndex(index);
     }
   };
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers = [];
     
     options.forEach((_, i) => {
       const timer = setTimeout(() => {
@@ -64,7 +64,7 @@ const InteractiveSelector = () => {
       {/* Header Section */}
       <div className="w-full max-w-2xl px-6 mt-8 mb-2 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-3 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">Escape in Style</h1>
-        <p className="text-lg md:text-xl text-gray-300 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">Discover luxurious camping experiences in nature’s most breathtaking spots.</p>
+        <p className="text-lg md:text-xl text-gray-300 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">Discover luxurious camping experiences in nature's most breathtaking spots.</p>
       </div>
 
       <div className="h-12"></div>
