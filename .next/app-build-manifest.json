@@ -6,15 +6,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/achats/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/achats/page.js"
-    ],
     "/le-groupe-senzala-78/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/le-groupe-senzala-78/page.js"
+    ],
+    "/achats/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/achats/page.js"
     ],
     "/la-capoeira/page": [
       "static/chunks/webpack.js",
