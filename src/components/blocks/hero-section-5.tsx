@@ -112,7 +112,7 @@ export function HeroSection({
                 <p className="text-center md:text-end text-xs sm:text-sm text-white">Nos partenaires</p>
               </div>
               <div className="relative py-4 sm:py-6 w-full md:w-[calc(100%-11rem)]">
-                <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
+                <InfiniteSlider durationOnHover={20} duration={40} gap={112}>
                   <div className="flex">
                     <img
                       className="mx-auto h-5 w-fit invert dark:invert"

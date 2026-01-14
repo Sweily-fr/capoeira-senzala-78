@@ -1,7 +1,7 @@
 {
-  "/contact/page": "app/contact/page.js",
-  "/le-groupe-senzala-78/page": "app/le-groupe-senzala-78/page.js",
-  "/prestations/page": "app/prestations/page.js",
+  "/achats/page": "app/achats/page.js",
   "/cours-tarifs/page": "app/cours-tarifs/page.js",
-  "/achats/page": "app/achats/page.js"
+  "/le-groupe-senzala-78/page": "app/le-groupe-senzala-78/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/prestations/page": "app/prestations/page.js"
 }
