@@ -6,20 +6,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/la-capoeira/page": [
+    "/le-groupe-senzala-78/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/la-capoeira/page.js"
+      "static/chunks/app/le-groupe-senzala-78/page.js"
     ],
     "/achats/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/achats/page.js"
     ],
-    "/le-groupe-senzala-78/page": [
+    "/la-capoeira/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/le-groupe-senzala-78/page.js"
+      "static/chunks/app/la-capoeira/page.js"
+    ],
+    "/prestations/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/prestations/page.js"
     ],
     "/contact/page": [
       "static/chunks/webpack.js",
@@ -30,11 +35,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/cours-tarifs/page.js"
-    ],
-    "/prestations/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/prestations/page.js"
     ]
   }
 }
