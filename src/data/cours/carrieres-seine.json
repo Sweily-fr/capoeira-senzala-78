@@ -1,0 +1,21 @@
+{
+  "nom": "Carrières s/Seine",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580326-s-2025-2026-inscriptions-capoeira-carrieres-sur-seine",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants de 6 à 12 ans - Tous niveaux",
+          "lieu": "Gymnase des Alouettes – Rue des Cent Arpents – 78420 Carrières Sur Seine"
+        },
+        {
+          "heure": "18h30 - 20h00",
+          "age": "Ados/Adultes - Tous niveaux",
+          "lieu": "Gymnase des Alouettes – Rue des Cent Arpents – 78420 Carrières Sur Seine"
+        }
+      ]
+    }
+  ]
+}

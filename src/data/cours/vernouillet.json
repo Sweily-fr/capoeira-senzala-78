@@ -1,0 +1,21 @@
+{
+  "nom": "Vernouillet",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580546-s-2025-2026-inscriptions-vernouillet",
+  "cours": [
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "10h45 - 11h30",
+          "age": "Enfants de 4 à 5 ans - MS et GS maternelle - Baby Capoeira",
+          "lieu": "Dojo Emile Zola - 61 route de Chapet - 78540 Vernouillet"
+        },
+        {
+          "heure": "11h30 - 13h00",
+          "age": "Enfants de 6 à 8 ans - Tous niveaux",
+          "lieu": "Dojo Emile Zola - 61 route de Chapet - 78540 Vernouillet"
+        }
+      ]
+    }
+  ]
+}

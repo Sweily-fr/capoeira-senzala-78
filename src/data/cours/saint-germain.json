@@ -1,0 +1,116 @@
+{
+  "nom": "Saint-Germain-en-Laye",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/572164-s-2025-2026-inscriptions-capoeira-st-germain",
+  "cours": [
+    {
+      "jour": "Lundi",
+      "cours": [
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants de 4 à 5 ans - Maternelle MS & GS",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        },
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants de 6 à 12 ans - Tous niveaux",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        },
+        {
+          "heure": "18h30 - 20h00",
+          "age": "Ados/Adultes - Tous niveaux",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        },
+        {
+          "heure": "21h00 - 22h30",
+          "age": "Ados/Adultes - Tous niveaux",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants de 6 à 12 ans",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        },
+        {
+          "heure": "20h00 - 22h00",
+          "age": "Batucada",
+          "lieu": "La CLEF - 46 rue de Mareil - 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Mercredi",
+      "cours": [
+        {
+          "heure": "14h00 - 15h00",
+          "age": "Enfants de 6 à 12 ans - Primaires",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        },
+        {
+          "heure": "15h00 - 16h30",
+          "age": "Tous niveaux de 12 à 15 ans (Ados/Collégiens)",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        },
+        {
+          "heure": "20h00 - 21h00",
+          "age": "Adultes débutants",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        },
+        {
+          "heure": "21h00 - 22h30",
+          "age": "Adultes avancés - À partir de corde grise entière et plus",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "18h00 - 19h30",
+          "age": "Adultes tous niveaux",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "14h00 - 15h00",
+          "age": "Enfants de 6 à 8 ans",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        },
+        {
+          "heure": "15h00 - 16h30",
+          "age": "Enfants de 9 à 13 ans",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        },
+        {
+          "heure": "17h00 - 18h30",
+          "age": "Enfants de 4 à 5 ans (Maternelle MS & GS)",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        },
+        {
+          "heure": "16h00 - 18h00",
+          "age": "Adultes tous niveaux (13 ans et plus)",
+          "lieu": "École Beethoven – 1 rue Beethoven - 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Dimanche",
+      "cours": [
+        {
+          "heure": "15h00 - 17h00",
+          "age": "Entraînement libre - (18 ans et plus uniquement)",
+          "lieu": "TUESG – 11 rue Armagis – 78100 St Germain en Laye"
+        }
+      ]
+    }
+  ]
+}

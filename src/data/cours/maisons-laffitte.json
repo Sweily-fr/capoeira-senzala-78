@@ -1,0 +1,29 @@
+{
+  "nom": "Maisons-Laffitte",
+  "contact": {
+    "telephone": "09 81 81 09 41,<br>06 16 42 03 88",
+    "prenom": "Chloé"
+  },
+  "cours": [
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "09h15 - 10h00",
+          "age": "Baby",
+          "lieu": "Maisons-Laffitte"
+        },
+        {
+          "heure": "10h00 - 11h00",
+          "age": "Enfants",
+          "lieu": "Maisons-Laffitte"
+        },
+        {
+          "heure": "11h00 - 11h45",
+          "age": "Baby",
+          "lieu": "Maisons-Laffitte"
+        }
+      ]
+    }
+  ]
+}

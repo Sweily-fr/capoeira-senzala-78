@@ -1,0 +1,21 @@
+{
+  "nom": "Croissy-Sur-Seine",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/603621-s-2025-2026-inscriptions-capoeira-croissy-sur-seine",
+  "cours": [
+    {
+      "jour": "Vendredi",
+      "cours": [
+        {
+          "heure": "17h00 - 18h00",
+          "age": "Enfants 6/8 ans",
+          "lieu": "Complexe sportif Jean Moulin, 3 impasse des Drocourtes 78290 Croissy sur Seine"
+        },
+        {
+          "heure": "18h00 - 19h00",
+          "age": "Enfants 9 ans et +",
+          "lieu": "Complexe sportif Jean Moulin, 3 impasse des Drocourtes 78290 Croissy sur Seine"
+        }
+      ]
+    }
+  ]
+}

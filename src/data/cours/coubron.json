@@ -1,0 +1,46 @@
+{
+  "nom": "Coubron",
+  "contact": {
+    "nom": "Flores",
+    "prenom": "Roland",
+    "email": "foresrlnd@gmail.com",
+    "telephone": "06 10 34 17 87"
+  },
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "19h30 - 21h00",
+          "age": "Ados - Adultes",
+          "lieu": "École Mercier chemin de la remise 93470"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "19h30 - 21h00",
+          "age": "Ados - Adultes",
+          "lieu": "École Mercier chemin de la remise 93470"
+        }
+      ]
+    },
+    {
+      "jour": "Vendredi",
+      "cours": [
+        {
+          "heure": "18h30 - 19h30",
+          "age": "3/5 ans",
+          "lieu": "Gymnase Jean Corlin rue de Courty 93470"
+        },
+        {
+          "heure": "18h30 - 20h00",
+          "age": "6/13 ans",
+          "lieu": "Gymnase Jean Corlin rue de Courty 93470"
+        }
+      ]
+    }
+  ]
+}

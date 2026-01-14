@@ -1,0 +1,51 @@
+{
+  "nom": "Jouy Le Moutier",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580924-s-2025-2026-inscription-capoeira-jouy-le-moutier",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "20h30 - 22h00",
+          "age": "Ados (13 ans et +) / Adultes corde blanche orange et plus",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "20h30 - 22h00",
+          "age": "Ados (13 ans et +) / Adultes sans jusqu'à corde jaune",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "13h00 - 14h00",
+          "age": "Enfants 4 à 5 ans (Maternelle MS & GS): Baby Capoeira",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        },
+        {
+          "heure": "14h00 - 15h00",
+          "age": "Enfants 6 à 9 ans",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        },
+        {
+          "heure": "15h00 - 16h30",
+          "age": "Enfants 10 à 12 ans",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        },
+        {
+          "heure": "16h30 - 18h00",
+          "age": "Ados (13 ans et +) / adultes tous niveaux",
+          "lieu": "Gymnase des Merisiers (Salle de gym) - Rue Rossini - 95280 Jouy Le Moutier"
+        }
+      ]
+    }
+  ]
+}

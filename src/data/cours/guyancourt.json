@@ -1,0 +1,36 @@
+{
+  "nom": "Guyancourt",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/581057-s-2025-2026-inscriptions-capoeira-guyancourt",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "20h15 - 21h45",
+          "age": "Tous niveaux - Ados + de 13 ans et Adultes",
+          "lieu": "Gymnase de l'Aviation - 20 rue le Corbusier - 78280 Guyancourt"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "09h45 - 10h30",
+          "age": "Tous niveaux - Baby 4/5 ans (à partir de la moyenne section)",
+          "lieu": "Gymnase de l'Aviation - 20 rue le Corbusier - 78280 Guyancourt"
+        },
+        {
+          "heure": "10h30 - 11h30",
+          "age": "Tous niveaux - Enfants de 6 à 12 ans",
+          "lieu": "Gymnase de l'Aviation - 20 rue le Corbusier - 78280 Guyancourt"
+        },
+        {
+          "heure": "11h30 - 12h45",
+          "age": "Tous niveaux - Ados + de 13 ans et Adultes",
+          "lieu": "Gymnase de l'Aviation - 20 rue le Corbusier - 78280 Guyancourt"
+        }
+      ]
+    }
+  ]
+}

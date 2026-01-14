@@ -1,0 +1,66 @@
+{
+  "nom": "Le Vésinet",
+  "cours": [
+    {
+      "jour": "Mercredi",
+      "inscriptionHref": "https://mjcvesinet.org/activites/capoeira/",
+      "contact": {
+        "email": "usv-gym@outlook.com"
+      },
+      "cours": [
+        {
+          "heure": "09h30 - 10h30",
+          "age": "4-5 ans",
+          "lieu": "MJC bât. principal"
+        },
+        {
+          "heure": "10h30 - 11h30",
+          "age": "6-8 ans",
+          "lieu": "MJC bât. principal"
+        },
+        {
+          "heure": "11h30 - 12h30",
+          "age": "9-12 ans",
+          "lieu": "MJC bât. principal"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "inscriptionHref": "https://mjcvesinet.org/activites/capoeira/",
+      "cours": [
+        {
+          "heure": "09h30 - 10h30",
+          "age": "4-5 ans",
+          "lieu": "MJC bât. principal"
+        },
+        {
+          "heure": "10h30 - 11h30",
+          "age": "6-8 ans",
+          "lieu": "MJC bât. principal"
+        },
+        {
+          "heure": "11h30 - 12h30",
+          "age": "9-12 ans",
+          "lieu": "MJC bât. principal"
+        }
+      ]
+    },
+    {
+      "jour": "Vendredi",
+      "inscriptionHref": "https://www.usv-gym.fr/capoeira/",
+      "cours": [
+        {
+          "heure": "17h00 - 18h30",
+          "age": "6-10 ans",
+          "lieu": "67 avenue du Belloy 78110 Le Vésinet"
+        },
+        {
+          "heure": "18h30 - 20h00",
+          "age": "10 ans et + et adultes",
+          "lieu": "67 avenue du Belloy 78110 Le Vésinet"
+        }
+      ]
+    }
+  ]
+}

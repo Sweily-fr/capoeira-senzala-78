@@ -1,0 +1,405 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --border: 214.3 31.8% 91.4%;
+    --hu-font-geist: var(--font-geist);
+    --hu-font-jetbrains: var(--font-jetbrains-mono);
+    --radius: 8px;
+    --card-radius: 10px;
+    --hu-background: 0, 0%, 100%;
+    --hu-foreground: 0, 0%, 14%;
+    --hu-card: 0, 0%, 99%;
+    --hu-card-foreground: 0, 0%, 14%;
+    --hu-primary: 235, 100%, 60%;
+    --hu-primary-foreground: 0, 0%, 98%;
+    --hu-secondary: 0, 0%, 97%;
+    --hu-secondary-foreground: 0, 0%, 20%;
+    --hu-muted: 0, 0%, 97%;
+    --hu-muted-foreground: 0, 0%, 56%;
+    --hu-accent: 0, 0%, 96%;
+    --hu-accent-foreground: 0, 0%, 20%;
+    --hu-destructive: 9, 96%, 47%;
+    --hu-destructive-foreground: 0, 0%, 98%;
+    --hu-border: 0, 0%, 92%;
+    --hu-input: 0, 0%, 100%;
+    --hu-ring: 0, 0%, 71%;
+    --color-fd-background: hsl(var(--hu-background));
+    --color-fd-card: hsl(var(--hu-background));
+    --destructive-foreground: oklch(1 0 0);
+  }
+  .theme {
+    --hu-font-geist: var(----hu-font-geist);
+    --hu-font-jetbrains: var(----hu-font-jetbrains);
+    --radius: var(----radius);
+    --card-radius: var(----card-radius);
+    --color-hu-background: var(----hu-background);
+    --color-hu-foreground: var(----hu-foreground);
+    --color-hu-card: var(----hu-card);
+    --color-hu-card-foreground: var(----hu-card-foreground);
+    --color-hu-primary: var(----hu-primary);
+    --color-hu-primary-foreground: var(----hu-primary-foreground);
+    --color-hu-secondary: var(----hu-secondary);
+    --color-hu-secondary-foreground: var(----hu-secondary-foreground);
+    --color-hu-muted: var(----hu-muted);
+    --color-hu-muted-foreground: var(----hu-muted-foreground);
+    --color-hu-accent: var(----hu-accent);
+    --color-hu-accent-foreground: var(----hu-accent-foreground);
+    --color-hu-destructive: var(----hu-destructive);
+    --color-hu-destructive-foreground: var(----hu-destructive-foreground);
+    --color-hu-border: var(----hu-border);
+    --color-hu-input: var(----hu-input);
+    --color-hu-ring: var(----hu-ring);
+    --color-color-fd-background: var(----color-fd-background);
+    --color-color-fd-card: var(----color-fd-card);
+    --color-destructive-foreground: oklch(1 0 0);
+    --color-color-destructive-foreground: var(----color-destructive-foreground);
+  }
+  .dark {
+    --hu-background: 0, 0%, 7%;
+    --hu-foreground: 0, 0%, 100%;
+    --hu-card: 0, 0%, 9%;
+    --hu-card-foreground: 0, 0%, 100%;
+    --hu-primary: 235, 100%, 60%;
+    --hu-primary-foreground: 0, 0%, 98%;
+    --hu-secondary: 0, 0%, 15%;
+    --hu-secondary-foreground: 0, 0%, 100%;
+    --hu-muted: 0, 0%, 15%;
+    --hu-muted-foreground: 0, 0%, 71%;
+    --hu-accent: 0, 0%, 15%;
+    --hu-accent-foreground: 0, 0%, 100%;
+    --hu-destructive: 0, 84%, 50%;
+    --hu-destructive-foreground: 0, 0%, 98%;
+    --hu-border: 0, 0%, 100%, 10%;
+    --hu-input: 0, 0%, 100%, 5%;
+    --hu-ring: 0, 0%, 56%;
+    --color-fd-background: hsl(var(--hu-background));
+    --color-fd-card: hsl(var(--hu-background));
+    --destructive-foreground: oklch(1 0 0);
+  }
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 !important;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Correction pour les menus déroulants */
+.relative {
+  position: relative;
+}
+
+/* Style pour le menu déroulant */
+.origin-top-right {
+  position: absolute;
+  right: 0;
+  z-index: 50;
+  margin-top: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-width: 14rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Style pour le menu déroulant dans la navbar noire */
+.bg-dark-blue\/95 a {
+  color: white !important;
+}
+
+/* Style pour le conteneur du menu déroulant */
+.py-1 {
+  padding: 0.5rem 0;
+}
+
+/* Style pour les éléments du menu déroulant */
+.block {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.625rem 1.25rem;
+  color: white;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.block:hover {
+  background-color: #eab308;
+  color: white;
+}
+
+/* Override pour les liens dans les événements */
+.bg-dark-blue a.block:hover,
+.text-white a.block:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Style pour le bouton du menu déroulant */
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+/* Animation du menu déroulant */
+/* Styles pour le composant HistoryScroll */
+.history-scroll-section {
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0f172a; /* dark-blue */
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.history-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, background-color;
+  backface-visibility: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transform-origin: center;
+  scroll-snap-align: start;
+}
+
+.history-item h3 {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800; /* font-extrabold */
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.history-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 0.25rem;
+  background: #eab308;
+  border-radius: 0.25rem;
+}
+
+.history-item p {
+  color: #e2e8f0;
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.8; /* leading-relaxed */
+  margin-top: 1.5rem;
+  max-width: 90%;
+}
+
+.history-item.active {
+  opacity: 1;
+  transform: translateY(0) scale(1.02);
+  background-color: rgba(15, 23, 42, 0.8);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+}
+
+.history-item.inactive {
+  opacity: 0.4;
+  transform: translateY(30px) scale(0.98);
+}
+
+/* Amélioration de l'accessibilité et des états de survol */
+.history-item:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animation pour les images */
+.history-scroll-section img {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  will-change: transform, opacity;
+}
+
+.history-scroll-section .active img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.history-scroll-section .inactive img {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+/* Amélioration du contraste pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .history-item,
+  .history-scroll-section img {
+    transition: none;
+  }
+}
+
+/* Styles pour les écrans mobiles et tablettes */
+@media (max-width: 1023px) {
+  .history-item {
+    min-height: auto;
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+  }
+  
+  .history-item h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .history-item h3::after {
+    width: 3rem;
+    height: 0.2rem;
+  }
+  
+  .history-item p {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+  
+  .history-item.active {
+    transform: translateY(0) scale(1);
+  }
+  
+  .history-item.inactive {
+    opacity: 0.6;
+    transform: translateY(10px) scale(1);
+  }
+}
+
+/* Styles pour les tablettes */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .history-item {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .history-item h3 {
+    font-size: 1.875rem;
+  }
+  
+  .history-item p {
+    font-size: 1rem;
+  }
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Amélioration de la visibilité du menu */
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-black {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+}
+
+.ring-opacity-5 {
+  --tw-ring-opacity: 0.05;
+}
+
+/* Suppression du positionnement fixe du body quand le menu est ouvert */
+/* On laisse le défilement normal de la page */
+
+@layer base {
+  .theme {
+    --color-destructive-foreground: oklch(1 0 0);
+    --color-color-destructive-foreground: var(----color-destructive-foreground);
+  }
+  :root {
+    --destructive-foreground: oklch(1 0 0);
+  }
+  .dark {
+    --destructive-foreground: oklch(1 0 0);
+  }
+}
+
+@theme inline {
+  @keyframes accordion-down {
+  from {
+    height: 0;
+    }
+  to {
+    height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    }
+  to {
+    height: 0;
+    }
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

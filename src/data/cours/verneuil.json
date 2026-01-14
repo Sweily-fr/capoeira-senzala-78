@@ -1,0 +1,31 @@
+{
+  "nom": "Verneuil s/Seine",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580541-s-2025-2026-inscriptions-verneuil-s-seine",
+  "cours": [
+    {
+      "jour": "Lundi",
+      "cours": [
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants (enfants de 6 à 10 ans)",
+          "lieu": "Gymnase la Garenne - Rue de Bazincourt - 78480 Verneuil sur Seine"
+        },
+        {
+          "heure": "18h30 - 19h45",
+          "age": "Ados/Adultes (+ de 13 ans et adultes / Tous niveaux)",
+          "lieu": "Gymnase la Garenne - Rue de Bazincourt - 78480 Verneuil sur Seine"
+        }
+      ]
+    },
+    {
+      "jour": "Mercredi",
+      "cours": [
+        {
+          "heure": "10h00 - 11h30",
+          "age": "Enfants de 4 à 5 ans - MS et GS maternelle - Baby Capoeira",
+          "lieu": "Gymnase Coubertin - 5 rue Jean Zay - 78480 Verneuil sur Seine"
+        }
+      ]
+    }
+  ]
+}

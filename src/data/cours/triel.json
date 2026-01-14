@@ -1,0 +1,66 @@
+{
+  "nom": "Triel s/Seine",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580458-s-2025-2026-inscriptions-triel-s-seine",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "20h30 - 22h00",
+          "age": "Adultes tous niveaux",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        }
+      ]
+    },
+    {
+      "jour": "Mercredi",
+      "cours": [
+        {
+          "heure": "17h30 - 19h00",
+          "age": "Ados & Adultes tous niveaux",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "20h30 - 22h00",
+          "age": "Adultes tous niveaux",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        }
+      ]
+    },
+    {
+      "jour": "Vendredi",
+      "cours": [
+        {
+          "heure": "21h00 - 22h30",
+          "age": "Adultes tous niveaux",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "14h00 - 15h00",
+          "age": "Enfants de 6 à 8 ans",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        },
+        {
+          "heure": "15h00 - 16h30",
+          "age": "Enfants de 9 à 12 ans",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        },
+        {
+          "heure": "16h30 - 17h30",
+          "age": "Enfants de 4 à 5 ans (Baby Capoeira)",
+          "lieu": "COSEC - 61 Rue de Chanteloup - 78510 Triel sur Seine"
+        }
+      ]
+    }
+  ]
+}

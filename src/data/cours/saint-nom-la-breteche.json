@@ -1,0 +1,21 @@
+{
+  "nom": "Saint Nom La Bretèche",
+  "inscriptionHref": "https://www.mlc-saintnom.com/capoeira/",
+  "cours": [
+    {
+      "jour": "Lundi",
+      "cours": [
+        {
+          "heure": "17h15 - 18h15",
+          "age": "4/5 ans",
+          "lieu": "Saint Nom La Bretèche"
+        },
+        {
+          "heure": "18h15 - 19h15",
+          "age": "6/13 ans",
+          "lieu": "Saint Nom La Bretèche"
+        }
+      ]
+    }
+  ]
+}

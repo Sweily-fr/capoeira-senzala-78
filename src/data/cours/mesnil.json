@@ -1,0 +1,21 @@
+{
+  "nom": "Mesnil le Roi",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/586253-s-2025-2026-inscriptions-capoeira-le-mesnil-le-roi",
+  "cours": [
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "10h30 - 11h30",
+          "age": "Tous niveaux - Enfants à partir de 4/5 ans",
+          "lieu": "Complexe Sportif - 12 rue des Grands Champs - 78600 Le Mesnil Le Roi"
+        },
+        {
+          "heure": "11h30 - 13h00",
+          "age": "Tous niveaux - Ados + de 13 ans et Adultes",
+          "lieu": "Complexe Sportif - 12 rue des Grands Champs - 78600 Le Mesnil Le Roi"
+        }
+      ]
+    }
+  ]
+}

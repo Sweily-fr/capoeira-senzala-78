@@ -1,0 +1,24 @@
+{
+  "nom": "Montesson",
+  "inscriptionHref": "https://asml-montesson.jimdofree.com/nos-cours/capoeira-enfants-ados-adultes/",
+  "contact": {
+    "telephone": "06 16 38 45 33"
+  },
+  "cours": [
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "18h - 19h",
+          "age": "6 à 11 ans",
+          "lieu": "Dojo Cosec Pablo Picasso"
+        },
+        {
+          "heure": "19h - 20h30",
+          "age": "Ados à partir de 12 ans et adultes",
+          "lieu": "Dojo Cosec Pablo Picasso"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "nom": "Gaillon s/Montcient",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580550-s-2025-2026-inscriptions-gaillon-s-montcient",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "18h30 - 19h30",
+          "age": "Enfants dès 4 ans (enfants 4/8 ans - Tous niveaux)",
+          "lieu": "Salle des Fêtes - Rue de la Montcient - 78250 Gaillon sur Montcient"
+        },
+        {
+          "heure": "19h30 - 21h00",
+          "age": "Ados/Adultes (+ de 13 ans et adultes - Tous niveaux)",
+          "lieu": "Salle des Fêtes - Rue de la Montcient - 78250 Gaillon sur Montcient"
+        }
+      ]
+    }
+  ]
+}

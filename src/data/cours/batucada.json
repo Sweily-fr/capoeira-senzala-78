@@ -1,0 +1,26 @@
+{
+  "nom": "Batucada",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580330-s-2025-2026-inscription-batucada",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "20h00 - 22h00",
+          "age": "À partir de 16 ans",
+          "lieu": "La CLEF - 46 rue de Mareil – 78100 St Germain en Laye"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "20h00 - 22h00",
+          "age": "À partir de 16 ans",
+          "lieu": "Salle des Fêtes - chemin des Gloriettes – 78250 Hardricourt"
+        }
+      ]
+    }
+  ]
+}

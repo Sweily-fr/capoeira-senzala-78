@@ -1,0 +1,21 @@
+{
+  "nom": "Bailly Noisy",
+  "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/580323-s-2025-2026-inscriptions-capoeira-bailly-noisy",
+  "cours": [
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "11h00 - 12h00",
+          "age": "Enfants (6/12 ans)",
+          "lieu": "Salle Bernard Gaultier – Allée de la Pépinière – 78870 Bailly"
+        },
+        {
+          "heure": "12h00 - 13h30",
+          "age": "Ados/Adultes (+ de 13 ans)",
+          "lieu": "Salle Bernard Gaultier – Allée de la Pépinière – 78870 Bailly"
+        }
+      ]
+    }
+  ]
+}
