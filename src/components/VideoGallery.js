@@ -115,7 +115,7 @@ const VideoGallery = () => {
     <section className="py-16 px-4 md:px-8 bg-dark-blue">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
             Galerie Vidéo
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>

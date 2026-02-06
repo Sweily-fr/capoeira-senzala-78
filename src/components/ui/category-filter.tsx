@@ -62,9 +62,9 @@ export function CategoryFilter({
             onClick={() => handleTabClick(null)}
             className={cn(
               "relative whitespace-nowrap pb-4 pt-2 text-sm font-normal transition-colors duration-150 tracking-normal",
-              "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-yellow-500/50",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500/50",
               !selectedCategory 
-                ? "text-yellow-400 border-b-2 border-yellow-400" 
+                ? "text-primary-500 border-b-2 border-primary-500" 
                 : "text-gray-400 hover:text-gray-300"
             )}
           >
@@ -78,9 +78,9 @@ export function CategoryFilter({
               onClick={() => handleTabClick(category)}
               className={cn(
                 "relative whitespace-nowrap pb-4 pt-2 text-sm font-normal transition-colors duration-150 tracking-normal",
-                "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-yellow-500/50",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500/50",
                 selectedCategory === category
-                  ? "text-yellow-400 border-b-2 border-yellow-400"
+                  ? "text-primary-500 border-b-2 border-primary-500"
                   : "text-gray-400 hover:text-gray-300"
               )}
             >

@@ -7,9 +7,9 @@ export default function CoursEtTarifs() {
   return (
     <>
       <main className="flex flex-col">
-        <HeroSection 
+        <HeroSection
           title="Cours & Tarifs"
-          subtitle="Découvrez nos cours et tarifs"
+          subtitle="Découvrez nos cours de capoeira et batucada dans plus de 20 villes des Yvelines. Des cours adaptés pour tous les âges, du baby capoeira aux adultes, avec des tarifs accessibles. Rejoignez-nous pour une expérience unique alliant sport, culture et convivialité."
           heroImage="/images/hero-section-img/cours_tarifs.png"
         />
         

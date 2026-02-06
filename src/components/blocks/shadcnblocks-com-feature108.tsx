@@ -40,7 +40,7 @@ const Feature108 = ({
         badge: "Adultes",
         title: "Cours pour adultes",
         description:
-          "Découvrez nos cours de Capoeira pour adultes, adaptés à tous les niveaux. Améliorez votre condition physique tout en apprenant l'art de la Capoeira.",
+          "Cours adaptés à tous les niveaux pour améliorer votre condition physique et maîtrise de la capoeira.",
         buttonText: "En savoir plus",
         imageSrc: "/images/cours_adultes.jpg",
         imageAlt: "Cours de Capoeira pour adultes",
@@ -54,7 +54,7 @@ const Feature108 = ({
         badge: "Enfants",
         title: "Cours pour enfants",
         description:
-          "Nos cours pour enfants allient apprentissage, jeu et développement personnel. La Capoeira est un excellent moyen pour les enfants de se dépenser et de s'épanouir.",
+          "Apprentissage ludique alliant jeu, développement personnel et pratique de la capoeira.",
         buttonText: "En savoir plus",
         imageSrc: "/images/hero-section-img/cours_tarifs.png",
         imageAlt: "Cours de Capoeira pour enfants",
@@ -68,7 +68,7 @@ const Feature108 = ({
         badge: "Batucada",
         title: "Groupe de Batucada",
         description:
-          "Découvrez notre groupe de Batucada, une expression rythmique et énergique qui accompagne la Capoeira. Apprenez à jouer des instruments traditionnels comme le berimbau, le pandeiro et l'atabaque.",
+          "Découvrez les instruments traditionnels : berimbau, pandeiro, atabaque. Une expression rythmique unique.",
         buttonText: "En savoir plus",
         imageSrc: "/images/cours_batucada.jpg",
         imageAlt: "Groupe de Batucada de Capoeira",
@@ -80,7 +80,7 @@ const Feature108 = ({
     <section className="py-16 lg:py-24 bg-dark-blue">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 text-center">
-          <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">{badge}</Badge>
+          <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">{badge}</Badge>
           <h2 className="max-w-3xl text-3xl font-medium text-white md:text-4xl lg:text-5xl">
             {heading}
           </h2>
@@ -92,7 +92,7 @@ const Feature108 = ({
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-white/80 data-[state=active]:bg-yellow-500 data-[state=active]:text-white data-[state=active]:hover:bg-yellow-400"
+                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-white/80 transition-all duration-200 cursor-pointer data-[state=active]:bg-primary-500 data-[state=active]:text-darker-blue data-[state=active]:hover:bg-primary-400"
               >
                 {tab.icon} {tab.label}
               </TabsTrigger>
@@ -106,7 +106,7 @@ const Feature108 = ({
                 className="grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10"
               >
                 <div className="flex flex-col gap-6 text-white">
-                  <Badge className="w-fit bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                  <Badge className="w-fit bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                     {tab.content.badge}
                   </Badge>
                   <h3 className="text-3xl font-medium lg:text-4xl">
@@ -115,7 +115,7 @@ const Feature108 = ({
                   <p className="text-white/80 lg:text-lg leading-relaxed font-light">
                     {tab.content.description}
                   </p>
-                  <Button className="mt-4 w-fit gap-2 bg-yellow-500 text-white hover:bg-yellow-400 font-semibold" size="lg">
+                  <Button className="mt-4 w-fit gap-2 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold cursor-pointer transition-all duration-200" size="lg">
                     {tab.content.buttonText}
                   </Button>
                 </div>

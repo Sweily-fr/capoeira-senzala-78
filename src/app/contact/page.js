@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 export default function ContactPage() {
   const heroData = {
     title: "Nous contacter",
-    description: "Pour toute question ou demande de renseignements, n'hésitez pas à nous contacter. Notre équipe est à votre écoute pour vous accompagner dans votre pratique de la capoeira.",
+    description: "N'hésitez pas à nous contacter. Notre équipe est à votre écoute pour vous accompagner.",
     image: "/images/logo-capoeira-senzala-78.jpg",
   };
 
@@ -32,14 +32,14 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <Card className="border-0 bg-transparent shadow-none p-0">
                 <CardHeader className="px-0 pt-0">
-                  <CardTitle className="text-2xl font-bold text-yellow-400">Nos coordonnées</CardTitle>
+                  <CardTitle className="text-2xl font-semibold text-primary-500">Nos coordonnées</CardTitle>
                   <p className="text-gray-300">
                     N'hésitez pas à nous contacter par téléphone, email ou en venant directement nous voir au dojo.
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6 p-0">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-2 bg-transparent border border-yellow-500/30 rounded-full text-yellow-400">
+                    <div className="flex-shrink-0 p-2 bg-transparent border border-primary-500/30 rounded-full text-primary-500">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-2 bg-transparent border border-yellow-500/30 rounded-full text-yellow-400">
+                    <div className="flex-shrink-0 p-2 bg-transparent border border-primary-500/30 rounded-full text-primary-500">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-2 bg-transparent border border-yellow-500/30 rounded-full text-yellow-400">
+                    <div className="flex-shrink-0 p-2 bg-transparent border border-primary-500/30 rounded-full text-primary-500">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-2 bg-transparent border border-yellow-500/30 rounded-full text-yellow-400">
+                    <div className="flex-shrink-0 p-2 bg-transparent border border-primary-500/30 rounded-full text-primary-500">
                       <Clock className="h-5 w-5" />
                     </div>
                     <div>
@@ -104,13 +104,13 @@ export default function ContactPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">Rejoignez-nous dès aujourd'hui</h3>
+                  <h3 className="text-xl font-semibold mb-2">Rejoignez-nous dès aujourd'hui</h3>
                   <p className="text-gray-200 mb-4">
                     Découvrez l'univers passionnant de la capoeira avec nos cours adaptés à tous les niveaux.
                   </p>
                   <Button
                     asChild
-                    className="bg-yellow-500 hover:bg-yellow-600 text-dark-blue font-medium"
+                    className="bg-primary-500 hover:bg-primary-600 text-dark-blue font-medium"
                   >
                     <Link href="/cours-tarifs">
                       Voir les cours

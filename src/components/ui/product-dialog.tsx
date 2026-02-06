@@ -162,7 +162,7 @@ export function ProductDialog({ product, open, onOpenChange }: ProductDialogProp
                     onClick={() => selectImage(index)}
                     className={`flex-shrink-0 w-16 h-16 rounded-md overflow-hidden border-2 transition-all ${
                       index === currentImageIndex
-                        ? 'border-yellow-500 ring-2 ring-yellow-500/30'
+                        ? 'border-primary-500 ring-2 ring-primary-500/30'
                         : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600'
                     }`}
                     aria-label={`Afficher l'image ${index + 1}`}
@@ -183,15 +183,15 @@ export function ProductDialog({ product, open, onOpenChange }: ProductDialogProp
               {/* Product Info */}
               <div className="space-y-6">
             <div>
-              <div className="inline-flex items-center px-4 py-1.5 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-medium rounded-full mb-4 backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></span>
+              <div className="inline-flex items-center px-4 py-1.5 bg-primary-500/10 border border-primary-500/20 text-primary-500 text-sm font-medium rounded-full mb-4 backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2"></span>
                 {product.category}
               </div>
-              <DialogTitle className="text-2xl font-bold text-white">
+              <DialogTitle className="text-2xl font-semibold text-white">
                 {product.name}
               </DialogTitle>
               <div className="mt-2 flex items-center">
-                <span className="text-3xl font-bold text-white">
+                <span className="text-3xl font-semibold text-white">
                   {product.price.toFixed(2)}€
                 </span>
                 {product.originalPrice && (
@@ -241,7 +241,7 @@ export function ProductDialog({ product, open, onOpenChange }: ProductDialogProp
             </Button>
             <Button 
               onClick={handleOrderClick}
-              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+              className="bg-primary-500 hover:bg-primary-600 text-white"
               disabled={!product.orderLink}
             >
               Commander maintenant

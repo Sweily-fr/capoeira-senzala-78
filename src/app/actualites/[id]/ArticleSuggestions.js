@@ -22,7 +22,7 @@ export default function ArticleSuggestions({ currentArticleId }) {
       transition={{ duration: 0.6, delay: 0.8 }}
     >
       <div className="text-center mb-12">
-        <h3 className="text-3xl font-bold text-white mb-4">
+        <h3 className="text-3xl font-semibold text-white mb-4">
           Articles suggérés
         </h3>
         <p className="text-gray-300">
@@ -47,7 +47,7 @@ export default function ArticleSuggestions({ currentArticleId }) {
                 />
                 <Badge 
                   variant="outline" 
-                  className="absolute top-4 left-4 border-yellow-500 text-yellow-400 bg-black/50 backdrop-blur-sm"
+                  className="absolute top-4 left-4 border-primary-500 text-primary-500 bg-black/50 backdrop-blur-sm"
                 >
                   {article.category}
                 </Badge>
@@ -74,7 +74,7 @@ export default function ArticleSuggestions({ currentArticleId }) {
                     <User className="w-4 h-4" />
                     <span className="text-sm">{article.author}</span>
                   </div>
-                  <Button asChild variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300 hover:bg-yellow-500/10">
+                  <Button asChild variant="ghost" size="sm" className="text-primary-500 hover:text-primary-400 hover:bg-primary-500/10">
                     <Link href={`/actualites/${article.id}`}>
                       Lire
                       <ArrowRight className="w-4 h-4 ml-1" />
@@ -89,7 +89,7 @@ export default function ArticleSuggestions({ currentArticleId }) {
 
       {/* Back to Articles Button */}
       <div className="text-center mt-12">
-        <Button asChild size="lg" className="bg-yellow-500 text-black hover:bg-yellow-600">
+        <Button asChild size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
           <Link href="/actualites">
             Voir tous les articles
           </Link>

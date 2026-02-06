@@ -61,8 +61,8 @@ export default function AchatsPage() {
 
   return (
     <div className="min-h-screen bg-dark-blue flex flex-col">
-      <HeroSection 
-        title="Boutique Officielle" 
+      <HeroSection
+        title="Boutique Adhérents"
         subtitle="Découvrez notre collection d'articles officiels et équipements de capoeira"
         heroImage="/images/hero-section-img/boutique.JPG"
       />
@@ -70,7 +70,7 @@ export default function AchatsPage() {
       <div className="flex-grow w-full">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-5 md:px-6 py-6 sm:py-8 md:py-12 lg:py-16 text-white">
           <div className="text-center mb-6 sm:mb-10 md:mb-12">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2 sm:mb-3">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-2 sm:mb-3">
               Nos Produits
             </h2>
             <p className="text-sm xs:text-base sm:text-lg text-gray-200 max-w-2xl mx-auto px-4">

@@ -22,7 +22,7 @@ const SectionCard = ({ title, description, icon, color, buttonText, buttonVarian
           className="w-6 h-6"
         />
       </div>
-      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-white">{title}</h3>
     </div>
     <p className="text-white/80 mb-6 flex-grow">{description}</p>
     {buttonText && (
@@ -50,7 +50,7 @@ const HomeSections = () => {
       title: "Enfants & Adultes",
       description: "Des cours spécifiques pour chaque tranche d'âge. Dès 4 ans, venez découvrir la capoeira en famille ou entre amis.",
       icon: "/icons/group.svg",
-      color: "bg-yellow-100",
+      color: "bg-primary-500/20",
       buttonText: "En savoir plus",
       buttonVariant: 'secondary'
     },

@@ -109,7 +109,7 @@ export function OrderDialog({ open, onOpenChange, onOrderSubmit, villes }: Order
             <Button 
               type="submit" 
               form="order-form"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+              className="bg-primary-500 hover:bg-primary-600 text-white"
               disabled={!selectedVille || !selectedProfesseur}
             >
               Commander maintenant

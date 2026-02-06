@@ -36,7 +36,7 @@ export default function EventsList() {
     if (daysUntil < 0) return { text: "Terminé", color: "bg-gray-500" };
     if (daysUntil === 0) return { text: "Aujourd'hui", color: "bg-red-500" };
     if (daysUntil <= 7) return { text: "Cette semaine", color: "bg-orange-500" };
-    if (daysUntil <= 30) return { text: "Ce mois-ci", color: "bg-yellow-500" };
+    if (daysUntil <= 30) return { text: "Ce mois-ci", color: "bg-primary-500" };
     return { text: "À venir", color: "bg-green-500" };
   };
 
@@ -54,8 +54,8 @@ export default function EventsList() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl lg:text-5xl font-bold text-white mb-6"
+          <motion.h2
+            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -81,7 +81,7 @@ export default function EventsList() {
               onClick={() => setSelectedCategory(category)}
               className={`${
                 selectedCategory === category
-                  ? 'bg-yellow-500 text-white hover:bg-yellow-600'
+                  ? 'bg-primary-500 text-darker-blue hover:bg-primary-600'
                   : 'border-white/20 text-white hover:bg-white/10'
               }`}
             >
@@ -107,18 +107,18 @@ export default function EventsList() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                    <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       <Star className="w-3 h-3 mr-1" />
                       Événement phare
                     </Badge>
-                    <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                    <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       {getEventStatus(featuredEvent).text}
                     </Badge>
                   </div>
                 </div>
                 <CardContent className="p-8 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-4">
-                    <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                    <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       {featuredEvent.category}
                     </Badge>
                     <div className="flex items-center text-gray-400 text-sm gap-4">
@@ -151,10 +151,10 @@ export default function EventsList() {
                     )}
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-yellow-400">
+                    <div className="text-2xl font-bold text-primary-500">
                       {featuredEvent.price}
                     </div>
-                    <Button asChild className="bg-yellow-500 text-white hover:bg-yellow-600">
+                    <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                       <a href={featuredEvent.externalLink} target="_blank" rel="noopener noreferrer">
                         S'inscrire
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -202,7 +202,7 @@ export default function EventsList() {
                   
                   {/* Badges */}
                   <div className="absolute top-4 left-4 flex gap-2 z-10">
-                    <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                    <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       {event.category}
                     </Badge>
                     <Badge className={`${status.color} text-white`}>
@@ -242,15 +242,15 @@ export default function EventsList() {
                       </CardDescription>
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2 text-white/80">
-                          <Calendar className="w-4 h-4 text-yellow-400" />
+                          <Calendar className="w-4 h-4 text-primary-500" />
                           {new Date(event.date).toLocaleDateString('fr-FR')} à {event.time}
                         </div>
                         <div className="flex items-center gap-2 text-white/80">
-                          <MapPin className="w-4 h-4 text-yellow-400" />
+                          <MapPin className="w-4 h-4 text-primary-500" />
                           {event.location}
                         </div>
                         <div className="flex items-center gap-2 text-white/80">
-                          <Users className="w-4 h-4 text-yellow-400" />
+                          <Users className="w-4 h-4 text-primary-500" />
                           {event.capacity ? `${event.registered}/${event.capacity} inscrits` : 'Ouvert à tous'}
                           {availability && (
                             <span className={`ml-2 ${availability.color}`}>
@@ -267,10 +267,10 @@ export default function EventsList() {
                         <span className="text-white">{event.organizer}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <div className="text-xl font-bold text-yellow-400">
+                        <div className="text-xl font-bold text-primary-500">
                           {event.price}
                         </div>
-                        <Button asChild size="sm" className="bg-yellow-500 text-white hover:bg-yellow-600">
+                        <Button asChild size="sm" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                           <a href={event.externalLink} target="_blank" rel="noopener noreferrer">
                             S'inscrire
                             <ArrowRight className="w-4 h-4 ml-1" />
@@ -292,7 +292,7 @@ export default function EventsList() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   </div>
                   <div className="absolute top-4 left-4 flex gap-2 z-10">
-                    <Badge className={past ? "bg-gray-400 text-gray-700" : "bg-yellow-100 text-yellow-800"}>{event.category}</Badge>
+                    <Badge className={past ? "bg-gray-400 text-gray-700" : "bg-primary-500/20 text-primary-500"}>{event.category}</Badge>
                     <Badge className={`${status.color} text-white`}>{status.text}</Badge>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
@@ -334,7 +334,7 @@ export default function EventsList() {
                 setSelectedCategory("Tous");
                 setShowPastEvents(false);
               }}
-              className="bg-yellow-500 text-black hover:bg-yellow-600"
+              className="bg-primary-500 text-darker-blue hover:bg-primary-600"
             >
               Voir tous les événements
             </Button>

@@ -12,7 +12,7 @@ const services = [
     id: 1,
     title: "Animations d'Entreprise",
     description: "Team building et animations pour vos événements d'entreprise",
-    fullDescription: "Renforcez la cohésion de vos équipes avec nos animations de capoeira. Nos interventions favorisent l'esprit d'équipe, la communication non-verbale et la confiance mutuelle à travers des exercices ludiques et des démonstrations spectaculaires.",
+    fullDescription: "Renforcez vos équipes avec nos animations de capoeira. Favorisez l'esprit d'équipe à travers des exercices ludiques et démonstrations spectaculaires.",
     icon: Building2,
     category: "Entreprise",
     duration: "2-4 heures",
@@ -31,7 +31,7 @@ const services = [
     id: 2,
     title: "Interventions Scolaires",
     description: "Programmes éducatifs pour écoles primaires et secondaires",
-    fullDescription: "Nos interventions scolaires allient sport, culture et histoire. Les élèves découvrent la capoeira comme art de vivre, apprennent l'histoire du Brésil et développent leurs capacités physiques dans un cadre respectueux et bienveillant.",
+    fullDescription: "Nos interventions allient sport, culture et histoire. Les élèves découvrent la capoeira comme art de vivre et développent leurs capacités physiques.",
     icon: GraduationCap,
     category: "Éducation",
     duration: "1-2 heures",
@@ -96,21 +96,20 @@ export default function PrestationsSection() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl lg:text-5xl font-bold text-white mb-6"
+          <motion.h2
+            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Prestations Professionnelles
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Partagez la richesse de la capoeira avec vos équipes, élèves ou invités. 
             Nos prestations allient spectacle, pédagogie et team building pour des expériences inoubliables.
           </motion.p>
         </div>
@@ -133,7 +132,7 @@ export default function PrestationsSection() {
               >
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group h-full relative">
                   {service.popular && (
-                    <Badge className="absolute -top-3 left-6 bg-yellow-100 text-yellow-800 hover:bg-yellow-200 z-10">
+                    <Badge className="absolute -top-3 left-6 bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30 z-10">
                       <Star className="w-3 h-3 mr-1" />
                       Populaire
                     </Badge>
@@ -149,7 +148,7 @@ export default function PrestationsSection() {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4">
-                      <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                      <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                         {service.category}
                       </Badge>
                       <span className="text-gray-400 text-sm">{service.duration}</span>
@@ -173,7 +172,7 @@ export default function PrestationsSection() {
                     </div>
                     <Button 
                       onClick={() => setSelectedService(service)}
-                      className="w-full bg-yellow-500 text-white hover:bg-yellow-600"
+                      className="w-full bg-primary-500 text-darker-blue hover:bg-primary-600"
                     >
                       En savoir plus
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -193,17 +192,16 @@ export default function PrestationsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <Card className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-500/20 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border-primary-500/20 max-w-4xl mx-auto">
             <CardContent className="p-12">
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-semibold text-white mb-4">
                 Prêt à organiser votre événement ?
               </h3>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                Contactez-nous pour discuter de votre projet et recevoir un devis personnalisé. 
-                Nous nous adaptons à tous vos besoins !
+                Contactez-nous pour discuter de votre projet et recevoir un devis adapté à vos besoins.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-yellow-500 text-white hover:bg-yellow-600">
+                <Button size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                   <Phone className="w-4 h-4 mr-2" />
                   Nous appeler
                 </Button>
@@ -278,7 +276,7 @@ export default function PrestationsSection() {
               </div>
               
               <div className="flex justify-end">
-                <Button className="bg-yellow-500 text-white hover:bg-yellow-600">
+                <Button className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                   Demander un devis
                 </Button>
               </div>

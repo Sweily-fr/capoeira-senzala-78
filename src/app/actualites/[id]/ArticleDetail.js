@@ -16,9 +16,9 @@ export default function ArticleDetail({ articleId }) {
     return (
       <div className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Article non trouvé</h2>
+          <h2 className="text-2xl font-semibold text-white mb-4">Article non trouvé</h2>
           <p className="text-gray-300 mb-8">L'article que vous recherchez n'existe pas ou a été supprimé.</p>
-          <Button asChild className="bg-yellow-500 text-white hover:bg-yellow-600">
+          <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
             <Link href="/actualites">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Retour aux actualités
@@ -57,7 +57,7 @@ export default function ArticleDetail({ articleId }) {
         >
           <div className="flex flex-wrap items-center gap-2">
             {article.tags.map((tag) => (
-              <Badge key={tag} className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+              <Badge key={tag} className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                 #{tag}
               </Badge>
             ))}
@@ -98,7 +98,7 @@ export default function ArticleDetail({ articleId }) {
             <CardContent className="p-8 lg:p-12">
               <div 
                 className="prose prose-lg prose-invert max-w-none
-                  prose-headings:text-white prose-headings:font-bold
+                  prose-headings:text-white prose-headings:font-semibold
                   prose-p:text-gray-300 prose-p:leading-relaxed
                   prose-ul:text-gray-300 prose-li:text-gray-300
                   prose-strong:text-white

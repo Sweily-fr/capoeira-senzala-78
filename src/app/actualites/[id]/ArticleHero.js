@@ -47,7 +47,7 @@ export default function ArticleHero({ articleId }) {
             <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
               {/* Category Badge */}
               {category && (
-                <Badge className="bg-yellow-500 text-white hover:bg-yellow-600 mb-4">
+                <Badge className="bg-primary-500 text-darker-blue hover:bg-primary-600 mb-4">
                   {category}
                 </Badge>
               )}
@@ -154,12 +154,12 @@ const Navbar = () => {
                       >
                         <div className="grid grid-cols-1 gap-2">
                           {item.submenu.map((subItem) => (
-                            <div key={subItem.name} className="hover:bg-yellow-500 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
+                            <div key={subItem.name} className="hover:bg-primary-500 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
                               <HoveredLink
                                 href={subItem.href}
                                 className={`w-full h-full block transition-colors duration-200 ${
                                   pathname === subItem.href 
-                                    ? 'text-yellow-500 font-semibold' 
+                                    ? 'text-primary-500 font-semibold' 
                                     : 'group-hover:text-white'
                                 }`}
                               >
@@ -177,8 +177,8 @@ const Navbar = () => {
                       href={item.href}
                       className={`font-normal text-sm transition-colors duration-200 ${
                         pathname === item.href 
-                          ? 'text-yellow-400' 
-                          : 'text-white hover:text-yellow-400'
+                          ? 'text-primary-500' 
+                          : 'text-white hover:text-primary-500'
                       }`}
                       onMouseEnter={() => setActive(null)}
                     >
@@ -194,7 +194,7 @@ const Navbar = () => {
                 <Button
                   asChild
                   size="default"
-                  className="bg-yellow-500 text-white hover:bg-yellow-600"
+                  className="bg-primary-500 text-darker-blue hover:bg-primary-600"
                 >
                   <Link href="#inscription">S'inscrire à un cours</Link>
                 </Button>
@@ -224,7 +224,7 @@ const Navbar = () => {
                           <div key={subItem.name} className="px-4 py-2 hover:bg-gray-200/50 dark:hover:bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
                             <HoveredLink
                               href={subItem.href}
-                              className="w-full h-full block group-hover:text-yellow-400 transition-colors duration-200"
+                              className="w-full h-full block group-hover:text-primary-500 transition-colors duration-200"
                               onClick={() => setActive(null)}
                             >
                               {subItem.name}
@@ -236,7 +236,7 @@ const Navbar = () => {
                   ) : (
                     <HoveredLink
                       href={item.href}
-                      className="block px-4 py-2 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 hover:text-yellow-400 rounded-lg transition-all duration-200"
+                      className="block px-4 py-2 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 hover:text-primary-500 rounded-lg transition-all duration-200"
                       onClick={() => setActive(null)}
                     >
                       {item.name}
@@ -247,7 +247,7 @@ const Navbar = () => {
               <Button
                 asChild
                 size="sm"
-                className="w-full mt-2 bg-yellow-500 text-white hover:bg-yellow-600 md:hidden"
+                className="w-full mt-2 bg-primary-500 text-darker-blue hover:bg-primary-600 md:hidden"
                 onClick={() => setActive(null)}
               >
                 <Link href="#inscription">S'inscrire</Link>

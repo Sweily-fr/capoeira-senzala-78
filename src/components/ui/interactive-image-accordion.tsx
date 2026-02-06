@@ -58,7 +58,7 @@ export function LandingAccordionItem() {
         <div className="mt-12 text-center">
           <a
             href="/achats"
-            className="inline-flex items-center justify-center rounded-md bg-yellow-500 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-primary-500 px-6 py-3 text-sm font-medium text-darker-blue shadow-sm hover:bg-primary-400 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 cursor-pointer"
           >
             En savoir plus
           </a>

@@ -59,8 +59,8 @@ export default function ArticlesList() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl lg:text-5xl font-bold text-white mb-6"
+          <motion.h2
+            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -86,7 +86,7 @@ export default function ArticlesList() {
               onClick={() => setSelectedCategory(category)}
               className={`${
                 selectedCategory === category
-                  ? 'bg-yellow-500 text-white hover:bg-yellow-600'
+                  ? 'bg-primary-500 text-darker-blue hover:bg-primary-600'
                   : 'border-white/20 text-white hover:bg-white/10'
               }`}
             >
@@ -111,13 +111,13 @@ export default function ArticlesList() {
                     alt={featuredArticle.title}
                     className="w-full h-full object-cover"
                   />
-                  <Badge className="absolute top-4 left-4 bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                  <Badge className="absolute top-4 left-4 bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                     À la une
                   </Badge>
                 </div>
                 <CardContent className="p-8 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-4">
-                    <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                    <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       {featuredArticle.category}
                     </Badge>
                     <div className="flex items-center text-gray-400 text-sm gap-4">
@@ -142,7 +142,7 @@ export default function ArticlesList() {
                       <User className="w-4 h-4" />
                       <span className="text-sm">{featuredArticle.author}</span>
                     </div>
-                    <Button asChild className="bg-yellow-500 text-white hover:bg-yellow-600">
+                    <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                       <Link href={`/actualites/${featuredArticle.id}`}>
                         Lire la suite
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -187,7 +187,7 @@ export default function ArticlesList() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <Badge 
-                    className="absolute top-4 left-4 bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
+                    className="absolute top-4 left-4 bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30"
                   >
                     {article.category}
                   </Badge>
@@ -214,7 +214,7 @@ export default function ArticlesList() {
                       <User className="w-4 h-4" />
                       <span className="text-sm">{article.author}</span>
                     </div>
-                    <Button asChild variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300 hover:bg-yellow-500/10">
+                    <Button asChild variant="ghost" size="sm" className="text-primary-500 hover:text-primary-400 hover:bg-primary-500/10">
                       <Link href={`/actualites/${article.id}`}>
                         Lire plus
                         <ArrowRight className="w-4 h-4 ml-1" />
@@ -233,7 +233,7 @@ export default function ArticlesList() {
           <div ref={loaderRef} className="flex justify-center py-8">
             {isLoading && (
               <div className="flex items-center gap-2 text-gray-400">
-                <div className="w-5 h-5 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
                 <span>Chargement...</span>
               </div>
             )}

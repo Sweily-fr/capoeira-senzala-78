@@ -44,7 +44,7 @@ export default function VillesList() {
 
   return (
     <div className="mt-8 md:mt-12 container mx-auto px-4 max-w-7xl">
-      <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center" ref={contentRef}>Nos lieux de cours</h2>
+      <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-center" ref={contentRef}>Nos lieux de cours</h2>
       
       {/* Onglets Capoeira / Batucada */}
       <div className="flex justify-center mb-6 md:mb-8">
@@ -53,7 +53,7 @@ export default function VillesList() {
             onClick={() => handleTabChange('capoeira')}
             className={`flex-1 px-4 md:px-8 py-2 md:py-3 rounded-md font-semibold transition-all text-sm md:text-base ${
               activeTab === 'capoeira'
-                ? 'bg-yellow-400 text-dark-blue'
+                ? 'bg-primary-500 text-dark-blue'
                 : 'text-white hover:bg-white/10'
             }`}
           >
@@ -63,7 +63,7 @@ export default function VillesList() {
             onClick={() => handleTabChange('batucada')}
             className={`flex-1 px-4 md:px-8 py-2 md:py-3 rounded-md font-semibold transition-all text-sm md:text-base ${
               activeTab === 'batucada'
-                ? 'bg-yellow-400 text-dark-blue'
+                ? 'bg-primary-500 text-dark-blue'
                 : 'text-white hover:bg-white/10'
             }`}
           >
@@ -86,7 +86,7 @@ export default function VillesList() {
                   placeholder="Rechercher une ville..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                 />
               </div>
 
@@ -98,7 +98,7 @@ export default function VillesList() {
                       onClick={() => handleVilleChange(key)}
                       className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-md transition-colors text-sm md:text-base ${
                         selectedVille === key 
-                          ? 'bg-yellow-400 text-dark-blue font-medium' 
+                          ? 'bg-primary-500 text-dark-blue font-medium' 
                           : 'hover:bg-white/10'
                       }`}
                     >
@@ -119,13 +119,13 @@ export default function VillesList() {
               {villeData && (
                 <>
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 md:gap-4 mb-4 md:mb-6">
-                    <h3 className="text-xl md:text-2xl font-bold">{villeData.nom}</h3>
+                    <h3 className="text-xl md:text-2xl font-semibold">{villeData.nom}</h3>
                     {villeData.inscriptionHref && (
                       <a 
                         href={villeData.inscriptionHref} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="bg-yellow-400 text-dark-blue font-bold py-2 px-6 rounded hover:bg-yellow-300 transition-colors text-sm whitespace-nowrap"
+                        className="bg-primary-500 text-dark-blue font-bold py-2 px-6 rounded hover:bg-primary-400 transition-colors text-sm whitespace-nowrap"
                       >
                         S'inscrire
                       </a>
@@ -140,7 +140,7 @@ export default function VillesList() {
                       )}
                       {villeData.contact.email && (
                         <p>
-                          <a href={`mailto:${villeData.contact.email}`} className="text-yellow-400 hover:underline">
+                          <a href={`mailto:${villeData.contact.email}`} className="text-primary-500 hover:underline">
                             {villeData.contact.email}
                           </a>
                         </p>
@@ -168,14 +168,14 @@ export default function VillesList() {
                       {villeData.cours.map((jour, index) => (
                         jour.contact && (
                           <div key={index} className="bg-white/5 p-3 md:p-4 rounded-lg">
-                            <h4 className="font-semibold text-yellow-400 mb-2 text-sm md:text-base">Contact - {jour.jour}</h4>
+                            <h4 className="font-semibold text-primary-500 mb-2 text-sm md:text-base">Contact - {jour.jour}</h4>
                             <div className="text-sm">
                               {jour.contact.nom && jour.contact.prenom && (
                                 <p>{jour.contact.prenom} {jour.contact.nom}</p>
                               )}
                               {jour.contact.email && (
                                 <p>
-                                  <a href={`mailto:${jour.contact.email}`} className="text-yellow-400 hover:underline">
+                                  <a href={`mailto:${jour.contact.email}`} className="text-primary-500 hover:underline">
                                     {jour.contact.email}
                                   </a>
                                 </p>
@@ -226,13 +226,13 @@ export default function VillesList() {
                                     rowSpan={jour.cours.length}
                                   >
                                     <div className="flex flex-col gap-1.5 md:gap-2">
-                                      <span className="font-semibold text-yellow-400 text-xs md:text-sm">{jour.jour}</span>
+                                      <span className="font-semibold text-primary-500 text-xs md:text-sm">{jour.jour}</span>
                                       {jour.inscriptionHref && (
                                         <a 
                                           href={jour.inscriptionHref} 
                                           target="_blank" 
                                           rel="noopener noreferrer"
-                                          className="bg-yellow-400 text-dark-blue font-bold py-1 px-3 md:px-6 rounded hover:bg-yellow-300 transition-colors text-xs text-center whitespace-nowrap inline-block w-fit"
+                                          className="bg-primary-500 text-dark-blue font-bold py-1 px-3 md:px-6 rounded hover:bg-primary-400 transition-colors text-xs text-center whitespace-nowrap inline-block w-fit"
                                         >
                                           S'inscrire
                                         </a>

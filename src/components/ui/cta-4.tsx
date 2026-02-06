@@ -20,7 +20,7 @@ const defaultItems = [
 
 export const Cta4 = ({
   title = "Prêt à commencer votre aventure capoeira ?",
-  description = "Rejoignez notre école et découvrez l'art de la capoeira dans une ambiance conviviale et bienveillante. Que vous soyez débutant ou expérimenté, nos cours s'adaptent à tous les niveaux.",
+  description = "Rejoignez notre école de capoeira. Nos cours s'adaptent à tous les niveaux dans une ambiance conviviale et bienveillante.",
   buttonText = "Réserver un cours d'essai",
   buttonUrl = "/contact",
   items = defaultItems,

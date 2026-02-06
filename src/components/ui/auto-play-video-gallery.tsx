@@ -166,8 +166,8 @@ export function AutoPlayVideoGallery({
                   key={video.id}
                   className={cn(
                     "relative cursor-pointer overflow-hidden rounded-lg sm:rounded-xl shadow-lg transition-all duration-300",
-                    isActive 
-                      ? "ring-1 ring-yellow-500 scale-[1.02] sm:scale-105" 
+                    isActive
+                      ? "ring-2 ring-primary-500 scale-[1.02] sm:scale-105"
                       : "hover:scale-[1.01] sm:hover:scale-102"
                   )}
                   onClick={() => handleVideoClick(index)}
@@ -216,7 +216,7 @@ export function AutoPlayVideoGallery({
 
                     {/* Title and Description */}
                     <div className="absolute bottom-0 left-0 p-3 sm:p-4 md:p-5 pointer-events-none w-full">
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-white truncate">{video.title}</h3>
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white truncate">{video.title}</h3>
                       {video.description && (
                         <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-white/80 line-clamp-2">{video.description}</p>
                       )}
@@ -231,7 +231,7 @@ export function AutoPlayVideoGallery({
           <div className="flex justify-center mt-6 sm:mt-8 gap-4">
             <button
               onClick={togglePlayPause}
-              className="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-yellow-500 hover:bg-yellow-600 text-white text-sm sm:text-base font-medium rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-primary-500 hover:bg-primary-400 text-darker-blue text-sm sm:text-base font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
             >
               {isPlaying ? (
                 <>

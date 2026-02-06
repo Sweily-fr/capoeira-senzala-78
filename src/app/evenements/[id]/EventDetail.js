@@ -80,9 +80,9 @@ export default function EventDetail({ eventId }) {
     return (
       <div className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Événement non trouvé</h2>
+          <h2 className="text-2xl font-semibold text-white mb-4">Événement non trouvé</h2>
           <p className="text-gray-300 mb-8">L'événement que vous recherchez n'existe pas ou a été supprimé.</p>
-          <Button asChild className="bg-yellow-500 text-black hover:bg-yellow-600">
+          <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
             <Link href="/evenements">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Retour aux événements
@@ -151,26 +151,26 @@ export default function EventDetail({ eventId }) {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                   {status.text}
                 </Badge>
-                <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                   {event.category}
                 </Badge>
                 {event.featured && (
-                  <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                  <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                     <Star className="w-3 h-3 mr-1" />
                     Événement phare
                   </Badge>
                 )}
                 {event.tags.map((tag) => (
-                  <Badge key={tag} className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
+                  <Badge key={tag} className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                     #{tag}
                   </Badge>
                 ))}
               </div>
               
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl lg:text-5xl font-semibold text-white mb-6">
                 {event.title}
               </h1>
               
@@ -242,7 +242,7 @@ export default function EventDetail({ eventId }) {
                     <div className="space-y-4">
                       {event.program.map((item, index) => (
                         <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-white/5">
-                          <div className="flex items-center justify-center w-16 h-16 bg-yellow-500 text-black font-bold rounded-lg">
+                          <div className="flex items-center justify-center w-16 h-16 bg-primary-500 text-black font-semibold rounded-lg">
                             {item.time}
                           </div>
                           <div className="flex-1">
@@ -270,7 +270,7 @@ export default function EventDetail({ eventId }) {
               <Card className="bg-white/5 backdrop-blur-sm border-white/10">
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl text-yellow-400">{event.price}</CardTitle>
+                    <CardTitle className="text-2xl text-primary-500">{event.price}</CardTitle>
                     {availability && (
                       <span className={`text-sm ${availability.color}`}>
                         {availability.text}
@@ -291,7 +291,7 @@ export default function EventDetail({ eventId }) {
                     className={`w-full ${
                       isRegistered 
                         ? 'bg-green-600 hover:bg-green-700' 
-                        : 'bg-yellow-500 hover:bg-yellow-600'
+                        : 'bg-primary-500 hover:bg-primary-600'
                     } text-black font-medium`}
                     disabled={availability && !availability.canRegister}
                   >
@@ -320,7 +320,7 @@ export default function EventDetail({ eventId }) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-yellow-400 mt-0.5" />
+                    <Calendar className="w-5 h-5 text-primary-500 mt-0.5" />
                     <div>
                       <p className="text-white font-medium">
                         {new Date(event.date).toLocaleDateString('fr-FR', { 
@@ -337,7 +337,7 @@ export default function EventDetail({ eventId }) {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-yellow-400 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-primary-500 mt-0.5" />
                     <div>
                       <p className="text-white font-medium">{event.location}</p>
                       <p className="text-gray-400 text-sm">{event.address}</p>
@@ -345,7 +345,7 @@ export default function EventDetail({ eventId }) {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <Users className="w-5 h-5 text-yellow-400 mt-0.5" />
+                    <Users className="w-5 h-5 text-primary-500 mt-0.5" />
                     <div>
                       <p className="text-white font-medium">Organisé par</p>
                       <p className="text-gray-400 text-sm">{event.organizer}</p>
@@ -361,14 +361,14 @@ export default function EventDetail({ eventId }) {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-yellow-400" />
-                    <a href={`mailto:${event.contact.email}`} className="text-gray-300 hover:text-yellow-400 transition-colors">
+                    <Mail className="w-4 h-4 text-primary-500" />
+                    <a href={`mailto:${event.contact.email}`} className="text-gray-300 hover:text-primary-500 transition-colors">
                       {event.contact.email}
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-4 h-4 text-yellow-400" />
-                    <a href={`tel:${event.contact.phone}`} className="text-gray-300 hover:text-yellow-400 transition-colors">
+                    <Phone className="w-4 h-4 text-primary-500" />
+                    <a href={`tel:${event.contact.phone}`} className="text-gray-300 hover:text-primary-500 transition-colors">
                       {event.contact.phone}
                     </a>
                   </div>

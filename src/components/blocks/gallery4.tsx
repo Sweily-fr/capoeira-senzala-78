@@ -53,17 +53,28 @@ const sortEventsByDate = (events: Gallery4Item[]) => {
 const formatDateRange = (startDate: string, endDate?: string) => {
   const start = new Date(startDate);
   const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
-  
+
   if (!endDate || startDate === endDate) {
     return start.toLocaleDateString('fr-FR', options);
   }
-  
+
   const end = new Date(endDate);
   if (start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear()) {
     return `Du ${start.getDate()} au ${end.toLocaleDateString('fr-FR', options)}`;
   }
-  
+
   return `Du ${start.toLocaleDateString('fr-FR', options)} au ${end.toLocaleDateString('fr-FR', options)}`;
+};
+
+// Vérifier si un événement est passé
+const isEventPast = (startDate: string, endDate?: string) => {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // Reset time to start of day for fair comparison
+
+  const eventDate = endDate ? new Date(endDate) : new Date(startDate);
+  eventDate.setHours(0, 0, 0, 0);
+
+  return eventDate < now;
 };
 
 const Gallery4 = ({
@@ -89,6 +100,39 @@ const Gallery4 = ({
     carouselApi.on("select", updateSelection);
     return () => {
       carouselApi.off("select", updateSelection);
+    };
+  }, [carouselApi]);
+
+  // Ajouter le support du scroll horizontal avec la molette
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+
+    const carousel = carouselApi.rootNode();
+
+    const handleWheel = (e: WheelEvent) => {
+      // Détecter si c'est un scroll horizontal (trackpad horizontal ou Shift+scroll)
+      const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey;
+
+      if (isHorizontalScroll) {
+        e.preventDefault();
+
+        const delta = e.deltaX || e.deltaY;
+
+        if (delta > 0) {
+          carouselApi.scrollNext();
+        } else if (delta < 0) {
+          carouselApi.scrollPrev();
+        }
+      }
+      // Sinon, laisser le scroll vertical normal se produire
+    };
+
+    carousel.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      carousel.removeEventListener('wheel', handleWheel);
     };
   }, [carouselApi]);
 
@@ -157,14 +201,16 @@ const Gallery4 = ({
                       <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
                         {item.title}
                       </div>
-                      <div className="mt-6 flex items-center gap-2 text-white">
+                      <div className="mt-2 flex items-center gap-2 text-white">
                         <CalendarDays className="h-5 w-5" />
                         <span>{formatDateRange(item.startDate, item.endDate)}</span>
                       </div>
-                      <div className="flex items-center text-sm">
-                        S'inscrire à l'événement{" "}
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                      </div>
+                      {!isEventPast(item.startDate, item.endDate) && (
+                        <div className="mt-4 flex items-center text-sm">
+                          S'inscrire à l'événement{" "}
+                          <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </a>

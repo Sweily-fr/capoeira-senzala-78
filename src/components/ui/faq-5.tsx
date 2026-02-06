@@ -49,7 +49,7 @@ export const Faq5 = ({
   return (
     <SectionWrapper className="bg-background">
         <div className="text-center text-white">
-          <Badge className="text-xs font-medium bg-yellow-100 text-yellow-800 hover:bg-yellow-200">{badge}</Badge>
+          <Badge className="text-xs font-medium bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">{badge}</Badge>
           <h2 className="mt-4 text-3xl font-medium text-white md:text-4xl lg:text-5xl">{heading}</h2>
           <p className="mt-6 text-lg text-white/80">
             {description}

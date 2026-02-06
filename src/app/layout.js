@@ -1,4 +1,6 @@
 import './globals.css';
+import { NotificationProvider } from '@/context/NotificationContext';
+import { FloatingNotifications } from '@/components/ui/floating-notifications';
 
 export const metadata = {
   title: 'Capoeira Senzala 78',
@@ -12,7 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NotificationProvider>
+          {children}
+          <FloatingNotifications />
+        </NotificationProvider>
+      </body>
     </html>
   );
 }

@@ -113,7 +113,7 @@ export default function LaCapoeiraPage() {
           {/* Introduction Section */}
           <div className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 md:mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-white mb-4 sm:mb-6 md:mb-8">
                 La Capoeira c'est quoi ?
               </h2>
               <p className="text-sm sm:text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed mb-8 sm:mb-10 md:mb-12 px-2 sm:px-0">

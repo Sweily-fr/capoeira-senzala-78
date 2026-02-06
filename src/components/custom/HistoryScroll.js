@@ -275,7 +275,7 @@ export const HistoryScroll = ({ content = [] }) => {
                 <div className="bg-white/10 p-4 rounded-full mb-4">
                   <span className="text-4xl">📷</span>
                 </div>
-                <h4 className="text-xl font-bold mb-2">
+                <h4 className="text-xl font-semibold mb-2">
                   {content[activeIndex]?.title || 'Image non disponible'}
                 </h4>
                 <p className="text-blue-100 text-sm">
@@ -314,7 +314,7 @@ export const HistoryScroll = ({ content = [] }) => {
                 <div className="w-full h-full flex items-center justify-center bg-black/20 relative group">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div className="text-white">
-                      <h4 className="text-xl font-bold mb-2">{content[activeIndex]?.title}</h4>
+                      <h4 className="text-xl font-semibold mb-2">{content[activeIndex]?.title}</h4>
                       <p className="text-sm opacity-90">Section {activeIndex + 1} sur {content.length}</p>
                     </div>
                   </div>
@@ -327,7 +327,7 @@ export const HistoryScroll = ({ content = [] }) => {
                   <div className="bg-white/10 p-6 rounded-full mb-6 transform transition-transform duration-300 hover:scale-110">
                     <span className="text-5xl">📷</span>
                   </div>
-                  <h4 className="text-2xl font-bold mb-3">
+                  <h4 className="text-2xl font-semibold mb-3">
                     {content[activeIndex]?.title || 'Image non disponible'}
                   </h4>
                   <p className="text-blue-100 mb-4">
@@ -345,7 +345,7 @@ export const HistoryScroll = ({ content = [] }) => {
         {/* Ligne verticale avec points - Timeline */}
         <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px z-20">
           {/* Ligne verticale */}
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-yellow-500/30 to-transparent"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary-500/30 to-transparent"></div>
           
           {/* Points pour chaque section */}
           {content.map((item, index) => (
@@ -359,8 +359,8 @@ export const HistoryScroll = ({ content = [] }) => {
               <div 
                 className={`w-4 h-4 rounded-full border-2 transition-all duration-500 ${
                   index === activeIndex 
-                    ? 'bg-yellow-500 border-yellow-500 scale-150 shadow-lg shadow-yellow-500/50' 
-                    : 'bg-dark-blue border-yellow-500/50 scale-100'
+                    ? 'bg-primary-500 border-primary-500 scale-150 shadow-lg shadow-primary-500/50' 
+                    : 'bg-dark-blue border-primary-500/50 scale-100'
                 }`}
               ></div>
             </div>
@@ -383,17 +383,17 @@ export const HistoryScroll = ({ content = [] }) => {
                   ref={el => sectionRefs.current[index] = el}
                   className={`history-item py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-5 md:px-6 rounded-lg transition-all duration-500 ${
                     index === activeIndex 
-                      ? 'active bg-gradient-to-r from-yellow-500/10 to-yellow-600/5 border-l-4 border-yellow-500' 
+                      ? 'active bg-gradient-to-r from-primary-500/10 to-primary-600/5 border-l-4 border-primary-500' 
                       : 'inactive'
                   }`}
                   data-index={index}
                   tabIndex={0}
                 >
                   <div className="relative">
-                    <span className="hidden lg:block absolute -left-12 top-0 text-2xl font-bold text-yellow-400 opacity-0 transition-opacity duration-300">
+                    <span className="hidden lg:block absolute -left-12 top-0 text-2xl font-semibold text-primary-500 opacity-0 transition-opacity duration-300">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-white mb-3 sm:mb-4">{item.title}</h3>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold text-white mb-3 sm:mb-4">{item.title}</h3>
                     <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed">{item.description}</p>
                   </div>
                 </div>

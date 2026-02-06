@@ -41,7 +41,7 @@ export function ProductCard({ product, onClick }: { product: Product; onClick: (
           <Button 
             onClick={onClick}
             size="sm"
-            className="bg-yellow-500 hover:bg-yellow-600 text-white text-xs xs:text-sm font-medium border-0 transition-colors px-3 h-8"
+            className="bg-primary-500 hover:bg-primary-600 text-white text-xs xs:text-sm font-medium border-0 transition-colors px-3 h-8"
           >
             Voir le produit
           </Button>

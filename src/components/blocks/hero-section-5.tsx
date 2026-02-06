@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Bell } from "lucide-react";
 import { useScroll, motion } from "motion/react";
 import Image from "next/image";
 import { Menu as MenuIcon } from "lucide-react";
 import { Menu, MenuItem, ProductItem, HoveredLink } from "@/components/ui/navbar-menu";
 import { usePathname } from "next/navigation";
+import { useNotifications } from "@/context/NotificationContext";
 
 export function HeroSection({ 
   title = "Escola do Grupo Senzala 78", 
@@ -54,8 +55,8 @@ export function HeroSection({
           <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
             <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:block lg:px-12">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
-                <motion.h1 
-                  className="mt-6 sm:mt-8 max-w-2xl text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-bold leading-tight drop-shadow-lg"
+                <motion.h1
+                  className="mt-6 sm:mt-8 max-w-2xl text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
@@ -81,7 +82,7 @@ export function HeroSection({
                   <Button
                     asChild
                     size="lg"
-                    className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-dark-blue font-semibold bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 shadow-lg shadow-yellow-500/30 hover:shadow-yellow-500/50 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
+                    className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
                   >
                     <Link href="/cours-tarifs">
                       <span className="text-nowrap">Découvrir nos cours</span>
@@ -92,9 +93,9 @@ export function HeroSection({
                     asChild
                     size="lg"
                     variant="outline"
-                    className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-white/40 hover:border-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
+                    className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
                   >
-                    <Link href="/contact">
+                    <Link href="/cours-tarifs">
                       <span className="text-nowrap">Où pratiquer ?</span>
                     </Link>
                   </Button>
@@ -215,18 +216,18 @@ const navItems = [
   { name: "Accueil", href: "/" },
 
   { name: "Cours et Tarifs", href: "/cours-tarifs" },
+  { name: "Événements à venir", href: "/evenements" },
+  { name: "Tenues & Instruments", href: "/achats" },
   {
     name: "À propos",
     submenu: [
       { name: "L'histoire du groupe", href: "/le-groupe-senzala-78" },
-      { name: "La capoeira", href: "/la-capoeira" },
-      { name: "Prestations professionnelles", href: "/prestations" },
+      // { name: "La capoeira", href: "/la-capoeira" },
+      { name: "Préstations Pro/Scolaire", href: "/prestations" },
       { name: "Nos partenaires", href: "/partenaires" },
       { name: "Actualités", href: "/actualites" },
-      { name: "Événements à venir", href: "/evenements" },
     ],
   },
-  { name: "Tenues & Instruments", href: "/achats" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -235,6 +236,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
+  const { unreadCount, openFromNavbar } = useNotifications();
 
   React.useEffect(() => {
     // Activer l'effet de flou dès le début du défilement
@@ -279,12 +281,12 @@ const Navbar = () => {
                       >
                         <div className="grid grid-cols-1 gap-2">
                           {item.submenu.map((subItem) => (
-                            <div key={subItem.name} className="hover:bg-yellow-500 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
+                            <div key={subItem.name} className="hover:bg-primary-500 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
                               <HoveredLink
                                 href={subItem.href}
                                 className={`w-full h-full block transition-colors duration-200 ${
                                   pathname === subItem.href 
-                                    ? 'text-yellow-500 font-semibold' 
+                                    ? 'text-primary-500 font-semibold' 
                                     : 'group-hover:text-white'
                                 }`}
                               >
@@ -302,8 +304,8 @@ const Navbar = () => {
                       href={item.href}
                       className={`font-normal text-sm transition-colors duration-200 ${
                         pathname === item.href 
-                          ? 'text-yellow-400' 
-                          : 'text-white hover:text-yellow-400'
+                          ? 'text-primary-500' 
+                          : 'text-white hover:text-primary-500'
                       }`}
                       onMouseEnter={() => setActive(null)}
                     >
@@ -315,13 +317,26 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="hidden md:block mr-4">
+              <div className="hidden md:flex items-center gap-3 mr-4">
+                <button
+                  onClick={openFromNavbar}
+                  className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <Bell className="w-5 h-5 text-white flex-shrink-0" />
+                  {unreadCount > 0 && (
+                    <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">
+                      {unreadCount > 9 ? "9+" : unreadCount}
+                    </span>
+                  )}
+                </button>
                 <Button
                   asChild
                   size="default"
-                  className="bg-yellow-500 text-white hover:bg-yellow-600"
+                  className="bg-primary-500 text-white hover:bg-primary-600"
                 >
-                  <Link href="#inscription">S'inscrire à un cours</Link>
+                  <Link href="/cours-tarifs">
+                    S'inscrire à un cours
+                  </Link>
                 </Button>
               </div>
 
@@ -349,7 +364,7 @@ const Navbar = () => {
                           <div key={subItem.name} className="px-4 py-2 hover:bg-gray-200/50 dark:hover:bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
                             <HoveredLink
                               href={subItem.href}
-                              className="w-full h-full block group-hover:text-yellow-400 transition-colors duration-200"
+                              className="w-full h-full block group-hover:text-primary-500 transition-colors duration-200"
                               onClick={() => setActive(null)}
                             >
                               {subItem.name}
@@ -361,7 +376,7 @@ const Navbar = () => {
                   ) : (
                     <HoveredLink
                       href={item.href}
-                      className="block px-4 py-2 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 hover:text-yellow-400 rounded-lg transition-all duration-200"
+                      className="block px-4 py-2 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 hover:text-primary-500 rounded-lg transition-all duration-200"
                       onClick={() => setActive(null)}
                     >
                       {item.name}
@@ -369,14 +384,32 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <Button
-                asChild
-                size="sm"
-                className="w-full mt-2 bg-yellow-500 text-white hover:bg-yellow-600 md:hidden"
-                onClick={() => setActive(null)}
-              >
-                <Link href="#inscription">S'inscrire</Link>
-              </Button>
+              <div className="w-full mt-2 md:hidden flex items-center gap-3 px-4 py-2">
+                <button
+                  onClick={() => {
+                    openFromNavbar();
+                    setActive(null);
+                  }}
+                  className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <Bell className="w-5 h-5 text-white flex-shrink-0" />
+                  {unreadCount > 0 && (
+                    <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">
+                      {unreadCount > 9 ? "9+" : unreadCount}
+                    </span>
+                  )}
+                </button>
+                <Button
+                  asChild
+                  size="sm"
+                  className="flex-1 bg-primary-500 text-white hover:bg-primary-600"
+                  onClick={() => setActive(null)}
+                >
+                  <Link href="/cours-tarifs">
+                    S'inscrire
+                  </Link>
+                </Button>
+              </div>
             </div>
           )}
         </Menu>

@@ -109,23 +109,21 @@ export default function PartnersSection() {
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl lg:text-5xl font-bold text-white mb-6"
+          <motion.h2
+            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Nos Partenaires
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Nous sommes fiers de collaborer avec des organisations qui partagent notre passion 
-            pour la capoeira et la culture brésilienne. Ensemble, nous créons un écosystème 
-            riche et dynamique pour notre communauté.
+            Nous collaborons avec des organisations partageant notre passion pour la capoeira. Ensemble, nous créons un écosystème dynamique pour notre communauté.
           </motion.p>
         </div>
 
@@ -142,16 +140,15 @@ export default function PartnersSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-3xl p-12 border border-yellow-500/20">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-3xl p-12 border border-primary-500/20">
+            <h3 className="text-3xl font-semibold text-white mb-4">
               Devenir Partenaire
             </h3>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              Vous souhaitez rejoindre notre réseau de partenaires ? 
-              Contactez-nous pour découvrir les opportunités de collaboration.
+              Rejoignez notre réseau de partenaires. Découvrez les opportunités de collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 text-white hover:bg-yellow-600">
+              <Button size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
                 <Phone className="w-4 h-4 mr-2" />
                 Nous contacter
               </Button>
@@ -171,19 +168,19 @@ export default function PartnersSection() {
           transition={{ duration: 0.6, delay: 1 }}
         >
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">15+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-2">15+</div>
             <div className="text-gray-300">Années de partenariats</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-2">50+</div>
             <div className="text-gray-300">Événements organisés</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">1000+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-2">1000+</div>
             <div className="text-gray-300">Participants touchés</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">25+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-2">25+</div>
             <div className="text-gray-300">Partenaires actifs</div>
           </div>
         </motion.div>

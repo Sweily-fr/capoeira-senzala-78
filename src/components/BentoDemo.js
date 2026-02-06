@@ -116,7 +116,7 @@ export function BentoDemo() {
   return (
     <div className="py-16 px-4 md:px-8 bg-dark-blue">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-white">
           Découvrez la capoeira
         </h2>
         <BentoGrid>
