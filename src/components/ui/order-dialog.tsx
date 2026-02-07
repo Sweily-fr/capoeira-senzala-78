@@ -70,8 +70,8 @@ export function OrderDialog({ open, onOpenChange, onOrderSubmit, villes }: Order
 
                 <div className="space-y-2">
                   <Label htmlFor="professeur">Professeur</Label>
-                  <Select 
-                    value={selectedProfesseur} 
+                  <Select
+                    value={selectedProfesseur}
                     onValueChange={setSelectedProfesseur}
                     disabled={!selectedVille}
                   >
@@ -94,6 +94,18 @@ export function OrderDialog({ open, onOpenChange, onOrderSubmit, villes }: Order
                   </Select>
                 </div>
               </div>
+
+              {/* Message d'avertissement adhérents */}
+              {selectedVille && selectedProfesseur && (
+                <div className="mt-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                  <p className="text-amber-400 text-sm font-medium mb-1">
+                    ⚠️ Réservé aux adhérents
+                  </p>
+                  <p className="text-amber-200/80 text-sm">
+                    La commande est réservée uniquement aux adhérents de l'association Capoeira Senzala 78. Toute commande passée par une personne extérieure à l'association ne sera pas traitée.
+                  </p>
+                </div>
+              )}
             </form>
           </div>
 

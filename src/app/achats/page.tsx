@@ -63,7 +63,7 @@ export default function AchatsPage() {
     <div className="min-h-screen bg-dark-blue flex flex-col">
       <HeroSection
         title="Boutique Adhérents"
-        subtitle="Découvrez notre collection d'articles officiels et équipements de capoeira"
+        subtitle="Découvrez notre collection d'articles officiels et équipements de capoeira, réservée exclusivement aux adhérents de l'association"
         heroImage="/images/hero-section-img/boutique.JPG"
       />
       
@@ -73,8 +73,8 @@ export default function AchatsPage() {
             <h2 className="text-2xl xs:text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-2 sm:mb-3">
               Nos Produits
             </h2>
-            <p className="text-sm xs:text-base sm:text-lg text-gray-200 max-w-2xl mx-auto px-4">
-              Découvrez notre sélection d'articles de qualité pour votre pratique de la capoeira
+            <p className="text-sm xs:text-base sm:text-lg text-gray-200 max-w-3xl mx-auto px-4">
+              Retrouvez notre sélection d'articles officiels Senzala 78 : vêtements, équipements et accessoires de qualité pour accompagner votre pratique de la capoeira. Tous nos produits sont disponibles exclusivement pour les adhérents de l'association.
             </p>
             <div className="mt-4 sm:mt-6 px-2 sm:px-0">
               <CategoryFilter 

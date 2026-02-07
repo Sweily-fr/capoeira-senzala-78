@@ -6,9 +6,9 @@ export default function PrestationsProfessionnelles() {
   return (
     <>
       <main className="flex flex-col">
-        <HeroSection 
-          title="Prestations Professionnelles"
-          subtitle="Services de capoeira pour entreprises, écoles et événements"
+        <HeroSection
+          title="Nos prestations Scolaires et Pro"
+          subtitle="Services de capoeira pour écoles, entreprises et événements"
           heroImage="/images/hero-section-img/prestations-pro.jpg"
         />
         

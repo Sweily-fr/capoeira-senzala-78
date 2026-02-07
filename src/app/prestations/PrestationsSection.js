@@ -1,15 +1,76 @@
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, GraduationCap, Calendar, Users, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Building2, GraduationCap, Calendar, Users, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, School } from 'lucide-react';
 
-// Services data
-const services = [
+// Services scolaires
+const servicesScolaires = [
   {
     id: 1,
+    title: "Interventions en Écoles Primaires",
+    description: "Programmes éducatifs adaptés aux enfants de 6 à 11 ans",
+    fullDescription: "Nos interventions en école primaire sont conçues pour éveiller la curiosité des enfants à travers la découverte de la capoeira. Alliant sport, musique et culture brésilienne, nos séances développent la motricité, la coordination et l'esprit d'équipe.",
+    icon: GraduationCap,
+    category: "Primaire",
+    duration: "1-2 heures",
+    participants: "15-30 élèves",
+    features: [
+      "Cours adaptés à l'âge",
+      "Jeux et activités ludiques",
+      "Initiation aux instruments",
+      "Découverte culturelle du Brésil",
+      "Support pédagogique fourni"
+    ],
+    image: "/images/favelas_capoeira_senzala.png",
+    popular: true
+  },
+  {
+    id: 2,
+    title: "Interventions en Collèges et Lycées",
+    description: "Programmes pour adolescents avec approche sportive et culturelle",
+    fullDescription: "Pour les collégiens et lycéens, nous proposons des séances plus dynamiques axées sur la pratique sportive tout en abordant l'histoire et la philosophie de la capoeira. Un excellent moyen de canaliser l'énergie et développer la confiance en soi.",
+    icon: School,
+    category: "Secondaire",
+    duration: "1-2 heures",
+    participants: "15-35 élèves",
+    features: [
+      "Approche sportive complète",
+      "Histoire et philosophie",
+      "Travail en groupe",
+      "Développement personnel",
+      "Préparation possible au spectacle"
+    ],
+    image: "/images/hero-2.jpg",
+    popular: false
+  },
+  {
+    id: 3,
+    title: "Projets Pédagogiques Annuels",
+    description: "Accompagnement sur l'année scolaire avec projet de fin d'année",
+    fullDescription: "Nous accompagnons les établissements sur des projets à l'année incluant des séances régulières et la préparation d'un spectacle de fin d'année. Une immersion complète dans l'univers de la capoeira pour les élèves.",
+    icon: Calendar,
+    category: "Projet annuel",
+    duration: "Année scolaire",
+    participants: "Variable",
+    features: [
+      "Séances hebdomadaires",
+      "Progression pédagogique",
+      "Spectacle de fin d'année",
+      "Costumes et accessoires",
+      "Coordination avec l'équipe éducative"
+    ],
+    image: "/images/mico_capo_senzala.png",
+    popular: false
+  }
+];
+
+// Services professionnels
+const servicesPro = [
+  {
+    id: 4,
     title: "Animations d'Entreprise",
     description: "Team building et animations pour vos événements d'entreprise",
     fullDescription: "Renforcez vos équipes avec nos animations de capoeira. Favorisez l'esprit d'équipe à travers des exercices ludiques et démonstrations spectaculaires.",
@@ -28,26 +89,7 @@ const services = [
     popular: true
   },
   {
-    id: 2,
-    title: "Interventions Scolaires",
-    description: "Programmes éducatifs pour écoles primaires et secondaires",
-    fullDescription: "Nos interventions allient sport, culture et histoire. Les élèves découvrent la capoeira comme art de vivre et développent leurs capacités physiques.",
-    icon: GraduationCap,
-    category: "Éducation",
-    duration: "1-2 heures",
-    participants: "15-30 élèves",
-    features: [
-      "Cours adaptés à l'âge",
-      "Contenu pédagogique",
-      "Histoire et culture",
-      "Activités ludiques",
-      "Support éducatif"
-    ],
-    image: "/images/favelas_capoeira_senzala.png",
-    popular: false
-  },
-  {
-    id: 3,
+    id: 5,
     title: "Spectacles & Démonstrations",
     description: "Performances artistiques pour vos événements publics",
     fullDescription: "Nos spectacles de capoeira captivent le public par leur dynamisme et leur authenticité. Adaptés à tous types d'événements, ils mettent en valeur la richesse culturelle brésilienne avec des performances de haute qualité.",
@@ -66,7 +108,7 @@ const services = [
     popular: false
   },
   {
-    id: 4,
+    id: 6,
     title: "Événements Privés",
     description: "Animations pour mariages, anniversaires et célébrations",
     fullDescription: "Ajoutez une touche d'originalité à vos événements privés avec nos animations de capoeira. Nous créons des moments mémorables qui marquent vos invités par leur authenticité et leur convivialité.",
@@ -89,20 +131,23 @@ const services = [
 
 export default function PrestationsSection() {
   const [selectedService, setSelectedService] = useState(null);
+  const [activeTab, setActiveTab] = useState('scolaire');
+
+  const currentServices = activeTab === 'scolaire' ? servicesScolaires : servicesPro;
 
   return (
     <div className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        
+
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Prestations Professionnelles
+            Nos Prestations
           </motion.h2>
           <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -110,79 +155,116 @@ export default function PrestationsSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Nos prestations allient spectacle, pédagogie et team building pour des expériences inoubliables.
+            Découvrez nos prestations adaptées aux établissements scolaires et aux professionnels.
           </motion.p>
         </div>
 
-        {/* Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        {/* Tabs */}
+        <motion.div
+          className="flex justify-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group h-full relative">
-                  {service.popular && (
-                    <Badge className="absolute -top-3 left-6 bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30 z-10">
-                      <Star className="w-3 h-3 mr-1" />
-                      Populaire
-                    </Badge>
-                  )}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40">
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
-                        {service.category}
-                      </Badge>
-                      <span className="text-gray-400 text-sm">{service.duration}</span>
-                    </div>
-                    <CardTitle className="text-xl text-white mb-3">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-300 mb-4">
-                      {service.description}
-                    </CardDescription>
-                    <div className="flex items-center mb-4">
-                      <span className="text-gray-400 text-sm">{service.participants}</span>
-                    </div>
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <Button 
-                      onClick={() => setSelectedService(service)}
-                      className="w-full bg-primary-500 text-darker-blue hover:bg-primary-600"
-                    >
-                      En savoir plus
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
+          <div className="inline-flex bg-white/5 rounded-lg p-1 w-full max-w-md">
+            <button
+              onClick={() => setActiveTab('scolaire')}
+              className={`flex-1 px-4 md:px-8 py-3 rounded-md font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeTab === 'scolaire'
+                  ? 'bg-primary-500 text-dark-blue'
+                  : 'text-white hover:bg-white/10'
+              }`}
+            >
+              <GraduationCap className="w-5 h-5" />
+              Scolaire
+            </button>
+            <button
+              onClick={() => setActiveTab('pro')}
+              className={`flex-1 px-4 md:px-8 py-3 rounded-md font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeTab === 'pro'
+                  ? 'bg-primary-500 text-dark-blue'
+                  : 'text-white hover:bg-white/10'
+              }`}
+            >
+              <Building2 className="w-5 h-5" />
+              Professionnel
+            </button>
+          </div>
         </motion.div>
+
+        {/* Services Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            {currentServices.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 * index }}
+                >
+                  <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group h-full relative">
+                    {service.popular && (
+                      <Badge className="absolute -top-3 left-6 bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30 z-10">
+                        <Star className="w-3 h-3 mr-1" />
+                        Populaire
+                      </Badge>
+                    )}
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/40">
+                      </div>
+                    </div>
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
+                          {service.category}
+                        </Badge>
+                        <span className="text-gray-400 text-sm">{service.duration}</span>
+                      </div>
+                      <CardTitle className="text-xl text-white mb-3">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-300 mb-4">
+                        {service.description}
+                      </CardDescription>
+                      <div className="flex items-center mb-4">
+                        <span className="text-gray-400 text-sm">{service.participants}</span>
+                      </div>
+                      <div className="space-y-2 mb-6">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400" />
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <Button
+                        onClick={() => setSelectedService(service)}
+                        className="w-full bg-primary-500 text-darker-blue hover:bg-primary-600"
+                      >
+                        En savoir plus
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </AnimatePresence>
 
 
         {/* Contact CTA */}

@@ -22,33 +22,33 @@ export const Cta4 = ({
   title = "Prêt à commencer votre aventure capoeira ?",
   description = "Rejoignez notre école de capoeira. Nos cours s'adaptent à tous les niveaux dans une ambiance conviviale et bienveillante.",
   buttonText = "Réserver un cours d'essai",
-  buttonUrl = "/contact",
+  buttonUrl = "/cours-tarifs",
   items = defaultItems,
 }: Cta4Props) => {
   return (
     <SectionWrapper paddingY="lg">
       <div className="w-full">
-        <div className="rounded-lg bg-slate-800/50 backdrop-blur-sm p-6 py-10 border border-slate-700/50 shadow-xl md:p-8 lg:p-12">
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row">
-            <div className="md:w-1/2 text-white">
-              <h2 className="mb-6 text-3xl font-medium text-white md:text-4xl lg:text-5xl">{title}</h2>
-              <p className="mb-6 text-lg text-white/80">{description}</p>
-              <Button className="bg-[#EAB308] hover:bg-[#F59E0B] text-dark-blue font-medium transition-colors" asChild>
-                <a href={buttonUrl}>
-                  {buttonText} <ArrowRight className="size-4" />
-                </a>
-              </Button>
-            </div>
-            <div className="md:w-1/3">
-              <ul className="flex flex-col space-y-2 text-base font-light text-white">
-                {items.map((item, idx) => (
-                  <li className="flex items-center text-white" key={idx}>
-                    <Check className="mr-4 size-4 flex-shrink-0 text-white" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-3xl p-8 md:p-12 border border-primary-500/20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-semibold text-white mb-4">{title}</h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">{description}</p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8">
+            {items.map((item, idx) => (
+              <div className="flex items-center text-gray-300" key={idx}>
+                <Check className="mr-2 size-4 flex-shrink-0 text-primary-500" />
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <Button className="bg-primary-500 hover:bg-primary-600 text-darker-blue font-medium transition-colors" size="lg" asChild>
+              <a href={buttonUrl}>
+                {buttonText} <ArrowRight className="ml-2 size-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>
