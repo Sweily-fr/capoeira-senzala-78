@@ -5,6 +5,7 @@ export interface Email {
   subject: string;
   preview: string;
   content?: string;
+  htmlContent?: string;
   timestamp: Date;
   read: boolean;
 }

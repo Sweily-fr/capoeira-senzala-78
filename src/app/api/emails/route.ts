@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { ImapFlow } from "imapflow";
+import { simpleParser } from "mailparser";
 
 export interface EmailData {
   id: string;
@@ -8,6 +9,7 @@ export interface EmailData {
   subject: string;
   preview: string;
   content: string;
+  htmlContent: string;
   timestamp: string;
   read: boolean;
 }
@@ -46,34 +48,27 @@ async function fetchEmails(): Promise<EmailData[]> {
     // Récupérer les emails
     for await (const message of client.fetch(range, {
       envelope: true,
-      bodyStructure: true,
       source: true,
       flags: true,
     })) {
       const envelope = message.envelope;
       const fromAddress = envelope.from?.[0];
 
-      // Extraire le contenu texte du message
       let content = "";
+      let htmlContent = "";
       let preview = "";
 
       if (message.source) {
-        const sourceText = message.source.toString();
+        // Utiliser mailparser pour parser correctement le contenu MIME
+        const parsed = await simpleParser(message.source);
 
-        // Extraire le corps du message (simplifié)
-        const bodyMatch = sourceText.split(/\r?\n\r?\n/).slice(1).join("\n\n");
-        content = bodyMatch || "";
+        // Contenu HTML (pour l'affichage riche)
+        htmlContent = parsed.html || "";
 
-        // Nettoyer le contenu HTML si présent
-        content = content
-          .replace(/<[^>]*>/g, "") // Supprimer les balises HTML
-          .replace(/=\r?\n/g, "") // Supprimer les sauts de ligne encodés
-          .replace(/=([0-9A-Fa-f]{2})/g, (_, hex) =>
-            String.fromCharCode(parseInt(hex, 16))
-          ) // Décoder quoted-printable
-          .trim();
+        // Contenu texte (pour le preview et le fallback)
+        content = parsed.text || "";
 
-        // Créer un aperçu
+        // Créer un aperçu à partir du texte brut
         preview = content.substring(0, 150).replace(/\s+/g, " ").trim();
         if (content.length > 150) preview += "...";
       }
@@ -87,6 +82,7 @@ async function fetchEmails(): Promise<EmailData[]> {
         subject: envelope.subject || "(Sans sujet)",
         preview,
         content,
+        htmlContent,
         timestamp: envelope.date?.toISOString() || new Date().toISOString(),
         read: isRead,
       });

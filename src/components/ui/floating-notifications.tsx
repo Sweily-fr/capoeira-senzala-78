@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bell, X, Mail, Check, ChevronRight, ArrowLeft, Loader2 } from "lucide-react";
+import { Bell, X, Mail, Check, ArrowLeft, Loader2 } from "lucide-react";
+import DOMPurify from "dompurify";
 import { useNotifications } from "@/context/NotificationContext";
 import { Email, formatRelativeTime } from "@/data/mockEmails";
 import { cn } from "@/lib/utils";
@@ -21,6 +22,14 @@ export function FloatingNotifications() {
   } = useNotifications();
 
   const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
+
+  const sanitizedHtml = useMemo(() => {
+    if (!selectedEmail?.htmlContent) return "";
+    return DOMPurify.sanitize(selectedEmail.htmlContent, {
+      ADD_TAGS: ["style"],
+      ADD_ATTR: ["target"],
+    });
+  }, [selectedEmail?.htmlContent]);
 
   const handleEmailClick = (email: Email) => {
     markAsRead(email.id);
@@ -53,7 +62,7 @@ export function FloatingNotifications() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                className="w-full max-w-lg max-h-[80vh] bg-dark-blue border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden pointer-events-auto"
+                className="w-full max-w-4xl max-h-[90vh] bg-dark-blue border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden pointer-events-auto"
               >
               {/* Header */}
               <div className="flex items-center gap-3 px-4 py-4 border-b border-white/10 flex-shrink-0">
@@ -99,10 +108,17 @@ export function FloatingNotifications() {
               </div>
 
               {/* Email content */}
-              <div className="flex-1 overflow-y-auto px-4 py-4">
-                <div className="text-white/80 text-sm leading-relaxed whitespace-pre-wrap">
-                  {selectedEmail.content || selectedEmail.preview}
-                </div>
+              <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4">
+                {sanitizedHtml ? (
+                  <div
+                    className="email-html-content text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+                  />
+                ) : (
+                  <div className="text-white/80 text-sm leading-relaxed whitespace-pre-wrap">
+                    {selectedEmail.content || selectedEmail.preview}
+                  </div>
+                )}
               </div>
 
             </motion.div>
@@ -240,13 +256,6 @@ export function FloatingNotifications() {
                     ))}
                   </div>
 
-                  {/* Footer */}
-                  <div className="px-4 py-3 border-t border-white/10">
-                    <button className="w-full text-center text-sm text-primary-500 hover:text-primary-400 transition-colors flex items-center justify-center gap-1">
-                      Voir toutes les notifications
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

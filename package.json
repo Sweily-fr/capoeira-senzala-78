@@ -30,11 +30,13 @@
     "@studio-freight/lenis": "^1.0.42",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dompurify": "^3.3.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.22",
     "gsap": "^3.13.0",
     "imapflow": "^1.2.8",
     "lucide-react": "^0.540.0",
+    "mailparser": "^3.9.3",
     "motion": "^12.23.12",
     "next": "^13.4.19",
     "radix-ui": "^1.4.3",
@@ -47,6 +49,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/mailparser": "^3.4.6",
     "@types/node": "24.3.0",
     "@types/react": "19.1.12",
     "autoprefixer": "^10.4.15",

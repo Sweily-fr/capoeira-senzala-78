@@ -403,3 +403,83 @@ body {
     transform: translateX(0);
   }
 }
+
+/* Styles pour le contenu HTML des emails dans le lecteur de notifications */
+.email-html-content {
+  color: rgba(255, 255, 255, 0.85);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.email-html-content * {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.email-html-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.email-html-content a {
+  color: #F9BB07;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.email-html-content a:hover {
+  color: #fcd34d;
+}
+
+.email-html-content p {
+  margin: 0.5rem 0;
+}
+
+.email-html-content h1,
+.email-html-content h2,
+.email-html-content h3,
+.email-html-content h4 {
+  color: white;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.email-html-content table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+
+.email-html-content td,
+.email-html-content th {
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top;
+}
+
+.email-html-content hr {
+  border-color: rgba(255, 255, 255, 0.15);
+  margin: 0.75rem 0;
+}
+
+.email-html-content strong,
+.email-html-content b {
+  color: white;
+  font-weight: 600;
+}
+
+.email-html-content ul,
+.email-html-content ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.email-html-content li {
+  margin: 0.25rem 0;
+}
