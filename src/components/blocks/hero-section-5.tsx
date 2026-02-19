@@ -262,7 +262,7 @@ const Navbar = () => {
         scrolled ? "backdrop-blur-lg bg-black/30 py-1" : "py-2"
       )}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-0">
         <Menu setActive={setActive}>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center">
