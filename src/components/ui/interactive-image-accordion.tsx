@@ -28,19 +28,19 @@ const features = [
 
 export function LandingAccordionItem() {
   return (
-    <div className="bg-dark-blue py-16 lg:py-24">
+    <div className="bg-dark-blue py-10 sm:py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-8">
-          <h2 className="text-3xl font-medium text-white md:text-4xl lg:text-5xl">
+          <h2 className="text-2xl font-medium text-white sm:text-3xl md:text-4xl lg:text-5xl">
             Commandez votre tenue et vos instruments
           </h2>
-          <p className="mt-4 text-lg text-gray-300">
+          <p className="mt-4 text-base sm:text-lg text-gray-300">
             Découvrez notre sélection de produits de qualité pour votre pratique de la capoeira.
           </p>
         </div>
         
         <div className="mx-auto mt-16 max-w-6xl">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <AnimatedFeatureCard
                 key={index}

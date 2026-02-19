@@ -148,7 +148,7 @@ export function AutoPlayVideoGallery({
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl font-medium text-white md:text-4xl lg:text-5xl mb-3 md:mb-4">
+            <h2 className="text-2xl font-medium text-white sm:text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4">
               Galerie vidéo
             </h2>
             <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto px-4">

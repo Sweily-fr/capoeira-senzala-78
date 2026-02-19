@@ -31,7 +31,7 @@ export default function ArticleDetail({ articleId }) {
 
   return (
     <div className="py-8 lg:py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Back Button */}
         <motion.div 
@@ -95,9 +95,9 @@ export default function ArticleDetail({ articleId }) {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-            <CardContent className="p-8 lg:p-12">
-              <div 
-                className="prose prose-lg prose-invert max-w-none
+            <CardContent className="p-4 sm:p-6 md:p-8 lg:p-12">
+              <div
+                className="prose prose-sm sm:prose-base md:prose-lg prose-invert max-w-none
                   prose-headings:text-white prose-headings:font-semibold
                   prose-p:text-gray-300 prose-p:leading-relaxed
                   prose-ul:text-gray-300 prose-li:text-gray-300

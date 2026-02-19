@@ -60,17 +60,17 @@ const InteractiveSelector = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#222] font-sans text-white"> 
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#222] font-sans text-white px-4 sm:px-6">
       {/* Header Section */}
-      <div className="w-full max-w-2xl px-6 mt-8 mb-2 text-center">
-        <h1 className="text-4xl md:text-5xl font-semibold text-white mb-3 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">Escape in Style</h1>
-        <p className="text-lg md:text-xl text-gray-300 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">Discover luxurious camping experiences in nature's most breathtaking spots.</p>
+      <div className="w-full max-w-2xl px-4 sm:px-6 mt-8 mb-2 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">Escape in Style</h1>
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">Discover luxurious camping experiences in nature's most breathtaking spots.</p>
       </div>
 
-      <div className="h-12"></div>
+      <div className="h-6 sm:h-12"></div>
 
       {/* Options Container */}
-      <div className="options flex w-full max-w-[900px] min-w-[600px] h-[400px] mx-0 items-stretch overflow-hidden relative">
+      <div className="options flex w-full max-w-[900px] h-[250px] sm:h-[320px] md:h-[400px] mx-0 items-stretch overflow-hidden relative">
         {options.map((option, index) => (
           <div
             key={index}
@@ -85,8 +85,8 @@ const InteractiveSelector = () => {
               backfaceVisibility: 'hidden',
               opacity: animatedOptions.includes(index) ? 1 : 0,
               transform: animatedOptions.includes(index) ? 'translateX(0)' : 'translateX(-60px)',
-              minWidth: '60px',
-              minHeight: '100px',
+              minWidth: '40px',
+              minHeight: '80px',
               margin: 0,
               borderRadius: 0,
               borderWidth: '2px',
@@ -122,12 +122,12 @@ const InteractiveSelector = () => {
             
             {/* Label with icon and info */}
             <div className="label absolute left-0 right-0 bottom-5 flex items-center justify-start h-12 z-2 pointer-events-none px-4 gap-3 w-full">
-              <div className="icon min-w-[44px] max-w-[44px] h-[44px] flex items-center justify-center rounded-full bg-[rgba(32,32,32,0.85)] backdrop-blur-[10px] shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 border-[#444] flex-shrink-0 flex-grow-0 transition-all duration-200">
+              <div className="icon min-w-[32px] max-w-[32px] h-[32px] sm:min-w-[44px] sm:max-w-[44px] sm:h-[44px] flex items-center justify-center rounded-full bg-[rgba(32,32,32,0.85)] backdrop-blur-[10px] shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 border-[#444] flex-shrink-0 flex-grow-0 transition-all duration-200">
                 {option.icon}
               </div>
               <div className="info text-white whitespace-pre relative">
                 <div 
-                  className="main font-bold text-lg transition-all duration-700 ease-in-out"
+                  className="main font-bold text-sm sm:text-base md:text-lg transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
                     transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'
@@ -136,7 +136,7 @@ const InteractiveSelector = () => {
                   {option.title}
                 </div>
                 <div 
-                  className="sub text-base text-gray-300 transition-all duration-700 ease-in-out"
+                  className="sub text-xs sm:text-sm md:text-base text-gray-300 transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
                     transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'

@@ -56,7 +56,7 @@ export default function ContactPage() {
           heroImage="/images/hero-section-img/contact.jpg"
         />
 
-        <section className="py-16 lg:py-24">
+        <section className="py-10 sm:py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Section titre */}
@@ -66,17 +66,17 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4">
                 Comment nous joindre ?
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
                 Plusieurs moyens sont à votre disposition pour nous contacter. N'hésitez pas, nous vous répondrons dans les plus brefs délais.
               </p>
             </motion.div>
 
             {/* Cards de contact */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -131,7 +131,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Section principale avec image et infos */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-stretch">
 
               {/* Colonne gauche - Image */}
               <motion.div
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="relative rounded-2xl overflow-hidden h-full min-h-[500px]">
+                <div className="relative rounded-2xl overflow-hidden h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
                   <Image
                     src="/images/professionnelle/bananapro.jpg"
                     alt="Cours de capoeira Senzala 78"
@@ -149,8 +149,8 @@ export default function ContactPage() {
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h3 className="text-2xl font-semibold mb-3">Venez nous rencontrer</h3>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+                    <h3 className="text-xl sm:text-2xl font-semibold mb-3">Venez nous rencontrer</h3>
                     <p className="text-gray-200 mb-4">
                       Découvrez l'univers de la capoeira lors d'un cours d'essai gratuit.
                     </p>
@@ -176,9 +176,9 @@ export default function ContactPage() {
               >
                 {/* Card message direct */}
                 <Card className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border-primary-500/20">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                  <CardContent className="p-5 sm:p-6 md:p-8">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0">
                         <MessageCircle className="w-6 h-6 text-primary-500" />
                       </div>
                       <div>

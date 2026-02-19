@@ -4,7 +4,7 @@ import { events } from '@/data/events';
 
 const EventCard = ({ event }) => {
   return (
-    <div className="flex-shrink-0 w-48 h-64 rounded-xl overflow-hidden border border-white/10 bg-dark-blue/50 backdrop-blur-sm">
+    <div className="flex-shrink-0 w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 rounded-xl overflow-hidden border border-white/10 bg-dark-blue/50 backdrop-blur-sm">
       <div className="relative w-full h-full">
         <img
           src={event.image}

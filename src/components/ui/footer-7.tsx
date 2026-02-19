@@ -81,8 +81,8 @@ export const Footer7 = ({
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
   return (
-    <section className="py-20 bg-dark-blue text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-dark-blue text-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             {/* Logo */}
@@ -92,14 +92,14 @@ export const Footer7 = ({
                   src="/images/logo-capoeirasenzala1.png"
                   alt={logo.alt}
                   title={logo.title}
-                  className="h-16 w-auto"
+                  className="h-12 sm:h-14 lg:h-16 w-auto"
                 />
               </a>
             </div>
-            <p className="max-w-[70%] text-sm text-white">
+            <p className="max-w-full sm:max-w-[70%] text-sm text-white">
               {description}
             </p>
-            <ul className="flex items-center space-x-6 mt-4">
+            <ul className="flex items-center space-x-4 sm:space-x-6 mt-4">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="text-white hover:text-[#EAB308] transition-colors">
                   <a href={social.href} aria-label={social.label} className="text-2xl">

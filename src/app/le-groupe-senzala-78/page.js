@@ -41,7 +41,7 @@ export default function LeGroupeSenzala78() {
                   videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
                   title="Building the Future"
                   description="A look into modern architecture and design."
-                  className="rounded-xl w-full h-[500px]"
+                  className="rounded-xl w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px]"
                 />
               </div>
             </div>

@@ -28,10 +28,10 @@ export const Cta4 = ({
   return (
     <SectionWrapper paddingY="lg">
       <div className="w-full">
-        <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-3xl p-8 md:p-12 border border-primary-500/20">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-semibold text-white mb-4">{title}</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">{description}</p>
+        <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 border border-primary-500/20">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4">{title}</h2>
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">{description}</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8">

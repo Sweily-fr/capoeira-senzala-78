@@ -49,13 +49,13 @@ export default function EventsList() {
   };
 
   return (
-    <div className="py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <div className="py-10 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -63,7 +63,7 @@ export default function EventsList() {
             Événements à venir
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -73,7 +73,7 @@ export default function EventsList() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
           {categories.map((category) => (
             <Button
               key={category}
@@ -99,8 +99,8 @@ export default function EventsList() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Card className="bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-0">
-                <div className="relative h-64 lg:h-auto">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-48 sm:h-64 md:h-auto">
                   <img
                     src={featuredEvent.image}
                     alt={featuredEvent.title}
@@ -116,7 +116,7 @@ export default function EventsList() {
                     </Badge>
                   </div>
                 </div>
-                <CardContent className="p-8 flex flex-col justify-center">
+                <CardContent className="p-5 sm:p-6 md:p-8 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-4">
                     <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                       {featuredEvent.category}
@@ -169,7 +169,7 @@ export default function EventsList() {
 
         {/* Events Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}

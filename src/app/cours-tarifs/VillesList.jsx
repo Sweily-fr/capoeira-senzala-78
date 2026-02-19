@@ -204,7 +204,7 @@ export default function VillesList() {
                   {/* Tableau unique avec tous les cours */}
                   <div className="bg-white/5 rounded-lg overflow-hidden">
                     <div className="overflow-x-auto">
-                      <table className="w-full min-w-[600px]">
+                      <table className="w-full min-w-[480px] sm:min-w-[600px]">
                         <thead>
                           <tr className="text-left text-xs md:text-sm text-gray-300 border-b border-white/10 bg-white/10">
                             <th className="p-2 md:p-3 w-1/5">Jour</th>

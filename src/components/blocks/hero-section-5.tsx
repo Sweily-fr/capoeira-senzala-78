@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { ChevronRight, Bell } from "lucide-react";
 import { useScroll, motion } from "motion/react";
 import Image from "next/image";
-import { Menu as MenuIcon } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 import { Menu, MenuItem, ProductItem, HoveredLink } from "@/components/ui/navbar-menu";
 import { usePathname } from "next/navigation";
 import { useNotifications } from "@/context/NotificationContext";
@@ -233,6 +233,7 @@ const navItems = [
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -342,78 +343,106 @@ const Navbar = () => {
 
               <div className="md:hidden">
                 <MenuIcon
-                  className="h-6 w-6 cursor-pointer"
-                  onClick={() => setActive(active ? null : "Menu")}
+                  className="h-6 w-6 cursor-pointer text-white"
+                  onClick={() => setMobileOpen(true)}
                 />
               </div>
             </div>
           </div>
-
-          {/* Mobile menu */}
-          {active === "Menu" && (
-            <div className="md:hidden mt-4 space-y-2">
-              {navItems.map((item) => (
-                <div key={item.name}>
-                  {item.submenu ? (
-                    <div className="mb-2">
-                      <div className="px-4 py-2 font-normal text-white">
-                        {item.name}
-                      </div>
-                      <div className="ml-4 mt-1 space-y-1">
-                        {item.submenu.map((subItem) => (
-                          <div key={subItem.name} className="px-4 py-2 hover:bg-gray-200/50 dark:hover:bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-[1.02] group">
-                            <HoveredLink
-                              href={subItem.href}
-                              className="w-full h-full block group-hover:text-primary-500 transition-colors duration-200"
-                              onClick={() => setActive(null)}
-                            >
-                              {subItem.name}
-                            </HoveredLink>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <HoveredLink
-                      href={item.href}
-                      className="block px-4 py-2 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 hover:text-primary-500 rounded-lg transition-all duration-200"
-                      onClick={() => setActive(null)}
-                    >
-                      {item.name}
-                    </HoveredLink>
-                  )}
-                </div>
-              ))}
-              <div className="w-full mt-2 md:hidden flex items-center gap-3 px-4 py-2">
-                <button
-                  onClick={() => {
-                    openFromNavbar();
-                    setActive(null);
-                  }}
-                  className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
-                >
-                  <Bell className="w-5 h-5 text-white flex-shrink-0" />
-                  {unreadCount > 0 && (
-                    <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">
-                      {unreadCount > 9 ? "9+" : unreadCount}
-                    </span>
-                  )}
-                </button>
-                <Button
-                  asChild
-                  size="sm"
-                  className="flex-1 bg-primary-500 text-white hover:bg-primary-600"
-                  onClick={() => setActive(null)}
-                >
-                  <Link href="/cours-tarifs">
-                    S'inscrire
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          )}
         </Menu>
       </div>
+
+      {/* Mobile menu overlay */}
+      {mobileOpen && (
+        <div className="md:hidden fixed inset-0 z-[60] bg-dark-blue flex flex-col h-[100dvh]">
+          {/* Header with logo and close */}
+          <div className="flex-shrink-0 flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <Link href="/" onClick={() => setMobileOpen(false)}>
+              <Logo />
+            </Link>
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="p-2 rounded-full hover:bg-white/10 transition-colors"
+            >
+              <X className="h-6 w-6 text-white" />
+            </button>
+          </div>
+
+          {/* Nav items */}
+          <nav className="flex-1 overflow-y-auto px-5 py-4">
+            <ul className="space-y-1">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  {item.submenu ? (
+                    <div className="mt-3 mb-1">
+                      <span className="block px-3 pb-2 text-xs font-semibold text-white/40 uppercase tracking-widest">
+                        {item.name}
+                      </span>
+                      <ul className="space-y-0.5 pl-2 border-l border-white/10 ml-3">
+                        {item.submenu.map((subItem) => (
+                          <li key={subItem.name}>
+                            <Link
+                              href={subItem.href}
+                              onClick={() => setMobileOpen(false)}
+                              className={`block px-3 py-2.5 rounded-lg text-[15px] transition-colors duration-200 ${
+                                pathname === subItem.href
+                                  ? 'bg-primary-500/15 text-primary-500 font-medium'
+                                  : 'text-white/70 hover:bg-white/5 hover:text-white'
+                              }`}
+                            >
+                              {subItem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`block px-3 py-3 rounded-lg text-[15px] font-medium transition-colors duration-200 ${
+                        pathname === item.href
+                          ? 'bg-primary-500/15 text-primary-500'
+                          : 'text-white hover:bg-white/5'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Bottom actions */}
+          <div className="flex-shrink-0 px-5 py-4 border-t border-white/10 flex items-center gap-3">
+            <button
+              onClick={() => {
+                openFromNavbar();
+                setMobileOpen(false);
+              }}
+              className="relative p-2.5 hover:bg-white/10 rounded-full transition-colors border border-white/10"
+            >
+              <Bell className="w-5 h-5 text-white flex-shrink-0" />
+              {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">
+                  {unreadCount > 9 ? "9+" : unreadCount}
+                </span>
+              )}
+            </button>
+            <Button
+              asChild
+              size="lg"
+              className="flex-1 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold rounded-xl"
+              onClick={() => setMobileOpen(false)}
+            >
+              <Link href="/cours-tarifs">
+                S'inscrire
+              </Link>
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

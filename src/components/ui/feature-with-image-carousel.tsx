@@ -9,9 +9,9 @@ import {
 
 function Feature() {
   return (
-    <div className="w-full py-16 lg:py-24 bg-dark-blue">
+    <div className="w-full py-10 sm:py-16 lg:py-24 bg-dark-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:flex-row-reverse">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 sm:gap-8 lg:gap-12 lg:flex-row-reverse">
           <div className="bg-gray-800/50 rounded-xl overflow-hidden shadow-xl">
             <Carousel>
               <CarouselContent>
@@ -45,10 +45,10 @@ function Feature() {
                 <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">Nos Services</Badge>
             </div>
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white">
                 Nos prestations
               </h2>
-              <p className="text-lg text-gray-300 max-w-xl">
+              <p className="text-base sm:text-lg text-gray-300 max-w-xl">
                 Interventions scolaires, animations d'entreprise, spectacles et événements privés.
                 Nous proposons des prestations éducatives et culturelles adaptées pour écoles,
                 entreprises et collectivités.

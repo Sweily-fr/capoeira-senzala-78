@@ -137,14 +137,14 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section className="py-10 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
         <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-medium text-white md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl font-medium text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {title}
             </h2>
-            <p className="max-w-lg text-lg text-white/80">{description}</p>
+            <p className="max-w-lg text-base sm:text-lg text-white/80">{description}</p>
           </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
@@ -172,7 +172,7 @@ const Gallery4 = ({
           </div>
         </div>
       </div>
-      <div className="w-full pl-6 lg:pl-12">
+      <div className="w-full pl-4 sm:pl-6 lg:pl-12">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -187,10 +187,10 @@ const Gallery4 = ({
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-0 pr-5 lg:max-w-[360px]"
+                className="max-w-[260px] sm:max-w-[300px] md:max-w-[320px] pl-0 pr-3 sm:pr-5 lg:max-w-[360px]"
               >
                 <a href={item.href} className="group rounded-xl">
-                  <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                  <div className="group relative h-full min-h-[20rem] sm:min-h-[24rem] md:min-h-[27rem] max-w-full overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[5/4] lg:aspect-[16/9]">
                     <img
                       src={item.image}
                       alt={item.title}

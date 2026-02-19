@@ -81,10 +81,10 @@ const Feature108 = ({
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">{badge}</Badge>
-          <h2 className="max-w-3xl text-3xl font-medium text-white md:text-4xl lg:text-5xl">
+          <h2 className="max-w-3xl text-2xl font-medium text-white sm:text-3xl md:text-4xl lg:text-5xl">
             {heading}
           </h2>
-          <p className="max-w-2xl text-lg text-white/80">{description}</p>
+          <p className="max-w-2xl text-base sm:text-lg text-white/80">{description}</p>
         </div>
         <Tabs defaultValue={tabs[0].value} className="mt-8">
           <TabsList className="container flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-10">
@@ -103,7 +103,7 @@ const Feature108 = ({
               <TabsContent
                 key={tab.value}
                 value={tab.value}
-                className="grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10"
+                className="grid place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10 p-4 sm:p-6 lg:p-0"
               >
                 <div className="flex flex-col gap-6 text-white">
                   <Badge className="w-fit bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
@@ -119,7 +119,7 @@ const Feature108 = ({
                     {tab.content.buttonText}
                   </Button>
                 </div>
-                <div className="w-full h-[400px] overflow-hidden rounded-xl border-2 border-white/20">
+                <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl border-2 border-white/20">
                   <img
                     src={tab.content.imageSrc}
                     alt={tab.content.imageAlt}

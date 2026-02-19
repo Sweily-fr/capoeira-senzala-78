@@ -136,13 +136,13 @@ export default function PrestationsSection() {
   const currentServices = activeTab === 'scolaire' ? servicesScolaires : servicesPro;
 
   return (
-    <div className="py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <div className="py-10 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         {/* Header */}
         <div className="text-center mb-12">
           <motion.h2
-            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -150,7 +150,7 @@ export default function PrestationsSection() {
             Nos Prestations
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -196,7 +196,7 @@ export default function PrestationsSection() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -275,11 +275,11 @@ export default function PrestationsSection() {
           transition={{ duration: 0.6, delay: 1.2 }}
         >
           <Card className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border-primary-500/20 max-w-4xl mx-auto">
-            <CardContent className="p-12">
-              <h3 className="text-3xl font-semibold text-white mb-4">
+            <CardContent className="p-6 sm:p-8 md:p-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4">
                 Prêt à organiser votre événement ?
               </h3>
-              <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Contactez-nous pour discuter de votre projet et recevoir un devis adapté à vos besoins.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -317,7 +317,7 @@ export default function PrestationsSection() {
           <Card className="bg-dark-blue border-white/10 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle className="text-2xl text-white">{selectedService.title}</CardTitle>
+                <CardTitle className="text-lg sm:text-xl md:text-2xl text-white">{selectedService.title}</CardTitle>
                 <Button 
                   variant="ghost" 
                   size="sm"
@@ -336,7 +336,7 @@ export default function PrestationsSection() {
               />
               <p className="text-gray-300 mb-6">{selectedService.fullDescription}</p>
               
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div>
                   <h4 className="text-white font-medium mb-2">Durée</h4>
                   <p className="text-gray-300">{selectedService.duration}</p>

@@ -104,13 +104,13 @@ const partnersLogos = [
 export default function PartnersSection() {
 
   return (
-    <div className="py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <div className="py-10 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Header Section */}
         <div className="text-center mb-16">
           <motion.h2
-            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -118,7 +118,7 @@ export default function PartnersSection() {
             Nos Partenaires
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,11 +140,11 @@ export default function PartnersSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-3xl p-12 border border-primary-500/20">
-            <h3 className="text-3xl font-semibold text-white mb-4">
+          <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-primary-500/20">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4">
               Devenir Partenaire
             </h3>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
               Rejoignez notre réseau de partenaires. Découvrez les opportunités de collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -162,26 +162,26 @@ export default function PartnersSection() {
 
         {/* Statistics Section */}
         <motion.div 
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">15+</div>
-            <div className="text-gray-300">Années de partenariats</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-500 mb-2">15+</div>
+            <div className="text-gray-300 text-sm sm:text-base">Années de partenariats</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">50+</div>
-            <div className="text-gray-300">Événements organisés</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-500 mb-2">50+</div>
+            <div className="text-gray-300 text-sm sm:text-base">Événements organisés</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">1000+</div>
-            <div className="text-gray-300">Participants touchés</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-500 mb-2">1000+</div>
+            <div className="text-gray-300 text-sm sm:text-base">Participants touchés</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-2">25+</div>
-            <div className="text-gray-300">Partenaires actifs</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-500 mb-2">25+</div>
+            <div className="text-gray-300 text-sm sm:text-base">Partenaires actifs</div>
           </div>
         </motion.div>
       </div>
