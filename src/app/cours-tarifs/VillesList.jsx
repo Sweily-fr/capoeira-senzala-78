@@ -80,7 +80,7 @@ export default function VillesList() {
           <aside className="w-full lg:w-72 xl:w-80 shrink-0 lg:sticky lg:top-[130px] lg:self-start">
             <div className="bg-white/5 p-3 md:p-4 rounded-lg">
               <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Villes</h3>
-              
+
               {/* Champ de recherche */}
               <div className="mb-3">
                 <input
@@ -92,15 +92,37 @@ export default function VillesList() {
                 />
               </div>
 
-              <div className="space-y-1 overflow-y-auto pr-2 max-h-[300px] lg:max-h-[calc(100vh-320px)]">
+              {/* Mobile : grille scrollable de boutons */}
+              <div className="lg:hidden flex flex-wrap gap-2 max-h-[200px] overflow-y-auto pr-1">
                 {villes.length > 0 ? (
                   villes.map(([key, ville]) => (
                     <button
                       key={key}
                       onClick={() => handleVilleChange(key)}
-                      className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-md transition-colors text-sm md:text-base ${
-                        selectedVille === key 
-                          ? 'bg-primary-500 text-dark-blue font-medium' 
+                      className={`px-3 py-1.5 rounded-full transition-colors text-xs font-medium ${
+                        selectedVille === key
+                          ? 'bg-primary-500 text-dark-blue'
+                          : 'bg-white/10 hover:bg-white/20'
+                      }`}
+                    >
+                      {ville.nom}
+                    </button>
+                  ))
+                ) : (
+                  <p className="text-gray-400 text-sm text-center py-4 w-full">Aucune ville trouvée</p>
+                )}
+              </div>
+
+              {/* Desktop : liste verticale */}
+              <div className="hidden lg:block space-y-1 overflow-y-auto pr-2 max-h-[calc(100vh-320px)]">
+                {villes.length > 0 ? (
+                  villes.map(([key, ville]) => (
+                    <button
+                      key={key}
+                      onClick={() => handleVilleChange(key)}
+                      className={`w-full text-left px-4 py-3 rounded-md transition-colors text-base ${
+                        selectedVille === key
+                          ? 'bg-primary-500 text-dark-blue font-medium'
                           : 'hover:bg-white/10'
                       }`}
                     >
@@ -232,54 +254,86 @@ export default function VillesList() {
                     </div>
                   )}
 
-                  {/* Tableau unique avec tous les cours */}
-                  <div className="bg-white/5 rounded-lg overflow-hidden">
-                    <div className="overflow-x-auto">
-                      <table className="w-full min-w-[480px] sm:min-w-[600px]">
-                        <thead>
-                          <tr className="text-left text-xs md:text-sm text-gray-300 border-b border-white/10 bg-white/10">
-                            <th className="p-2 md:p-3 w-1/5">Jour</th>
-                            <th className="p-2 md:p-3 w-1/5">Horaire</th>
-                            <th className="p-2 md:p-3 w-1/4">Âge</th>
-                            <th className="p-2 md:p-3">Lieu</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {villeData.cours.map((jour, jourIndex) => (
-                            jour.cours.map((cours, coursIndex) => (
-                              <tr 
-                                key={`${jourIndex}-${coursIndex}`} 
-                                className={`border-b border-white/5 ${(jourIndex + coursIndex) % 2 === 0 ? 'bg-white/5' : 'bg-white/[0.03]'}`}
-                              >
-                                {coursIndex === 0 && (
-                                  <td 
-                                    className="p-2 md:p-3 align-top" 
-                                    rowSpan={jour.cours.length}
-                                  >
-                                    <div className="flex flex-col gap-1.5 md:gap-2">
-                                      <span className="font-semibold text-primary-500 text-xs md:text-sm">{jour.jour}</span>
-                                      {jour.inscriptionHref && (
-                                        <a 
-                                          href={jour.inscriptionHref} 
-                                          target="_blank" 
-                                          rel="noopener noreferrer"
-                                          className="bg-primary-500 text-dark-blue font-bold py-1 px-3 md:px-6 rounded hover:bg-primary-400 transition-colors text-xs text-center whitespace-nowrap inline-block w-fit"
-                                        >
-                                          S'inscrire
-                                        </a>
-                                      )}
-                                    </div>
-                                  </td>
-                                )}
-                                <td className="p-2 md:p-3 font-medium text-xs md:text-sm">{cours.heure}</td>
-                                <td className="p-2 md:p-3 text-xs md:text-sm">{cours.age}</td>
-                                <td className="p-2 md:p-3 text-xs md:text-sm">{cours.lieu}</td>
-                              </tr>
-                            ))
+                  {/* Cours - Cards mobile / Tableau desktop */}
+
+                  {/* Mobile : affichage en cards */}
+                  <div className="sm:hidden space-y-4">
+                    {villeData.cours.map((jour, jourIndex) => (
+                      <div key={jourIndex} className="bg-white/5 rounded-lg overflow-hidden">
+                        <div className="flex items-center justify-between bg-white/10 px-3 py-2.5">
+                          <span className="font-semibold text-primary-500 text-sm">{jour.jour}</span>
+                          {jour.inscriptionHref && (
+                            <a
+                              href={jour.inscriptionHref}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-primary-500 text-dark-blue font-bold py-1 px-3 rounded hover:bg-primary-400 transition-colors text-xs"
+                            >
+                              S'inscrire
+                            </a>
+                          )}
+                        </div>
+                        <div className="divide-y divide-white/5">
+                          {jour.cours.map((cours, coursIndex) => (
+                            <div key={coursIndex} className="px-3 py-3 space-y-1">
+                              <div className="flex items-center justify-between">
+                                <span className="font-medium text-sm">{cours.heure}</span>
+                                <span className="text-xs text-gray-300 bg-white/10 px-2 py-0.5 rounded-full">{cours.age}</span>
+                              </div>
+                              <p className="text-xs text-gray-400">{cours.lieu}</p>
+                            </div>
                           ))}
-                        </tbody>
-                      </table>
-                    </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Desktop : tableau */}
+                  <div className="hidden sm:block bg-white/5 rounded-lg overflow-hidden">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="text-left text-xs md:text-sm text-gray-300 border-b border-white/10 bg-white/10">
+                          <th className="p-2 md:p-3 w-1/5">Jour</th>
+                          <th className="p-2 md:p-3 w-1/5">Horaire</th>
+                          <th className="p-2 md:p-3 w-1/4">Âge</th>
+                          <th className="p-2 md:p-3">Lieu</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {villeData.cours.map((jour, jourIndex) => (
+                          jour.cours.map((cours, coursIndex) => (
+                            <tr
+                              key={`${jourIndex}-${coursIndex}`}
+                              className={`border-b border-white/5 ${(jourIndex + coursIndex) % 2 === 0 ? 'bg-white/5' : 'bg-white/[0.03]'}`}
+                            >
+                              {coursIndex === 0 && (
+                                <td
+                                  className="p-2 md:p-3 align-top"
+                                  rowSpan={jour.cours.length}
+                                >
+                                  <div className="flex flex-col gap-1.5 md:gap-2">
+                                    <span className="font-semibold text-primary-500 text-xs md:text-sm">{jour.jour}</span>
+                                    {jour.inscriptionHref && (
+                                      <a
+                                        href={jour.inscriptionHref}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-primary-500 text-dark-blue font-bold py-1 px-3 md:px-6 rounded hover:bg-primary-400 transition-colors text-xs text-center whitespace-nowrap inline-block w-fit"
+                                      >
+                                        S'inscrire
+                                      </a>
+                                    )}
+                                  </div>
+                                </td>
+                              )}
+                              <td className="p-2 md:p-3 font-medium text-xs md:text-sm">{cours.heure}</td>
+                              <td className="p-2 md:p-3 text-xs md:text-sm">{cours.age}</td>
+                              <td className="p-2 md:p-3 text-xs md:text-sm">{cours.lieu}</td>
+                            </tr>
+                          ))
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </>
               )}
