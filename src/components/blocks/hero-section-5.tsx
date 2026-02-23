@@ -30,7 +30,7 @@ export function HeroSection({
 } = {}) {
   return (
     <>
-      <main className="overflow-x-hidden bg-dark-blue min-h-[100dvh] flex flex-col">
+      <main className="overflow-x-hidden bg-dark-blue min-h-[100svh] flex flex-col">
         <Navbar />
         <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen">
           <div className="absolute inset-0 overflow-hidden m-2 rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/5 lg:rounded-[3rem]">
