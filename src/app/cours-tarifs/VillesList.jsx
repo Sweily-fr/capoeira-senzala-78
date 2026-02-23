@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 import coursParVille from '@/data/cours';
+import { getProfesseursParVille } from '@/data/professeurs';
 
 export default function VillesList() {
   const [activeTab, setActiveTab] = useState('capoeira');
@@ -131,6 +133,35 @@ export default function VillesList() {
                       </a>
                     )}
                   </div>
+
+                  {/* Professeurs de la ville */}
+                  {activeTab === 'capoeira' && (() => {
+                    const profs = getProfesseursParVille(selectedVille);
+                    if (profs.length === 0) return null;
+                    return (
+                      <div className="mb-4 md:mb-6">
+                        <h4 className="font-semibold mb-3 text-sm md:text-base text-gray-300">
+                          {profs.length > 1 ? 'Professeurs' : 'Professeur'}
+                        </h4>
+                        <div className="flex flex-wrap gap-4">
+                          {profs.map((prof) => (
+                            <div key={prof.id} className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3">
+                              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white/10">
+                                <Image
+                                  src={prof.photo}
+                                  alt={prof.nomComplet}
+                                  fill
+                                  className="object-cover"
+                                  sizes="48px"
+                                />
+                              </div>
+                              <span className="text-sm md:text-base font-medium">{prof.nomComplet}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   {villeData.contact && (
                     <div className="mb-4 md:mb-6 p-3 md:p-4 bg-white/5 rounded-lg">
