@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
@@ -28,9 +28,23 @@ export function HeroSection({
   heroImage?: string;
   customBackground?: React.ReactNode;
 } = {}) {
+  const heroRef = useRef<HTMLElement>(null);
+  const [heroHeight, setHeroHeight] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Lock the hero height on mount to prevent resize when mobile address bar hides
+    if (heroRef.current) {
+      setHeroHeight(heroRef.current.offsetHeight);
+    }
+  }, []);
+
   return (
     <>
-      <main className="overflow-x-hidden bg-dark-blue min-h-[100svh] flex flex-col">
+      <main
+        ref={heroRef}
+        className="overflow-x-hidden bg-dark-blue flex flex-col"
+        style={{ minHeight: heroHeight ? `${heroHeight}px` : '100svh' }}
+      >
         <Navbar />
         <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen">
           <div className="absolute inset-0 overflow-hidden m-2 rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/5 lg:rounded-[3rem]">
