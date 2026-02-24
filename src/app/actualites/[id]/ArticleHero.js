@@ -44,7 +44,7 @@ export default function ArticleHero({ articleId }) {
         </div>
         <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
           <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:block lg:px-12">
-            <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
+            <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
               {/* Category Badge */}
               {category && (
                 <Badge className="bg-primary-500 text-darker-blue hover:bg-primary-600 mb-4">
@@ -61,7 +61,7 @@ export default function ArticleHero({ articleId }) {
 
               {/* Article Meta */}
               {article && (
-                <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-white/70 text-sm">
+                <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-start gap-4 sm:gap-6 text-white/70 text-sm">
                   {author && (
                     <div className="flex items-center gap-2">
                       <User className="w-4 h-4" />

@@ -14,7 +14,7 @@ export const professeurs = [
     id: 'orlane-silva',
     nom: 'Orlane',
     prenom: 'Mestra',
-    photo: '/images/professeurs/cathy.jpeg',
+    photo: '/images/professeurs/orlane.jpg',
     email: 'mariana.santos@example.com',
     telephone: '06 23 45 67 89',
     villes: ['triel', 'vernouillet', 'verneuil']

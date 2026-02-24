@@ -1,4 +1,4 @@
-import { HeroSection } from '@/components/blocks/hero-section-5';
+import HeroWithPartners from '@/components/blocks/HeroWithPartners';
 import HomeSections from '../components/HomeSections';
 import Footer from '../components/Footer';
 
@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-        <HeroSection />
+        <HeroWithPartners />
         <div className="bg-dark-blue">
           <HomeSections />
         </div>

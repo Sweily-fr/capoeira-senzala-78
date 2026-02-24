@@ -25,6 +25,7 @@ export interface PartnerLogo {
   src: string
   alt: string
   height: number
+  imgClassName?: string
 }
 
 interface PartnersSectionProps {
@@ -48,12 +49,12 @@ export function PartnersSection({ partners = [], className }: PartnersSectionPro
             },
             ...transitionVariants,
           }}
-          className="mx-auto grid max-w-4xl grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-14"
+          className="mx-auto grid max-w-4xl grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-14 place-items-center"
         >
           {partners.map((logo, index) => (
-            <div key={index} className="flex group">
+            <div key={index} className="flex items-center">
               <img
-                className="mx-auto h-auto w-fit filter brightness-0 invert transition-all duration-300 group-hover:brightness-100 group-hover:invert-0"
+                className={`mx-auto h-auto w-fit max-h-16 sm:max-h-20 ${logo.imgClassName ?? ""}`}
                 src={logo.src}
                 alt={logo.alt}
                 height={logo.height}

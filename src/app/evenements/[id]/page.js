@@ -1,4 +1,4 @@
-import { HeroSection } from '@/components/blocks/hero-section-5';
+import HeroWithPartners from '@/components/blocks/HeroWithPartners';
 import Footer from '../../../components/Footer';
 import EventDetail from './EventDetail';
 
@@ -6,7 +6,7 @@ export default function EventPage({ params }) {
   return (
     <>
       <main className="flex flex-col">
-        <HeroSection 
+        <HeroWithPartners 
           title="Événement"
           subtitle="Détails de l'événement"
         />
