@@ -1,0 +1,21 @@
+{
+  "nom": "Le Boulou",
+  "inscriptionHref": "",
+  "cours": [
+    {
+      "jour": "Lundi",
+      "cours": [
+        {
+          "heure": "18h30 - 19h30",
+          "age": "Enfants",
+          "lieu": "Gymnase Les Echards - 66160 Le Boulou"
+        },
+        {
+          "heure": "19h30 - 21h30",
+          "age": "Adultes",
+          "lieu": "Gymnase Les Echards - 66160 Le Boulou"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "nom": "Sarre-Union",
+  "inscriptionHref": "",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "17h30 - 18h30",
+          "age": "Enfants",
+          "lieu": "Complexe de la Corderie - Sarre-Union"
+        },
+        {
+          "heure": "18h30 - 20h00",
+          "age": "Adultes",
+          "lieu": "Complexe de la Corderie - Sarre-Union"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "16h00 - 17h30",
+          "age": "Adultes",
+          "lieu": "Complexe de la Corderie - Sarre-Union"
+        }
+      ]
+    }
+  ]
+}

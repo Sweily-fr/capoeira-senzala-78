@@ -23,6 +23,7 @@ export const professeurs = [
     id: 'hanaa-aangour',
     nom: 'Positiva',
     prenom: 'Professora',
+    focus: 'bottom',
     photo: '/images/professeurs/hanaa.jpeg',
     email: 'rafael.oliveira@example.com',
     telephone: '06 34 56 78 90',
@@ -32,6 +33,7 @@ export const professeurs = [
     id: 'treme-treme',
     nom: 'Treme treme',
     prenom: 'Professor',
+    focus: 'top',
     photo: '/images/professeurs/Tremetreme.jpg',
     email: 'juliana.pereira@example.com',
     telephone: '06 45 67 89 01',
@@ -41,10 +43,20 @@ export const professeurs = [
     id: 'sininho',
     nom: 'Sininho',
     prenom: 'Professora',
+    focus: 'top',
     photo: '/images/professeurs/sininho.jpg',
     email: 'lucas.costa@example.com',
     telephone: '06 56 78 90 12',
     villes: ['guyancourt']
+  },
+   {
+    id: 'cathy',
+    nom: 'Pe de Braza',
+    prenom: 'Professora',
+    photo: '/images/professeurs/cathy.jpeg',
+    email: 'lucas.costa@example.com',
+    telephone: '06 56 78 90 12',
+    villes: ['saint-germain']
   },
   {
     id: 'christian-tavares',
@@ -78,6 +90,7 @@ export const professeurs = [
     nom: 'Ligeirinha',
     prenom: 'Instrutora',
     photo: '/images/professeurs/ligeirinha.jpg',
+    focus: 'top',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['vaucresson']
@@ -86,6 +99,7 @@ export const professeurs = [
     id: 'coqueiro',
     nom: 'Coqueiro',
     prenom: 'Professor',
+    focus: 'top',
     photo: '/images/professeurs/coqueiro.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
@@ -122,12 +136,13 @@ export const professeurs = [
     id: 'Nolwenn',
     nom: 'Paquita',
     prenom: 'Instrutora',
+    focus: 'top',
     photo: '/images/professeurs/paquita.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['saint-nom-la-breteche']
   },
-   {
+  {
     id: 'claudinha',
     nom: 'Claudinha (Farinha)',
     prenom: 'Contra-mestra',
@@ -145,7 +160,7 @@ export const professeurs = [
     telephone: '06 78 90 12 34',
     villes: ['montesson']
   },
-   {
+  {
     id: 'brazil',
     nom: 'Brazil',
     prenom: 'Instrutor',
@@ -154,6 +169,73 @@ export const professeurs = [
     telephone: '06 78 90 12 34',
     villes: ['triel']
   },
+  {
+    id: 'bombeiro',
+    nom: 'bombeiro',
+    prenom: 'Contrat-mestre',
+    photo: '/images/professeurs/bombeiro.jpg',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['triel', 'sarre-union', 'diemeringen']
+  },
+  {
+    id: 'flor',
+    nom: 'Flor',
+    prenom: 'Graduada',
+    focus: 'top',
+    photo: '/images/professeurs/flor.jpg',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['triel', 'sarre-union', 'diemeringen']
+  },
+  {
+    id: 'anginho',
+    nom: 'Anginho',
+    prenom: 'Instrutora',
+    photo: '/images/professeurs/anginho.jpg',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['triel', 'sarre-union', 'diemeringen']
+  },
+  {
+    id: 'musico',
+    nom: 'musico',
+    prenom: 'Instrutor',
+    focus: 'top',
+    photo: '/images/professeurs/musico.jpg',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['triel', 'sarre-union', 'diemeringen']
+  },
+  {
+    id: 'pena',
+    nom: 'Pena',
+    prenom: 'Instrutora',
+    photo: '/images/professeurs/pena.jpg',
+    focus: 'top',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['saint-germain']
+  },
+  {
+    id: 'levezinha',
+    nom: 'Levazinha',
+    prenom: 'Instrutora',
+    photo: '/images/professeurs/levezinha.jpg',
+    focus: 'top',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['saint-germain']
+  },
+  {
+    id: 'esqueleto',
+    nom: 'Esqueleto',
+    prenom: 'Professor',
+    photo: '/images/professeurs/esqueleto.JPG',
+    email: 'diego.ferreira@example.com',
+    telephone: '06 78 90 12 34',
+    villes: ['saleilles', 'le-boulou']
+  }
 ];
 
 // Fonction pour obtenir les professeurs par ville
@@ -163,7 +245,8 @@ export function getProfesseursParVille(villeId) {
     .map(prof => ({
       id: prof.id,
       nomComplet: `${prof.prenom} ${prof.nom}`,
-      photo: prof.photo
+      photo: prof.photo,
+      focus: prof.focus || 'center'
     }));
 }
 
@@ -279,6 +362,26 @@ export const villes = [
     id: 'croissy-seine',
     nom: 'Croissy-sur-Seine',
     professeurs: getProfesseursParVille('croissy-seine')
+  },
+  {
+    id: 'sarre-union',
+    nom: 'Sarre-Union',
+    professeurs: getProfesseursParVille('sarre-union')
+  },
+  {
+    id: 'diemeringen',
+    nom: 'Diemeringen',
+    professeurs: getProfesseursParVille('diemeringen')
+  },
+  {
+    id: 'saleilles',
+    nom: 'Saleilles',
+    professeurs: getProfesseursParVille('saleilles')
+  },
+  {
+    id: 'le-boulou',
+    nom: 'Le Boulou',
+    professeurs: getProfesseursParVille('le-boulou')
   }
 ];
 

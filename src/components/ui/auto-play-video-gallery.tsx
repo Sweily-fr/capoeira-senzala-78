@@ -35,7 +35,6 @@ export function AutoPlayVideoGallery({
   const [hasStarted, setHasStarted] = React.useState(false);
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const timerRef = React.useRef<NodeJS.Timeout | null>(null);
-  const iframeRefs = React.useRef<{ [key: number]: HTMLIFrameElement | null }>({});
 
   // Intersection Observer to detect when section is visible
   React.useEffect(() => {
@@ -49,7 +48,7 @@ export function AutoPlayVideoGallery({
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 30% of the section is visible
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -63,37 +62,12 @@ export function AutoPlayVideoGallery({
     };
   }, [hasStarted]);
 
-  // Auto-play sequence logic
+  // Auto-play sequence: advance to next video after duration
   React.useEffect(() => {
     if (!isPlaying || !hasStarted) return;
 
-    // Clear any existing timer
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-
-    // Play current video
-    const currentIframe = iframeRefs.current[activeVideoIndex];
-    if (currentIframe) {
-      const videoId = getYouTubeId(videos[activeVideoIndex].videoUrl);
-      if (videoId) {
-        currentIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1`;
-      }
-    }
-
-    // Set timer to move to next video
     timerRef.current = setTimeout(() => {
-      // Pause current video
-      if (currentIframe) {
-        const videoId = getYouTubeId(videos[activeVideoIndex].videoUrl);
-        if (videoId) {
-          currentIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1&controls=0&showinfo=0&modestbranding=1`;
-        }
-      }
-
-      // Move to next video
-      const nextIndex = (activeVideoIndex + 1) % videos.length;
-      setActiveVideoIndex(nextIndex);
+      setActiveVideoIndex((prev) => (prev + 1) % videos.length);
     }, autoPlayDuration);
 
     return () => {
@@ -101,41 +75,12 @@ export function AutoPlayVideoGallery({
         clearTimeout(timerRef.current);
       }
     };
-  }, [activeVideoIndex, isPlaying, hasStarted, videos, autoPlayDuration]);
+  }, [activeVideoIndex, isPlaying, hasStarted, videos.length, autoPlayDuration]);
 
   const handleVideoClick = (index: number) => {
-    // Arrêter TOUTES les vidéos avant d'en lancer une nouvelle
-    videos.forEach((video, idx) => {
-      const iframe = iframeRefs.current[idx];
-      if (iframe) {
-        const videoId = getYouTubeId(video.videoUrl);
-        if (videoId) {
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1&controls=0&showinfo=0&modestbranding=1`;
-        }
-      }
-    });
-    
-    // Nettoyer le timer pour empêcher le passage automatique
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-      timerRef.current = null;
-    }
-    
-    // Changer la vidéo active (bordure active)
+    // Changer la vidéo active — seule l'iframe active est rendue,
+    // donc l'ancienne vidéo s'arrête automatiquement
     setActiveVideoIndex(index);
-    
-    // Lancer uniquement la nouvelle vidéo sélectionnée
-    setTimeout(() => {
-      const newIframe = iframeRefs.current[index];
-      if (newIframe) {
-        const videoId = getYouTubeId(videos[index].videoUrl);
-        if (videoId) {
-          newIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1`;
-        }
-      }
-    }, 100);
-    
-    // Activer l'état de lecture pour afficher l'indicateur
     setIsPlaying(true);
   };
 
@@ -173,19 +118,17 @@ export function AutoPlayVideoGallery({
                   onClick={() => handleVideoClick(index)}
                 >
                   <div className="relative aspect-video">
-                    {videoId ? (
+                    {isActive && videoId ? (
                       <iframe
-                        ref={(el) => {
-                          iframeRefs.current[index] = el;
-                        }}
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1&controls=0&showinfo=0&modestbranding=1`}
+                        key={`iframe-${video.id}-${index}`}
+                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&enablejsapi=1`}
                         className="w-full h-full"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                       />
                     ) : (
                       <img
-                        src={video.thumbnailUrl}
+                        src={videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : video.thumbnailUrl}
                         alt={video.title}
                         className="w-full h-full object-cover"
                       />
@@ -194,8 +137,8 @@ export function AutoPlayVideoGallery({
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
-                    {/* Play/Pause indicator */}
-                    {!isActive && !isPlaying && (
+                    {/* Play indicator on inactive videos */}
+                    {!isActive && (
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
                           <Play className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 fill-white text-white" />

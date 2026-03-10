@@ -23,6 +23,10 @@ import montesson from './cours/montesson.json';
 import leVesinet from './cours/le-vesinet.json';
 import maisonsLaffitte from './cours/maisons-laffitte.json';
 import croissySeine from './cours/croissy-seine.json';
+import sarreUnion from './cours/sarre-union.json';
+import diemeringen from './cours/diemeringen.json';
+import saleilles from './cours/saleilles.json';
+import leBoulou from './cours/le-boulou.json';
 // Import du fichier batucada
 import batucada from './cours/batucada.json';
 
@@ -52,6 +56,10 @@ const coursParVille = {
   'le-vesinet': leVesinet,
   'maisons-laffitte': maisonsLaffitte,
   'croissy-seine': croissySeine,
+  'sarre-union': sarreUnion,
+  'diemeringen': diemeringen,
+  'saleilles': saleilles,
+  'le-boulou': leBoulou,
   'batucada': batucada
 };
 

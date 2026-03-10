@@ -37,7 +37,7 @@ const SectionCard = ({ title, description, icon, color, buttonText, buttonVarian
   </div>
 );
 
-const HomeSections = () => {
+const HomeSections = ({ prestationImages = [] }) => {
   const sections = [
     {
       title: "Cours pour Tous Niveaux",
@@ -92,7 +92,7 @@ const HomeSections = () => {
       <Gallery4 />
       {/* Discover Capoeira Section */}
       <Feature108 />
-        <Feature />
+        <Feature images={prestationImages} />
       <LandingAccordionItem />
       {/* Video Gallery Section with Auto-Play */}
       <AutoPlayVideoGallery videos={videos} autoPlayDuration={15000} />

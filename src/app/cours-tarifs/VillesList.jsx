@@ -173,7 +173,7 @@ export default function VillesList() {
                                   src={prof.photo}
                                   alt={prof.nomComplet}
                                   fill
-                                  className="object-cover"
+                                  className={`object-cover ${prof.focus === 'top' ? 'object-top' : prof.focus === 'bottom' ? 'object-bottom' : ''}`}
                                   sizes="48px"
                                 />
                               </div>

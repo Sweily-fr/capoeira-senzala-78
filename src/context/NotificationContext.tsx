@@ -33,16 +33,19 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
   const fetchEmails = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("/api/emails");
+      const response = await fetch("/api/emails", { cache: "no-store" });
       const data = await response.json();
 
       if (data.emails && data.emails.length > 0) {
-        // Convertir les timestamps en Date
-        const emailsWithDates = data.emails.map((email: Email & { timestamp: string }) => ({
-          ...email,
-          timestamp: new Date(email.timestamp),
-        }));
-        setEmails(emailsWithDates);
+        // Convertir les timestamps en Date, puis ignorer les 3 premiers mails de la boîte (les plus anciens retournés)
+        const emailsWithDates = data.emails
+          .map((email: Email & { timestamp: string }) => ({
+            ...email,
+            timestamp: new Date(email.timestamp),
+          }));
+        // L'API retourne les emails du plus récent au plus ancien,
+        // les 3 premiers de la boîte sont donc les 3 derniers du tableau
+        setEmails(emailsWithDates.slice(0, -3));
       } else {
         // Fallback sur les données mock si l'API ne retourne rien
         setEmails(mockEmails);

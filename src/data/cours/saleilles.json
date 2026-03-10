@@ -1,0 +1,41 @@
+{
+  "nom": "Saleilles",
+  "inscriptionHref": "",
+  "cours": [
+    {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "18h30 - 19h30",
+          "age": "Enfants",
+          "lieu": "Gymnase Arieta - 66200 Saleilles"
+        },
+        {
+          "heure": "19h30 - 21h30",
+          "age": "Adultes",
+          "lieu": "Gymnase Arieta - 66200 Saleilles"
+        }
+      ]
+    },
+    {
+      "jour": "Jeudi",
+      "cours": [
+        {
+          "heure": "19h30 - 21h30",
+          "age": "Adultes",
+          "lieu": "Gymnase Arieta - 66200 Saleilles"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "10h00 - 11h00",
+          "age": "Enfants",
+          "lieu": "Gymnase Arieta - 66200 Saleilles"
+        }
+      ]
+    }
+  ]
+}

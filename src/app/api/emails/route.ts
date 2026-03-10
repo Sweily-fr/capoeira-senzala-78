@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { ImapFlow } from "imapflow";
 import { simpleParser } from "mailparser";
 
+export const dynamic = "force-dynamic";
+
 export interface EmailData {
   id: string;
   from: string;
@@ -27,7 +29,7 @@ async function fetchEmails(): Promise<EmailData[]> {
   });
 
   const emails: EmailData[] = [];
-  const fetchCount = parseInt(process.env.IMAP_FETCH_COUNT || "7");
+  const fetchCount = parseInt(process.env.IMAP_FETCH_COUNT || "10");
 
   try {
     await client.connect();

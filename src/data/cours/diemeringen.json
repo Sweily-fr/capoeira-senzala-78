@@ -1,0 +1,21 @@
+{
+  "nom": "Diemeringen",
+  "inscriptionHref": "",
+  "cours": [
+    {
+      "jour": "Lundi",
+      "cours": [
+        {
+          "heure": "17h00 - 18h00",
+          "age": "Baby",
+          "lieu": "Gymnase de l'Eichel - Diemeringen"
+        },
+        {
+          "heure": "18h00 - 19h00",
+          "age": "Enfants",
+          "lieu": "Gymnase de l'Eichel - Diemeringen"
+        }
+      ]
+    }
+  ]
+}

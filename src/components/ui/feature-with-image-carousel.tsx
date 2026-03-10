@@ -7,7 +7,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-function Feature() {
+interface FeatureProps {
+  images?: string[];
+}
+
+function Feature({ images = [] }: FeatureProps) {
   return (
     <div className="w-full py-10 sm:py-16 lg:py-24 bg-dark-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,11 +19,7 @@ function Feature() {
           <div className="bg-gray-800/50 rounded-xl overflow-hidden shadow-xl">
             <Carousel>
               <CarouselContent>
-                {[
-                  '/images/favelas_capoeira_senzala.png',
-                  '/images/professionnelle/presta_pro_01.jpg',
-                  '/images/professionnelle/presta_pro_02.jpeg',
-                ].map((src, index) => (
+                {images.map((src, index) => (
                   <CarouselItem key={index}>
                     <div className="relative aspect-video">
                       <img

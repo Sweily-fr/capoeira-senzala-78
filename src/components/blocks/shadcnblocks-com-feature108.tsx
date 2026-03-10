@@ -87,14 +87,14 @@ const Feature108 = ({
           <p className="max-w-2xl text-base sm:text-lg text-white/80">{description}</p>
         </div>
         <Tabs defaultValue={tabs[0].value} className="mt-8">
-          <TabsList className="container flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-10">
+          <TabsList className="container flex flex-row items-center justify-center gap-4 md:gap-10">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-white/80 transition-all duration-200 cursor-pointer data-[state=active]:bg-primary-500 data-[state=active]:text-darker-blue data-[state=active]:hover:bg-primary-400"
+                className="flex items-center rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white/80 whitespace-nowrap transition-all duration-200 cursor-pointer data-[state=active]:bg-primary-500 data-[state=active]:text-darker-blue data-[state=active]:hover:bg-primary-400"
               >
-                {tab.icon} {tab.label}
+                {tab.label}
               </TabsTrigger>
             ))}
           </TabsList>
