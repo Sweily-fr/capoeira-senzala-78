@@ -5,10 +5,10 @@ export const professeurs = [
     id: 'marcio-silva',
     nom: 'Banana',
     prenom: 'Mestre',
-    photo: '/images/professeurs/cathy.jpeg',
+    photo: '/images/professeurs/banana.jpg',
     email: 'carlos.silva@example.com',
     telephone: '06 12 34 56 78',
-    villes: ['saint-germain', 'poissy', 'triel', 'chatou', 'le-vesinet']
+    villes: ['saint-germain', 'poissy', 'triel', 'chatou', 'le-vesinet', 'montesson']
   },
   {
     id: 'orlane-silva',
@@ -150,15 +150,6 @@ export const professeurs = [
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['ville-avray', 'le-vesinet']
-  },
-  {
-    id: 'perna-leve',
-    nom: 'Perna leve',
-    prenom: 'Instrutor',
-    photo: '/images/professeurs/cathy.jpeg',
-    email: 'diego.ferreira@example.com',
-    telephone: '06 78 90 12 34',
-    villes: ['montesson']
   },
   {
     id: 'brazil',
