@@ -129,11 +129,11 @@ export function HeroSection({
                 <p className="text-center md:text-end text-xs sm:text-sm text-white">Nos partenaires</p>
               </div>
               <div className="relative py-4 sm:py-6 w-full md:w-[calc(100%-11rem)]">
-                <InfiniteSlider durationOnHover={20} duration={40} gap={112}>
+                <InfiniteSlider durationOnHover={20} duration={40} gap={56}>
                   {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                    <div key={i} className="flex items-center">
+                    <div key={i} className="flex shrink-0 items-center">
                       <img
-                        className={`mx-auto h-8 w-fit rounded ${logo.invert ? "invert" : ""}`}
+                        className={`mx-auto h-6 sm:h-8 w-auto max-w-[100px] sm:max-w-none object-contain rounded ${logo.invert ? "invert" : ""}`}
                         src={logo.src}
                         alt={logo.alt}
                         height="32"
