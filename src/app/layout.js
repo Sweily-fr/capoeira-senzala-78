@@ -62,7 +62,7 @@ const jsonLd = {
   url: 'https://capoeirasenzala78.fr',
   logo: 'https://capoeirasenzala78.fr/images/logo-capoeirasenzala1.png',
   image: 'https://capoeirasenzala78.fr/images/hero-section-img/home.jpg',
-  telephone: '+33 6 XX XX XX XX',
+  telephone: '+33 6 24 85 12 99',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'Yvelines',
@@ -74,8 +74,9 @@ const jsonLd = {
     longitude: 2.1,
   },
   sameAs: [
-    'https://www.facebook.com/gruposenzala78',
-    'https://www.instagram.com/gruposenzala78',
+    'https://www.facebook.com/capoeirasenzala78',
+    'https://www.instagram.com/capoeira_senzala_78/',
+    'https://www.youtube.com/c/capoeirasenzala78fr',
   ],
   sport: 'Capoeira',
   openingHoursSpecification: [
