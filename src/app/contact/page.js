@@ -3,6 +3,12 @@ import Footer from '@/components/Footer';
 import ContactContent from './ContactContent';
 import { Cta4 } from '@/components/ui/cta-4';
 
+export const metadata = {
+  title: 'Contact',
+  description: 'Contactez le Grupo Senzala 78 pour toute question sur nos cours de capoeira dans les Yvelines. Notre équipe est à votre écoute.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr/contact' },
+};
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col bg-dark-blue text-white">

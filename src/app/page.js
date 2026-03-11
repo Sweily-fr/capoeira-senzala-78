@@ -4,6 +4,12 @@ import HeroWithPartners from '@/components/blocks/HeroWithPartners';
 import HomeSections from '../components/HomeSections';
 import Footer from '../components/Footer';
 
+export const metadata = {
+  title: 'Capoeira Senzala 78 | École de Capoeira dans les Yvelines',
+  description: 'École de capoeira dans les Yvelines (78). Cours pour enfants et adultes dans plus de 20 villes : Versailles, Saint-Germain-en-Laye, Poissy. Stages, batucada et prestations professionnelles.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr' },
+};
+
 export default function Home() {
   const professionnelleDir = path.join(process.cwd(), 'public/images/professionnelle');
   const prestationImages = fs.readdirSync(professionnelleDir)

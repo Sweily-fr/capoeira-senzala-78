@@ -3,6 +3,12 @@ import Footer from '../../components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import VillesList from './VillesList';
 
+export const metadata = {
+  title: 'Cours & Tarifs',
+  description: 'Découvrez nos cours de capoeira et batucada dans plus de 20 villes des Yvelines (78). Cours pour bébés, enfants, ados et adultes avec des tarifs accessibles.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr/cours-tarifs' },
+};
+
 export default function CoursEtTarifs() {
   return (
     <>

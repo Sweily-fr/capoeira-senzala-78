@@ -2,6 +2,12 @@ import HeroWithPartners from '@/components/blocks/HeroWithPartners';
 import Footer from '../../components/Footer';
 import PrestationsSection from './PrestationsSection';
 
+export const metadata = {
+  title: 'Prestations Scolaires et Professionnelles',
+  description: 'Services de capoeira pour écoles, entreprises et événements dans les Yvelines. Animations, team building et ateliers culturels.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr/prestations' },
+};
+
 export default function PrestationsProfessionnelles() {
   return (
     <>

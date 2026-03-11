@@ -3,6 +3,12 @@ import Footer from '../../components/Footer';
 import EventsList from './EventsList';
 import EventsHeroBackground from '@/components/custom/EventsHeroBackground';
 
+export const metadata = {
+  title: 'Événements à venir',
+  description: 'Stages, batizados, rodas ouvertes et rencontres de capoeira dans les Yvelines. Ne manquez aucun événement du Grupo Senzala 78.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr/evenements' },
+};
+
 export default function EvenementsAVenir() {
   return (
     <>

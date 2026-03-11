@@ -2,6 +2,12 @@ import HeroWithPartners from '@/components/blocks/HeroWithPartners';
 import Footer from '../../components/Footer';
 import ArticlesList from './ArticlesList';
 
+export const metadata = {
+  title: 'Actualités',
+  description: 'Restez informé des événements, stages, batizados et de la vie de notre communauté capoeiriste. Toutes les actualités du Grupo Senzala 78.',
+  alternates: { canonical: 'https://capoeirasenzala78.fr/actualites' },
+};
+
 export default function Actualites() {
   return (
     <>
