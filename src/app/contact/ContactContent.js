@@ -123,7 +123,7 @@ export default function ContactContent() {
           >
             <div className="relative rounded-2xl overflow-hidden h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
               <Image
-                src="/images/professionnelle/bananapro.jpg"
+                src="/images/professionnelle/presta_pro_01.jpg"
                 alt="Cours de capoeira Senzala 78"
                 fill
                 className="object-cover object-top"

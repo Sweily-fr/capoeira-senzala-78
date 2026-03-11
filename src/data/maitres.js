@@ -3,7 +3,7 @@ export const maitres = [
     name: "Mestre Xuxa",
     role: "Mestre",
     description: "Fabiano Lourenço Marques, connu sous le nom de Mestre Xuxa, est un maître capoeiriste passionné avec plus de 30 ans d'expérience.",
-    image: "/images/maitres/MESTRE XUXA.png",
+    image: "/images/maitres/MESTRE-XUXA.png",
     fullText: `ESCOLA DE CAPOEIRA DO GRUPO SENZALA DE TERESÓPOLIS
 Meu nome é Fabiano Lourenco Marques, eu nasci em 1979. Comecei na capoeira em 1992 e no final de 1993 por falta de condições financeiras tive que parar de treinar. Em 1995 comecei a trabalhar em um supermercado chamado ABC, o mesmo me dava a oportunidade de fazer capoeira gratuitamente. Foi então que comecei a treinar no cesc com o Mestre Batata do Grupo Ganga Zumbi, e la fiquei em um período de 6 meses. Depois que saí de lá retornei a minha família Senzala, onde passei por vários momentos indescritíveis. Em 1996 pulei diretamente para a corda laranja. Daí jamais parei com a capoeira, comecei a viajar, ganhar conhecimento, conquistar amigos.
 
@@ -18,7 +18,7 @@ En 2002, j'ai obtenu le grade de professeur formé, la corda roxa. Peu après, M
     name: "Marcio Santos",
     role: "Mestre",
     description: "Marcio Santos est un maître reconnu du Groupe Senzala.",
-    image: "/images/maitres/MESTRA MARCIO SANTOS.png",
+    image: "/images/maitres/MESTRA-MARCIO-SANTOS.png",
     originalLanguage: "english",
     fullText: `Marcio Santos began his Capoeira journey in 1984, training under Mestre Elias at Escola de Capoeira Grupo Senzala in Teresópolis, Brazil.
 
@@ -37,7 +37,7 @@ En août 2019, M. Santos a eu l'honneur de recevoir sa corda de Mestre Elias, ma
     name: "Mestre Elias",
     role: "Mestre",
     description: "Mestre Elias est un maître emblématique du Groupe Senzala.",
-    image: "/images/maitres/MESTRE ELIAS.png",
+    image: "/images/maitres/MESTRE-ELIAS.png",
     fullText: `Mestre Elias, nasceu em Recife (PE) em 1951. Até 1967 praticava "Pernadas", movimentos que, nessa época, não era chamado de Capoeira. Mudou-se para a cidade de Teresópolis em 1967, no Estado do Rio de Janeiro onde começou a praticar Capoeira em academia em 1968 com o Professor Carlinhos de Recife.
 
 Em 1972 Elias teve seu primeiro Mestre de Capoeira, Mestre Geraldão, na época estudante do 5º ano de medicina. Em 1975 Mestre Geraldão se formou, tendo então que se ausentar da cidade, deixou em seu lugar o Mestre Girardan, segundo ele formado do Mestre Tabosa, de Brasília.
@@ -65,7 +65,7 @@ Depuis, l'école a gagné en force à l'étranger, et Mestre Elias est l'une des
     name: "Mestra Orlane",
     role: "Mestra",
     description: "Mestra Orlane est une maîtresse respectée du Groupe Senzala.",
-    image: "/images/maitres/MESTRA ORLANE.png",
+    image: "/images/maitres/MESTRA-ORLANE.png",
     fullText: `Texto em português a ser adicionado.
 
 Mon nom est Mestra Orlane. Biographie à compléter.`
@@ -74,7 +74,7 @@ Mon nom est Mestra Orlane. Biographie à compléter.`
     name: "Mestra Tres Semanas",
     role: "Mestra",
     description: "Mestra Tres Semanas est une maîtresse du Groupe Senzala.",
-    image: "/images/maitres/MESTRE TRES SEMANAS.png",
+    image: "/images/maitres/MESTRE-TRES-SEMANAS.png",
     fullText: `Começei capoeira no dia 15 de agosto de 1994 com o Mestre Batata do grupo Ganga Zumbi em Teresópolis, acabei saindo do grupo e me inscrevi no Grupo Senzala no fim do mês de setembro do ano de 1995. Des de então fui praticante permanente do Grupo onde a unica pausa de treinamento foi de 8 meses no ano de 1998 por falta de dinheiro pra pagar. Retornei no fim do ano de 98 e nunca mais parei.
 
 Peguei as seguintes cordas : Amarela (1995), Amarela e Laranja (1996), Laranja (1997), Cinza (1999), Azul e Branca (2000), Azul (2001), Verde (2004), Roxa (2009), Marron (2015) e Vermelha em 2022.
@@ -100,7 +100,7 @@ Quand j'étais élève au Brésil j'ai eu l'opportunité de participer à des é
     name: "Mestre Mark York",
     role: "Mestre",
     description: "Mestre Mark York est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE MARK YORK.png",
+    image: "/images/maitres/MESTRE-MARK-YORK.png",
     fullText: `Eu me chamo Mark York, nascido 27 de Novembro de 1978 e conhecido pelo meu primeiro nome na Capoeira. Comecei e recomecei a capoeira várias vezes. Meu primeiro contato foi em 1983 e depois mais ou menos em 1989 fiz uma nova tentativa sem sucesso. Era criança e voltei em 1995 e daí cruzei toda uma geração da escola de capoeira que foi importante pra mim estar aqui até hoje. Antes estudava e estava terminando o equivalente do "lycée" na França, fiz igualmente um curso profissionalizante para ser eletricista mas acabei não atuando, capoeira me envolveu muito mais.
 
 Em 1995 comecei a treinar novamente, pois Mestre Elias, meu pai, tinha me convidado a trabalhar com ele na sua nova academia, e aceitei sem pensar que iria treinar novamente, e fiz novas amizades la dentro e essas pessoas me motivaram e incentivaram a recomeça. Em 1996 fui batizado e passei a corda amarela. Fui batizado pelo meu Mestre Elias. Em 1997, passei a corda laranja, em 1998 passei a corda cinza e ali comecei a dar algumas aulas na academia e em projetos do Mestre.
@@ -128,7 +128,7 @@ Avenir : j'espère toujours préserver les origines et les traditions de la capo
     name: "Mestre Barriga",
     role: "Mestre",
     description: "Mestre Barriga est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE BARRIGA.png",
+    image: "/images/maitres/MESTRE-BARRIGA.png",
     fullText: `Nascido o 4 de março de 1983, José Eduardo é conhecido no mundo da capoeira como "Barriga", e pratica capoeira desde 1993 e ensina-a desde 1999. Tudo começou em 1993, depois de assistir a um festival de capoeira em Teresópolis! Na semana seguinte, Barriga se inscreveu para aulas de capoeira com Mestre Elias na Casa de Cultura de Teresópolis. Em 1994, depois de um ano de treinamento, ele participou do seu primeiro festival de capoeira, onde foi "batizado" e recebeu a corda branca e amarela.
 
 Nos três anos seguintes, passou pelos graus seguintes (amarela, laranja-amarela e laranja). Em 1997, com a corda laranja, Barriga começou a participar e ajudar nas aulas do Mestre Banana (ainda aluno graduado), no "Tiro de Gerra" em Teresopólis, com o objetivo de ganhar experiência como professor. A partir de 1998, com a corda cinza e branca, Barriga começou a dar aulas de capoeira num projeto social. Dá aulas em dois bairros de Teresopólis : na Barra, onde divide as aulas com Mark e Venda-Nova, e no bairro de São Pedro com Cara-Pálida.
@@ -158,7 +158,7 @@ En 2012, Barriga commence une thèse réalisée à cheval entre le Brésil et la
     name: "Mestre Alemao",
     role: "Mestre",
     description: "Mestre Alemao est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE ALEMAO.png",
+    image: "/images/maitres/MESTRE-ALEMAO.png",
     fullText: `Texto em português a ser adicionado.
 
 Mon nom est Mestre Alemao. Biographie à compléter.`
@@ -167,7 +167,7 @@ Mon nom est Mestre Alemao. Biographie à compléter.`
     name: "Mestre Tyson",
     role: "Mestre",
     description: "Mestre Tyson est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE TYSON.png",
+    image: "/images/maitres/MESTRE-TYSON.png",
     fullText: `Nasceu em 25 de junho de 1979 em Terésopolis, Brasil. Em 1996, aos 17 anos, iniciou a capoeira em Térésopolis com Mestre Elias. Com o corte de cabelo parecido com o do boxeador Mike Tyson, Alexandre recebeu então o apelido de "TYSON". Após alguns anos de formação e nível considerado suficiente por seu Mestre, passou a ministrar aulas de forma voluntária, em praça pública, para crianças de bairros populares da cidade. Posteriormente, em 2000, lecionou num centro social para jovens delinquentes menores.
 
 A partir dessa experiência, no ano seguinte, dá aulas regularmente na academia Mestre Elias e também em uma academia de natação que oferece aos seus integrantes treinamento de capoeira. Em 2002, Mestre Elias deu-lhe a corda verde, Tyson tornou-se "Instrutor". Ele fez sua primeira viagem à França em 2002 com outros capoeiristas que moravam na França. Tyson ficou lá por três meses, durante os quais visitou os diversos clubes de capoeira do Grupo. Retornou então ao Brasil com o único objetivo de voltar a se estabelecer e lecionar na França.
@@ -191,7 +191,7 @@ Aujourd'hui, Mestre Tyson enseigne au sein de différentes associations dans dif
     name: "Mestre Jorge Kangol",
     role: "Mestre",
     description: "Mestre Jorge Kangol est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE JORGE KANGOL.png",
+    image: "/images/maitres/MESTRE-JORGE-KANGOL.png",
     fullText: `Mon nom est Mestre Jorge Kangol.
 Mon surnom Kangol, je l'ai gagné parce que je ressemblais à un kangourou dans la ronde, je sautais beaucoup et faisais beaucoup d'acrobaties. Kangol est une marque célèbre de casquette avec un petit kangourou.
 
@@ -219,7 +219,7 @@ Ce que je voudrais pour la capoeira, c'est pouvoir valoriser davantage son aspec
     name: "Mestre Duzentos",
     role: "Mestre",
     description: "Mestre Duzentos est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE DUZENTOS.png",
+    image: "/images/maitres/MESTRE-DUZENTOS.png",
     fullText: `Aos 12 anos de idade, conheci a capoeira através de um amigo da família, Capoeirista conhecido como Miguel, com o qual fiquei treinando até os meus 15 anos. Com o interesse crescendo pela capoeira procurei um grupo de grande tradição do subúrbio do Rio de Janeiro para treinar, Grupo Martins Capoeira, onde permaneci até os meus 20 anos.
 
 Entre 1995 e 1996, comecei a treinar com o Professor Olho Vivo, sob a coordenação do Mestre Sorriso (Waldir) do Grupo Senzala até corda laranja. Com a opção do Professor parar de dar aulas de capoeira, passei a treinar diretamente com o Mestre Peixinho (Marcelo Azevedo Guimarães, In Memorian). A partir desse momento segui com o Mestre, no ano de 2000 me graduei corda cinza e neste mesmo ano iniciei um trabalho de capoeira na Comunidade Parque Monsenhor Brito, em Bonsucesso no Rio de Janeiro, na qual me criei. Ao longo dos anos fui me graduando, fidedignamente com o Mestre Peixinho, construindo novos trabalhos. Viajando pelo Brasil acompanhando o Mestre e desenvolvi o aprendizado do ofício de artesão de berimbaus com ele.
@@ -247,7 +247,7 @@ Lorsque j'ai quitté sa coordination pour diverses raisons, nous avons passé un
     name: "Mestra Covinha",
     role: "Mestra",
     description: "Mestra Covinha est une maîtresse du Groupe Senzala.",
-    image: "/images/maitres/MESTRA COVINHA.png",
+    image: "/images/maitres/MESTRA-COVINHA.png",
     fullText: `Mon nom est Mestra Covinha.
 Je m'appelle Cécile Bennegent et je suis née le 6 novembre 1974 à Vénissieux (banlieue lyonnaise), dans une famille nombreuse, d'un père immigré algérien et d'une mère lyonnaise d'origine espagnol. Mon apelido Covinha m'a été donné par Mestre Sorriso lors de sa première venue à Lyon pour un stage en 1996, dû à ma fossette marquée au menton.
 
@@ -274,7 +274,7 @@ Je continue à explorer et à apprendre à chaque pas, avec chaque public, group
     name: "Mestra Nega",
     role: "Mestra",
     description: "Mestra Nega est une maîtresse du Groupe Senzala.",
-    image: "/images/maitres/MESTRA NEGA.png",
+    image: "/images/maitres/MESTRA-NEGA.png",
     fullText: `Alessandra Uara 35 anos nascida na cidade de são Paulo conhecida no mundo da capoeira como Nega Uara corda vermelha, Mestra do Grupo Senzala de São Paulo. Começou a capoeira pela influência da família. Iniciando seus primeiros passos no funda da casa da sua avó com seus irmãos. Ao passar do tempo resolveu a se dedicar e acompanhar o Mestre Flávio nas aulas na casa de capoeira Malungos.
 
 Em 96 os Mestre Flávio e Ulisses se filiaram ao Grupo Senzala do Rio de Janeiro Mestre Peixinho. Com a dificuldade de horário e a distancia passou a treinar com Mestre Ulisses, no bairro onde nasceu, depois alguns anos começou a ministrar aulas junto com eles graduada decidiu a continuar trabalhar com a capoeira como educadora do sporte e lazer ministrava cursos e palestra por todo Brasil.
@@ -302,7 +302,7 @@ Elle y crée l'association Nega Capoeira Sète, qui lui permet de donner des cou
     name: "Mestre Rodriginho",
     role: "Mestre",
     description: "Mestre Rodriginho est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE RODRIGUINHO.png",
+    image: "/images/maitres/MESTRE-RODRIGUINHO.png",
     fullText: `O grupo Senzala instituiu-se no estado do Espírito Santo inicialmente por meio do Mestre Luiz Paulo em 1979, aluno formado Corda vermelha, 1986, pelo Mestre Peixinho (RJ). Mestre Rodrigo iniciou na Capoeira em Julho de 1985 no Grupo Senzala e permaneceu por dez anos enquanto aluno do Mestre Luiz Paulo.
 
 Em 1996, passou a treinar e a ensinar sob orientação do Mestre Peixinho, fundador do Centro Cultural Senzala de Capoeira. Lecionou aulas de Capoeira para adultos e crianças entre 1997 a 2008 no Clube dos Oficiais da Polícia Militar (Vitória - ES). Neste período lecionou também em escolas públicas e particulares. Participou de Simpósios e eventos nacionais e internacionais de Capoeira em Universidades e em outros núcleos da comunidade da Capoeira.
@@ -328,7 +328,7 @@ Aujourd'hui, il enseigne la Capoeira aux enfants de "Paradise Swim and Arts Acad
     name: "Mestre Espiga",
     role: "Mestre",
     description: "Mestre Espiga est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE ESPIGA.png",
+    image: "/images/maitres/MESTRE-ESPIGA.png",
     fullText: `Meu nome é Frans Benjamin Vinding, eu nasci em Copenhague, Dinamarca, em 8 de abril de 1976. Meu apelido é Espiga. Recebi esse apelido em 1993 durante meu primeiro Batizado pelo Mestre Peixinho porque eu era alto e magro.
 
 Comecei a jogar capoeira quando tinha 14 anos e morava no subúrbio de Copenhague. Antes de começar a capoeira, eu gostava de música e ouvia hip-hop. Meu primeiro contato com a capoeira foi por meio da música, comecei a tocar percussão e violão aos 10/11 anos de idade. Quando tinha 13 anos, comecei a tocar instrumentos de percussão em uma escola de samba para crianças no subúrbio chamada "Hvidovre Sambaskole". Lá, aprendemos a tocar instrumentos de percussão e a dançar o samba. Meu professor era o Mestre Steen, que tinha 19 anos na época. Ele foi para o Rio por seis meses para tocar e dançar algo chamado Capoeira. Na época, eu não sabia o que era. Quando ele voltou, começamos a treinar às quartas-feiras e aos sábados. Aprendi a batucada com Michael Aabye nessa academia.
@@ -354,7 +354,7 @@ Mon objectif ne concerne pas que moi, je souhaite construire une communauté de 
     name: "Mestre Pedro",
     role: "Mestre",
     description: "Mestre Pedro est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE PEDRO.png",
+    image: "/images/maitres/MESTRE-PEDRO.png",
     originalLanguage: "english",
     fullText: `Capoeira is such a part of my life, I cannot remember when I saw it the first time. I was born into it. I started training by the age of 7 but way before that I was around it, surrounded by it.
 
@@ -379,7 +379,7 @@ Je suis venu au Royaume-Uni il y a seize ans. Tout ce que j'avais, c'était un b
     name: "Mestre Steen",
     role: "Mestre",
     description: "Mestre Steen est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE STEEN.png",
+    image: "/images/maitres/MESTRE-STEEN.png",
     originalLanguage: "english",
     fullText: `Steen Møller has been physically active his whole life, and always striven to be the best in his field. The competitor in him has always dominated, and his will power and desire to learn new things has brought him far.
 
@@ -402,7 +402,7 @@ Sa compétence en kinésithérapie, qui soutient et complète sa capoeira, est u
     name: "Mestre Sorriso",
     role: "Mestre",
     description: "Mestre Sorriso est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE SORRISO.png",
+    image: "/images/maitres/MESTRE-SORRISO.png",
     fullText: `Waldir José da Costa é nascido no 25 de dezembro de 1954 no Rio de Janeiro, Brasil. Mestre "Sorriso" descobriu o mundo da Capoeira aos nove anos de idade, e nunca mais abandonou.
 
 Desde o início, ele foi muito importante para a divulgação dessa arte no Brasil e no mundo. No Rio de Janeiro, onde, com outros capoeiristas, fundou o Grupo Senzala de Capoeira (1964), deu aulas em comunidades carentes, na rua, em universidades, escolas (como o Lycée Francês), academias, etc.
@@ -428,7 +428,7 @@ Arrivé du Brésil en 1997, il est invité par l'association Senzala à donner d
     name: "Mestre Torneiro",
     role: "Mestre",
     description: "Mestre Torneiro est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE TORNEIRO.png",
+    image: "/images/maitres/MESTRE-TORNEIRO.png",
     fullText: `Mestre Torneiro iniciou a capoeira em 1987 em Teresopolis, no estado do Rio de Janeiro, com Mestre Elias do Grupo Senzala. Com o objetivo de se tornar Professor, ele assistiu inicialmente o seu Mestre nas aulas que ele dava na Faculdade de Medicina para os estudantes, bem como na Casa de Cultura, que abriu as suas portas a um público mais aberto e diversificado.
 
 Chegado a França a 18 de Junho de 1997, Mestre Torneiro (na altura ainda Professor) instalou-se em Paris, onde desenvolveu o seu primeiro núcleo e o que viria a ser a base do seu trabalho. Em poucos anos, desenvolveu outros centros de ensino nas cidades de Melun, Saint-Germain-en-Laye e Reims.
@@ -450,7 +450,7 @@ Au bout de 20 ans de travail depuis son arrivée en France, Mestre Torneiro a fo
     name: "Mestre Banana",
     role: "Mestre",
     description: "Mestre Banana est un maître du Groupe Senzala.",
-    image: "/images/maitres/MESTRE BANANA.png",
+    image: "/images/maitres/MESTRE-BANANA.png",
     fullText: `Foi em 1989 que Marcio Da Silva descobriu a capoeira com Mestre Batata (grupo Gunga Zumbi) e foi uma revelação para ele. Já apelidado de "Banana" pelos amigos do bairro porque jogava mal futebol e não gostava desse esporte, Marcio ingressou em 1992, aos 14 anos, na academia de Mestre Elias do grupo Senzala em Teresópolis, sua cidade natal. Em apenas 2 anos, seu mestre lhe entregou a corda azul e aos 18 anos a corda verde!
 
 De 1992 a 1999, ele treinou e se dedicou à sua academia, dando suas primeiras aulas. Em 1999, Mestre Elias o enviou à Europa para ensinar capoeira na Inglaterra.
