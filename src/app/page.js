@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-        <HeroWithPartners />
+        <HeroWithPartners showFlags />
         <div className="bg-dark-blue">
           <HomeSections prestationImages={prestationImages} />
         </div>

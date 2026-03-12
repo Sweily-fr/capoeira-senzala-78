@@ -18,6 +18,7 @@ export function HeroSection({
   subtitle = "L'école du Grupo Senzala 78 est une école de capoeira qui promeut la pratique et la transmission de la culture capoeira aux générations futures.",
   showButtons = true,
   showPartners = true,
+  showFlags = false,
   heroImage = "/images/hero-section-img/home.jpg",
   customBackground = null,
   partnerLogos = []
@@ -26,6 +27,7 @@ export function HeroSection({
   subtitle?: string;
   showButtons?: boolean;
   showPartners?: boolean;
+  showFlags?: boolean;
   heroImage?: string;
   customBackground?: React.ReactNode;
   partnerLogos?: { src: string; alt: string; filename?: string; invert?: boolean }[];
@@ -72,11 +74,20 @@ export function HeroSection({
             <div className="mx-auto flex max-w-7xl flex-col px-7 sm:px-6 lg:block lg:px-12">
               <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
                 <motion.h1
-                  className="mt-6 sm:mt-8 max-w-2xl text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
+                  className="max-w-2xl text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
+                  {showFlags && (
+                    <>
+                      <span className="inline-flex items-center gap-2">
+                        <img src="/images/flags/brazil.svg" alt="Brésil" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
+                        <img src="/images/flags/france.svg" alt="France" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
+                      </span>
+                      <br />
+                    </>
+                  )}
                   {title}
                 </motion.h1>
                 <motion.p
