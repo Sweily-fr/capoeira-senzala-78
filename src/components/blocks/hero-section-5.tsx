@@ -48,7 +48,7 @@ export function HeroSection({
         style={{ minHeight: heroHeight ? `${heroHeight}px` : '100svh' }}
       >
         <Navbar />
-        <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen flex flex-col">
+        <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen">
           <div className="absolute inset-0 overflow-hidden m-2 rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/5 lg:rounded-[3rem]">
             <div className="relative w-full h-full">
               {customBackground ? (
@@ -68,8 +68,8 @@ export function HeroSection({
               )}
             </div>
           </div>
-          <div className="relative z-10 flex-1 flex flex-col justify-between sm:justify-start py-6 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
-            <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:block lg:px-12">
+          <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
+            <div className="mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
               <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
                 <motion.h1
                   className="mt-6 sm:mt-8 max-w-2xl text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
@@ -87,39 +87,70 @@ export function HeroSection({
                 >
                   {subtitle}
                 </motion.p>
+
+                {showButtons && (
+                  <motion.div
+                    className="hidden sm:flex mt-8 md:mt-12 flex-row items-center gap-4 lg:justify-start"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                  >
+                    <Button
+                      asChild
+                      size="lg"
+                      className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-auto cursor-pointer"
+                    >
+                      <Link href="/cours-tarifs">
+                        <span className="text-nowrap">Découvrir nos cours</span>
+                        <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                      </Link>
+                    </Button>
+                    <Button
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-auto cursor-pointer"
+                    >
+                      <Link href="/cours-tarifs">
+                        <span className="text-nowrap">Où pratiquer ?</span>
+                      </Link>
+                    </Button>
+                  </motion.div>
+                )}
               </div>
             </div>
-
-            {showButtons && (
-              <motion.div
-                className="mt-auto pt-6 sm:mt-8 md:mt-12 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-12 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:justify-start"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              >
-                <Button
-                  asChild
-                  size="lg"
-                  className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
-                >
-                  <Link href="/cours-tarifs">
-                    <span className="text-nowrap">Découvrir nos cours</span>
-                    <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
-                >
-                  <Link href="/cours-tarifs">
-                    <span className="text-nowrap">Où pratiquer ?</span>
-                  </Link>
-                </Button>
-              </motion.div>
-            )}
           </div>
+
+          {/* Boutons mobile — positionnés en bas de la section */}
+          {showButtons && (
+            <motion.div
+              className="sm:hidden absolute bottom-6 left-0 right-0 z-10 px-6 flex flex-col items-stretch gap-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="h-11 rounded-full pl-5 pr-3 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transition-all duration-200 text-sm w-full cursor-pointer"
+              >
+                <Link href="/cours-tarifs">
+                  <span className="text-nowrap">Découvrir nos cours</span>
+                  <ChevronRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-11 rounded-full px-5 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm w-full cursor-pointer"
+              >
+                <Link href="/cours-tarifs">
+                  <span className="text-nowrap">Où pratiquer ?</span>
+                </Link>
+              </Button>
+            </motion.div>
+          )}
         </section>
         {showPartners && (
         <section className="bg-background pb-2 relative z-10">
@@ -215,7 +246,7 @@ const Navbar = () => {
         scrolled ? "backdrop-blur-lg bg-black/30 py-1" : "py-2"
       )}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-0">
         <Menu setActive={setActive}>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center">
