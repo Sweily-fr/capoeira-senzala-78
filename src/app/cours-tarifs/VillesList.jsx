@@ -267,7 +267,7 @@ export default function VillesList() {
                               href={jour.inscriptionHref}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-primary-500 text-dark-blue font-bold py-1 px-5 rounded hover:bg-primary-400 transition-colors text-xs"
+                              className="bg-primary-500 text-dark-blue font-bold py-1.5 px-6 rounded hover:bg-primary-400 transition-colors text-xs"
                             >
                               S'inscrire
                             </a>
