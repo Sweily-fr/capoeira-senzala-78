@@ -138,7 +138,7 @@ export default function VillesList() {
         )}
 
           {/* Détails de la ville sélectionnée - Scrollable */}
-          <div className={`flex-1 min-w-0 ${activeTab === 'batucada' ? 'mx-auto max-w-4xl' : ''}`}>
+          <div className={`flex-1 min-w-0 w-full ${activeTab === 'batucada' ? 'mx-auto max-w-4xl' : ''}`}>
             <div className="bg-white/5 p-4 md:p-6 rounded-lg">
               {villeData && (
                 <>
@@ -267,7 +267,7 @@ export default function VillesList() {
                               href={jour.inscriptionHref}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-primary-500 text-dark-blue font-bold py-1 px-3 rounded hover:bg-primary-400 transition-colors text-xs"
+                              className="bg-primary-500 text-dark-blue font-bold py-1 px-5 rounded hover:bg-primary-400 transition-colors text-xs"
                             >
                               S'inscrire
                             </a>
