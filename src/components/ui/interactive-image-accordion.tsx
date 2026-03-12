@@ -15,14 +15,14 @@ const features = [
     tag: "Instruments",
     title: "Instruments de musique",
     imageSrc: "images/boutique/instruments_01.png",
-    color: "purple" as const,
+    color: "orange" as const,
   },
   {
     index: "03",
     tag: "Accessoires",
     title: "Accessoires essentiels",
     imageSrc: "images/boutique/caixixi_01.png",
-    color: "blue" as const,
+    color: "orange" as const,
   },
 ];
 
@@ -42,15 +42,16 @@ export function LandingAccordionItem() {
         <div className="mx-auto mt-16 max-w-6xl">
           <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <AnimatedFeatureCard
-                key={index}
-                index={feature.index}
-                tag={feature.tag}
-                title={feature.title}
-                imageSrc={feature.imageSrc}
-                color={feature.color}
-                className="mx-auto w-full"
-              />
+              <a key={index} href="/achats" className="block">
+                <AnimatedFeatureCard
+                  index={feature.index}
+                  tag={feature.tag}
+                  title={feature.title}
+                  imageSrc={feature.imageSrc}
+                  color={feature.color}
+                  className="w-full cursor-pointer"
+                />
+              </a>
             ))}
           </div>
         </div>
@@ -60,7 +61,7 @@ export function LandingAccordionItem() {
             href="/achats"
             className="inline-flex items-center justify-center rounded-md bg-primary-500 px-6 py-3 text-sm font-medium text-darker-blue shadow-sm hover:bg-primary-400 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 cursor-pointer"
           >
-            En savoir plus
+            Boutique adhérents
           </a>
         </div>
       </div>

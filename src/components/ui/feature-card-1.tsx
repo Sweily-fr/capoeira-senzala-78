@@ -33,9 +33,9 @@ const cardVariants: Variants = {
     y: 0,
     boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
   },
-  hover: { 
+  hover: {
     y: -10,
-    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+    boxShadow: "0 20px 40px -10px var(--feature-color-light)"
   },
 };
 
@@ -55,7 +55,7 @@ const AnimatedFeatureCard = React.forwardRef<HTMLDivElement, AnimatedFeatureCard
         ref={ref}
         style={cardStyle}
         className={cn(
-          "relative flex h-[380px] w-full max-w-sm flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-card p-6 shadow-sm",
+          "relative flex h-[380px] w-full flex-col justify-end overflow-hidden rounded-2xl border border-[var(--feature-color-light)] bg-card p-6 shadow-sm",
           className
         )}
         initial="initial"
@@ -64,9 +64,9 @@ const AnimatedFeatureCard = React.forwardRef<HTMLDivElement, AnimatedFeatureCard
         transition={{ type: "spring", stiffness: 200, damping: 15 }}
       >
         <div
-          className="absolute inset-0 z-0 opacity-30 dark:opacity-10"
+          className="absolute inset-0 z-0 opacity-40"
           style={{
-            background: `radial-gradient(circle at 50% 30%, var(--feature-color) 0%, transparent 70%)`
+            background: `radial-gradient(circle at 50% 20%, var(--feature-color) 0%, transparent 60%)`
           }}
         />
         
@@ -89,12 +89,12 @@ const AnimatedFeatureCard = React.forwardRef<HTMLDivElement, AnimatedFeatureCard
         <div className="relative z-20 mt-auto">
           <div className="rounded-lg bg-black/50 p-5 backdrop-blur-sm">
             <span
-              className="mb-3 inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium"
-              style={{ color: `var(--feature-color)` }}
+              className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-medium border"
+              style={{ color: `var(--feature-color)`, backgroundColor: `var(--feature-color-light)`, borderColor: `var(--feature-color-light)` }}
             >
               {tag}
             </span>
-            <h3 className="text-lg font-semibold text-white">{title}</h3>
+            <h3 className="text-lg font-semibold text-white truncate">{title}</h3>
           </div>
         </div>
       </motion.div>
