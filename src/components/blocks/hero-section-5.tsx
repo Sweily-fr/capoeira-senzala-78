@@ -48,7 +48,7 @@ export function HeroSection({
         style={{ minHeight: heroHeight ? `${heroHeight}px` : '100svh' }}
       >
         <Navbar />
-        <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen">
+        <section className="relative pt-16 flex-1 min-h-0 sm:min-h-[70vh] md:min-h-screen flex flex-col">
           <div className="absolute inset-0 overflow-hidden m-2 rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/5 lg:rounded-[3rem]">
             <div className="relative w-full h-full">
               {customBackground ? (
@@ -68,57 +68,57 @@ export function HeroSection({
               )}
             </div>
           </div>
-          <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
+          <div className="relative z-10 flex-1 flex flex-col justify-between sm:justify-start py-6 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
             <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:block lg:px-12">
               <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
                 <motion.h1
-                  className="mt-6 sm:mt-8 max-w-2xl text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
+                  className="mt-6 sm:mt-8 max-w-2xl text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   {title}
                 </motion.h1>
-                <motion.p 
-                  className="mt-4 sm:mt-6 md:mt-8 max-w-2xl text-balance text-sm sm:text-base md:text-lg text-white/90 font-light px-2 sm:px-0 drop-shadow-md"
+                <motion.p
+                  className="mt-4 sm:mt-6 md:mt-8 max-w-2xl text-balance text-sm sm:text-base md:text-lg text-white/90 font-light drop-shadow-md"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
                   {subtitle}
                 </motion.p>
-
-                {showButtons && (
-                  <motion.div 
-                    className="mt-6 sm:mt-8 md:mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center lg:justify-start"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                  >
-                  <Button
-                    asChild
-                    size="lg"
-                    className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
-                  >
-                    <Link href="/cours-tarifs">
-                      <span className="text-nowrap">Découvrir nos cours</span>
-                      <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
-                  >
-                    <Link href="/cours-tarifs">
-                      <span className="text-nowrap">Où pratiquer ?</span>
-                    </Link>
-                  </Button>
-                  </motion.div>
-                )}
               </div>
             </div>
+
+            {showButtons && (
+              <motion.div
+                className="mt-auto pt-6 sm:mt-8 md:mt-12 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-12 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:justify-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
+                >
+                  <Link href="/cours-tarifs">
+                    <span className="text-nowrap">Découvrir nos cours</span>
+                    <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-full sm:w-auto cursor-pointer"
+                >
+                  <Link href="/cours-tarifs">
+                    <span className="text-nowrap">Où pratiquer ?</span>
+                  </Link>
+                </Button>
+              </motion.div>
+            )}
           </div>
         </section>
         {showPartners && (

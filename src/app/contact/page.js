@@ -16,7 +16,7 @@ export default function ContactPage() {
         <HeroWithPartners
           title="Nous Contacter"
           subtitle="Notre équipe est à votre écoute pour répondre à toutes vos questions"
-          heroImage="/images/hero-section-img/contact.jpg"
+          heroImage="/images/hero-section-img/home.jpg"
         />
         <ContactContent />
         <div className="container mx-auto px-4">

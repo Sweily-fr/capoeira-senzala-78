@@ -24,7 +24,7 @@ const servicesScolaires = [
       "Découverte culturelle du Brésil",
       "Support pédagogique fourni"
     ],
-    image: "/images/favelas_capoeira_senzala.png",
+    image: "/images/professionnelle/ecole-capoeira.jpg",
     popular: true
   },
   {
@@ -43,7 +43,7 @@ const servicesScolaires = [
       "Développement personnel",
       "Préparation possible au spectacle"
     ],
-    image: "/images/hero-2.jpg",
+    image: "/images/professionnelle/initiation-capoeira.jpg",
     popular: false
   },
   {
@@ -62,7 +62,7 @@ const servicesScolaires = [
       "Costumes et accessoires",
       "Coordination avec l'équipe éducative"
     ],
-    image: "/images/mico_capo_senzala.png",
+    image: "/images/professionnelle/presta_pro_01.jpg",
     popular: false
   }
 ];
@@ -85,7 +85,7 @@ const servicesPro = [
       "Animation musicale",
       "Matériel fourni"
     ],
-    image: "/images/hero-2.jpg",
+    image: "/images/professionnelle/presta_pro_01.jpg",
     popular: true
   },
   {
@@ -104,7 +104,7 @@ const servicesPro = [
       "Interaction avec le public",
       "Son et éclairage"
     ],
-    image: "/images/mico_capo_senzala.png",
+    image: "/images/professionnelle/initiation-capoeira.jpg",
     popular: false
   },
   {
@@ -123,7 +123,7 @@ const servicesPro = [
       "Photos souvenirs",
       "Ambiance festive"
     ],
-    image: "/images/bg-hero.png",
+    image: "/images/professionnelle/ecole-capoeira.jpg",
     popular: false
   }
 ];
@@ -274,7 +274,7 @@ export default function PrestationsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <Card className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border-primary-500/20 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border-primary-500/20">
             <CardContent className="p-6 sm:p-8 md:p-12">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4">
                 Prêt à organiser votre événement ?
@@ -283,14 +283,18 @@ export default function PrestationsSection() {
                 Contactez-nous pour discuter de votre projet et recevoir un devis adapté à vos besoins.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Nous appeler
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Demander un devis
-                </Button>
+                <a href="tel:0624851299">
+                  <Button size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Nous appeler
+                  </Button>
+                </a>
+                <a href="mailto:contact@capoeirasenzala78.fr?subject=Demande%20de%20devis%20-%20Prestation%20Capoeira">
+                  <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Demander un devis
+                  </Button>
+                </a>
               </div>
               <div className="flex flex-wrap justify-center gap-8 mt-8 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
@@ -358,9 +362,11 @@ export default function PrestationsSection() {
               </div>
               
               <div className="flex justify-end">
-                <Button className="bg-primary-500 text-darker-blue hover:bg-primary-600">
-                  Demander un devis
-                </Button>
+                <a href={`mailto:contact@capoeirasenzala78.fr?subject=Demande%20de%20devis%20-%20${encodeURIComponent(selectedService.title)}`}>
+                  <Button className="bg-primary-500 text-darker-blue hover:bg-primary-600">
+                    Demander un devis
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
