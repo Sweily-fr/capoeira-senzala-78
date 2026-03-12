@@ -15,7 +15,7 @@ import { useNotifications } from "@/context/NotificationContext";
 
 export function HeroSection({
   title = "Escola do Grupo Senzala 78",
-  subtitle = "A escola do Grupo Senzala 78 é uma escola de capoeira que promove a prática e a passagem da cultura capoeira para as gerações futuras.",
+  subtitle = "L'école du Grupo Senzala 78 est une école de capoeira qui promeut la pratique et la transmission de la culture capoeira aux générations futures.",
   showButtons = true,
   showPartners = true,
   heroImage = "/images/hero-section-img/home.jpg",
