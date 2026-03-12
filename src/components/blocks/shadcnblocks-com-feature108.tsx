@@ -98,12 +98,12 @@ const Feature108 = ({
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="mx-auto mt-12 max-w-screen-xl rounded-2xl bg-white/5 backdrop-blur-sm lg:p-12">
+          <div className="mx-auto mt-12 max-w-screen-xl rounded-2xl bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-12">
             {tabs.map((tab) => (
               <TabsContent
                 key={tab.value}
                 value={tab.value}
-                className="grid items-start lg:place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10 p-4 sm:p-6 lg:p-0"
+                className="grid items-start lg:place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10"
               >
                 <div className="flex flex-col gap-6 text-white">
                   <Badge className="w-fit bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">

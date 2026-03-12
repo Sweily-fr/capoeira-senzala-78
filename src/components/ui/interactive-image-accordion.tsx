@@ -42,7 +42,7 @@ export function LandingAccordionItem() {
         <div className="mx-auto mt-16 max-w-6xl">
           <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <a key={index} href="/achats" className="block">
+              <a key={index} href="/achats" className="block max-w-sm sm:max-w-none mx-auto">
                 <AnimatedFeatureCard
                   index={feature.index}
                   tag={feature.tag}

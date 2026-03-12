@@ -55,7 +55,7 @@ const AnimatedFeatureCard = React.forwardRef<HTMLDivElement, AnimatedFeatureCard
         ref={ref}
         style={cardStyle}
         className={cn(
-          "relative flex h-[380px] w-full flex-col justify-end overflow-hidden rounded-2xl border border-[var(--feature-color-light)] bg-card p-6 shadow-sm",
+          "relative flex h-[320px] sm:h-[350px] lg:h-[380px] w-full flex-col justify-end overflow-hidden rounded-2xl border border-[var(--feature-color-light)] bg-card p-4 sm:p-6 shadow-sm",
           className
         )}
         initial="initial"
@@ -82,19 +82,19 @@ const AnimatedFeatureCard = React.forwardRef<HTMLDivElement, AnimatedFeatureCard
           <img
             src={imageSrc}
             alt={tag}
-            className="w-56 h-56 object-contain"
+            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain"
           />
         </motion.div>
         
         <div className="relative z-20 mt-auto">
-          <div className="rounded-lg bg-black/50 p-5 backdrop-blur-sm">
+          <div className="rounded-lg bg-black/50 p-3 sm:p-5 backdrop-blur-sm">
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-medium border"
               style={{ color: `var(--feature-color)`, backgroundColor: `var(--feature-color-light)`, borderColor: `var(--feature-color-light)` }}
             >
               {tag}
             </span>
-            <h3 className="text-lg font-semibold text-white truncate">{title}</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-white truncate">{title}</h3>
           </div>
         </div>
       </motion.div>
