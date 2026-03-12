@@ -69,7 +69,7 @@ export function HeroSection({
             </div>
           </div>
           <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
-            <div className="mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
+            <div className="mx-auto flex max-w-7xl flex-col px-7 sm:px-6 lg:block lg:px-12">
               <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
                 <motion.h1
                   className="mt-6 sm:mt-8 max-w-2xl text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:mt-16 xl:text-7xl text-white font-semibold leading-tight drop-shadow-lg"
@@ -124,7 +124,7 @@ export function HeroSection({
           {/* Boutons mobile — positionnés en bas de la section */}
           {showButtons && (
             <motion.div
-              className="sm:hidden absolute bottom-6 left-0 right-0 z-10 px-6 flex flex-col items-stretch gap-3"
+              className="sm:hidden absolute bottom-6 left-0 right-0 z-10 px-7 flex flex-col items-stretch gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -246,7 +246,7 @@ const Navbar = () => {
         scrolled ? "backdrop-blur-lg bg-black/30 py-1" : "py-2"
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-0">
+      <div className="max-w-7xl mx-auto px-7 sm:px-6 lg:px-8 py-0">
         <Menu setActive={setActive}>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center">
