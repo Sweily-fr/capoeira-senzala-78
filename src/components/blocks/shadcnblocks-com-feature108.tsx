@@ -105,7 +105,7 @@ const Feature108 = ({
                 value={tab.value}
                 className="grid items-start lg:place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10"
               >
-                <div className="flex flex-col gap-6 text-white">
+                <div className="flex flex-col gap-3 sm:gap-6 text-white">
                   <Badge className="w-fit bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
                     {tab.content.badge}
                   </Badge>
@@ -115,7 +115,7 @@ const Feature108 = ({
                   <p className="text-white/80 lg:text-lg leading-relaxed font-light">
                     {tab.content.description}
                   </p>
-                  <Button className="mt-4 w-fit gap-2 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold cursor-pointer transition-all duration-200" size="lg">
+                  <Button className="mt-2 sm:mt-4 w-fit gap-2 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold cursor-pointer transition-all duration-200" size="lg">
                     {tab.content.buttonText}
                   </Button>
                 </div>
