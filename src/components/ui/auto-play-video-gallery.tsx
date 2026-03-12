@@ -118,59 +118,60 @@ export function AutoPlayVideoGallery({
               const isActive = index === activeVideoIndex;
 
               return (
-                <div
-                  key={video.id}
-                  className={cn(
-                    "relative cursor-pointer overflow-hidden rounded-lg sm:rounded-xl shadow-lg transition-all duration-300",
-                    isActive
-                      ? "ring-2 ring-primary-500 scale-[1.02] sm:scale-105"
-                      : "hover:scale-[1.01] sm:hover:scale-102"
-                  )}
-                  onClick={() => handleVideoClick(index)}
-                >
-                  <div className="relative aspect-video">
-                    {isActive && videoId ? (
-                      <iframe
-                        key={`iframe-${video.id}-${index}`}
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&enablejsapi=1`}
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <img
-                        src={videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : video.thumbnailUrl}
-                        alt={video.title}
-                        className="w-full h-full object-cover"
-                      />
+                <div key={video.id}>
+                  <div
+                    className={cn(
+                      "relative cursor-pointer overflow-hidden rounded-lg sm:rounded-xl shadow-lg transition-all duration-300",
+                      isActive
+                        ? "ring-2 ring-primary-500 scale-[1.02] sm:scale-105"
+                        : "hover:scale-[1.01] sm:hover:scale-102"
                     )}
+                    onClick={() => handleVideoClick(index)}
+                  >
+                    <div className="relative aspect-video">
+                      {isActive && videoId ? (
+                        <iframe
+                          key={`iframe-${video.id}-${index}`}
+                          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&enablejsapi=1`}
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <img
+                          src={videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : video.thumbnailUrl}
+                          alt={video.title}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
 
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
-                    {/* Play indicator on inactive videos */}
-                    {!isActive && (
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                          <Play className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 fill-white text-white" />
+                      {/* Play indicator on inactive videos */}
+                      {!isActive && (
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                            <Play className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 fill-white text-white" />
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    {/* Active indicator */}
-                    {isActive && isPlaying && (
-                      <div className="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4 pointer-events-none">
-                        <div className="flex items-center gap-1.5 sm:gap-2 bg-red-600 text-white px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium">
-                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" />
-                          <span className="hidden xs:inline">EN LECTURE</span>
-                          <span className="xs:hidden">●</span>
+                      {/* Active indicator */}
+                      {isActive && isPlaying && (
+                        <div className="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4 pointer-events-none">
+                          <div className="flex items-center gap-1.5 sm:gap-2 bg-red-600 text-white px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" />
+                            <span className="hidden xs:inline">EN LECTURE</span>
+                            <span className="xs:hidden">●</span>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
+                    </div>
                   </div>
                   {ytTitles[video.id] && (
-                    <p className="mt-2 text-sm sm:text-base text-white/80 text-center truncate px-1">
+                    <p className="mt-4 text-sm sm:text-base text-white/80 text-center truncate px-1">
                       {ytTitles[video.id]}
                     </p>
                   )}

@@ -103,7 +103,7 @@ const Feature108 = ({
               <TabsContent
                 key={tab.value}
                 value={tab.value}
-                className="grid place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10 p-4 sm:p-6 lg:p-0"
+                className="grid items-start lg:place-items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-10 p-4 sm:p-6 lg:p-0"
               >
                 <div className="flex flex-col gap-6 text-white">
                   <Badge className="w-fit bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
