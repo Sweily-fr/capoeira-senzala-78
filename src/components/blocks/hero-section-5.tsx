@@ -243,7 +243,7 @@ const Navbar = () => {
     <div
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
-        scrolled ? "backdrop-blur-lg bg-black/30 py-1" : "py-2"
+        scrolled ? "backdrop-blur-lg bg-black/30 py-1 sm:py-1" : "py-3 sm:py-2"
       )}
     >
       <div className="max-w-7xl mx-auto px-7 sm:px-6 lg:px-8 py-0">
