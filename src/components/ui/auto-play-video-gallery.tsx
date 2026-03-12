@@ -2,11 +2,11 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Play, Pause } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface VideoData {
   id: number;
-  thumbnailUrl: string;
+  thumbnailUrl?: string;
   videoUrl: string;
   title: string;
   description?: string;
@@ -33,8 +33,23 @@ export function AutoPlayVideoGallery({
   const [activeVideoIndex, setActiveVideoIndex] = React.useState(0);
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [hasStarted, setHasStarted] = React.useState(false);
+  const [ytTitles, setYtTitles] = React.useState<Record<number, string>>({});
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const timerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  // Fetch YouTube titles via oEmbed
+  React.useEffect(() => {
+    videos.forEach((video) => {
+      fetch(`https://noembed.com/embed?url=${encodeURIComponent(video.videoUrl)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.title) {
+            setYtTitles((prev) => ({ ...prev, [video.id]: data.title }));
+          }
+        })
+        .catch(() => {});
+    });
+  }, [videos]);
 
   // Intersection Observer to detect when section is visible
   React.useEffect(() => {
@@ -82,10 +97,6 @@ export function AutoPlayVideoGallery({
     // donc l'ancienne vidéo s'arrête automatiquement
     setActiveVideoIndex(index);
     setIsPlaying(true);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -157,38 +168,17 @@ export function AutoPlayVideoGallery({
                       </div>
                     )}
 
-                    {/* Title and Description */}
-                    <div className="absolute bottom-0 left-0 p-3 sm:p-4 md:p-5 pointer-events-none w-full">
-                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white truncate">{video.title}</h3>
-                      {video.description && (
-                        <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-white/80 line-clamp-2">{video.description}</p>
-                      )}
-                    </div>
                   </div>
+                  {ytTitles[video.id] && (
+                    <p className="mt-2 text-sm sm:text-base text-white/80 text-center truncate px-1">
+                      {ytTitles[video.id]}
+                    </p>
+                  )}
                 </div>
               );
             })}
           </div>
 
-          {/* Control buttons */}
-          <div className="flex justify-center mt-6 sm:mt-8 gap-4">
-            <button
-              onClick={togglePlayPause}
-              className="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-primary-500 hover:bg-primary-400 text-darker-blue text-sm sm:text-base font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
-            >
-              {isPlaying ? (
-                <>
-                  <Pause className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span>Pause</span>
-                </>
-              ) : (
-                <>
-                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span>Reprendre</span>
-                </>
-              )}
-            </button>
-          </div>
         </div>
       </div>
     </section>

@@ -23,23 +23,70 @@ const VideoGallery = () => {
   const videos = [
     {
       id: 1,
-      title: 'Cours Baby',
-      src: 'https://www.youtube.com/watch?v=UirNQJh9cF4',
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=FM8i00JvbGc',
       thumbnail: '/images/bg-hero.png'
     },
     {
       id: 2,
-      title: 'Cours Enfants',
-      src: 'https://www.youtube.com/watch?v=UirNQJh9cF4',
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=3me94ifV53M',
       thumbnail: '/images/bg-hero.png'
     },
     {
       id: 3,
-      title: 'Cours Ados/Adultes',
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=G3X9gtTBCuE',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 4,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=aS79PPqh2cU',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 5,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=k6GJ5x9X5GE',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 6,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=T65oaiazA4A',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 7,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=u9KF1fxrn-c',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 8,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=dAgqjfTLfv4',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 9,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=6CwhFeGhJeg',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 10,
+      title: 'Capoeira Senzala 78',
+      src: 'https://www.youtube.com/watch?v=DFkEk6x2Nls',
+      thumbnail: '/images/bg-hero.png'
+    },
+    {
+      id: 11,
+      title: 'Capoeira Senzala 78',
       src: 'https://www.youtube.com/watch?v=UirNQJh9cF4',
       thumbnail: '/images/bg-hero.png'
     },
-    // Add more videos as needed
   ];
 
   // Suppression de l'effet de rotation automatique inutile

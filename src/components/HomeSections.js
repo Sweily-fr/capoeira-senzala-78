@@ -66,25 +66,59 @@ const HomeSections = ({ prestationImages = [] }) => {
   const videos = [
     {
       id: 1,
-      thumbnailUrl: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?q=80&w=2069&auto=format&fit=crop",
-      videoUrl: "https://www.youtube.com/watch?v=UirNQJh9cF4",
-      title: "Cours Baby",
-      description: "Découvrez nos cours pour les plus petits"
+      videoUrl: "https://www.youtube.com/watch?v=FM8i00JvbGc",
+      title: "Capoeira Senzala 78",
     },
     {
       id: 2,
-      thumbnailUrl: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?q=80&w=2069&auto=format&fit=crop",
-      videoUrl: "https://www.youtube.com/watch?v=UirNQJh9cF4",
-      title: "Cours Enfants",
-      description: "Des cours adaptés aux enfants"
+      videoUrl: "https://www.youtube.com/watch?v=3me94ifV53M",
+      title: "Capoeira Senzala 78",
     },
     {
       id: 3,
-      thumbnailUrl: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?q=80&w=2069&auto=format&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=G3X9gtTBCuE",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 4,
+      videoUrl: "https://www.youtube.com/watch?v=aS79PPqh2cU",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 5,
+      videoUrl: "https://www.youtube.com/watch?v=k6GJ5x9X5GE",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 6,
+      videoUrl: "https://www.youtube.com/watch?v=T65oaiazA4A",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 7,
+      videoUrl: "https://www.youtube.com/watch?v=u9KF1fxrn-c",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 8,
+      videoUrl: "https://www.youtube.com/watch?v=dAgqjfTLfv4",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 9,
+      videoUrl: "https://www.youtube.com/watch?v=6CwhFeGhJeg",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 10,
+      videoUrl: "https://www.youtube.com/watch?v=DFkEk6x2Nls",
+      title: "Capoeira Senzala 78",
+    },
+    {
+      id: 11,
       videoUrl: "https://www.youtube.com/watch?v=UirNQJh9cF4",
-      title: "Cours Ados/Adultes",
-      description: "Cours pour adolescents et adultes"
-    }
+      title: "Capoeira Senzala 78",
+    },
   ]; 
 
   return (
