@@ -153,13 +153,13 @@ export function HeroSection({
           )}
         </section>
         {showPartners && (
-        <section className="bg-background pb-2 relative z-10">
-          <div className="group relative m-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        <section className="bg-dark-blue pb-2 relative z-10">
+          <div className="group relative mx-auto max-w-7xl px-7 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:max-w-44 md:border-r md:pr-6 mb-4 md:mb-0">
+              <div className="md:max-w-44 md:border-r md:pr-6 mb-4 md:mb-0 shrink-0">
                 <p className="text-center md:text-end text-xs sm:text-sm text-white">Nos partenaires</p>
               </div>
-              <div className="relative py-4 sm:py-6 w-full md:w-[calc(100%-11rem)]">
+              <div className="relative py-4 sm:py-6 w-full md:flex-1 overflow-hidden">
                 <InfiniteSlider durationOnHover={20} duration={40} gap={56}>
                   {[...partnerLogos, ...partnerLogos].map((logo, i) => (
                     <div key={i} className="flex shrink-0 items-center">
@@ -302,7 +302,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="hidden md:flex items-center gap-3 mr-4">
+              <div className="hidden md:flex items-center gap-3">
                 <button
                   onClick={openFromNavbar}
                   className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
