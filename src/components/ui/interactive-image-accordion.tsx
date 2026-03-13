@@ -28,7 +28,7 @@ const features = [
 
 export function LandingAccordionItem() {
   return (
-    <div className="bg-dark-blue py-10 sm:py-16 lg:py-24">
+    <div className="bg-dark-blue py-16 sm:py-20 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center mb-8">
           <h2 className="text-2xl font-medium text-white sm:text-3xl md:text-4xl lg:text-5xl">

@@ -12,11 +12,11 @@ export function SectionWrapper({
   paddingY = '2xl' // default to 2xl (py-32)
 }: SectionWrapperProps) {
   const paddingClasses = {
-    'sm': 'py-16',
-    'md': 'py-20',
-    'lg': 'py-24',
-    'xl': 'py-28',
-    '2xl': 'py-32',
+    'sm': 'py-12 sm:py-14 lg:py-16',
+    'md': 'py-16 sm:py-20 lg:py-24',
+    'lg': 'py-16 sm:py-20 lg:py-24',
+    'xl': 'py-16 sm:py-20 lg:py-24',
+    '2xl': 'py-16 sm:py-20 lg:py-24',
     'none': ''
   };
 

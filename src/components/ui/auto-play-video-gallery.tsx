@@ -100,7 +100,7 @@ export function AutoPlayVideoGallery({
   };
 
   return (
-    <section ref={sectionRef} className={cn("py-16 lg:py-24 text-white", className)}>
+    <section ref={sectionRef} className={cn("py-16 sm:py-20 lg:py-24 text-white", className)}>
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-12">

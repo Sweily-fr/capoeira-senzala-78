@@ -77,7 +77,7 @@ const Feature108 = ({
   ],
 }: Feature108Props) => {
   return (
-    <section className="py-16 lg:py-24 bg-dark-blue">
+    <section className="py-16 sm:py-20 lg:py-24 bg-dark-blue">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">{badge}</Badge>

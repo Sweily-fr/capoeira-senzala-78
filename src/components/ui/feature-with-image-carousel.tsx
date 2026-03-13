@@ -13,7 +13,7 @@ interface FeatureProps {
 
 function Feature({ images = [] }: FeatureProps) {
   return (
-    <div className="w-full py-10 sm:py-16 lg:py-24 bg-dark-blue">
+    <div className="w-full py-16 sm:py-20 lg:py-24 bg-dark-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 sm:gap-8 lg:gap-12 lg:flex-row-reverse">
           <div className="bg-gray-800/50 rounded-xl overflow-hidden shadow-xl order-2 lg:order-1">
