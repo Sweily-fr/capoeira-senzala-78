@@ -39,9 +39,9 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "hover:bg-pink-500/20 hover:border-pink-500/50 hover:text-pink-400" },
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook", color: "hover:bg-blue-500/20 hover:border-blue-500/50 hover:text-blue-400" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "hover:bg-red-500/20 hover:border-red-500/50 hover:text-red-400" }
+  { icon: Instagram, href: "https://www.instagram.com/capoeira_senzala_78/", label: "Instagram", color: "hover:bg-pink-500/20 hover:border-pink-500/50 hover:text-pink-400" },
+  { icon: Facebook, href: "https://www.facebook.com/capoeirasenzala78", label: "Facebook", color: "hover:bg-blue-500/20 hover:border-blue-500/50 hover:text-blue-400" },
+  { icon: Youtube, href: "https://www.youtube.com/c/capoeirasenzala78fr", label: "YouTube", color: "hover:bg-red-500/20 hover:border-red-500/50 hover:text-red-400" }
 ];
 
 export default function ContactContent() {

@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Layout, Pointer, Zap } from "lucide-react";
+import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -115,8 +116,8 @@ const Feature108 = ({
                   <p className="text-white/80 lg:text-lg leading-relaxed font-light">
                     {tab.content.description}
                   </p>
-                  <Button className="mt-2 sm:mt-4 w-fit gap-2 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold cursor-pointer transition-all duration-200" size="lg">
-                    {tab.content.buttonText}
+                  <Button asChild className="mt-2 sm:mt-4 w-fit gap-2 bg-primary-500 text-darker-blue hover:bg-primary-400 font-semibold cursor-pointer transition-all duration-200" size="lg">
+                    <Link href="/cours-tarifs">{tab.content.buttonText}</Link>
                   </Button>
                 </div>
                 <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl border-2 border-white/20">

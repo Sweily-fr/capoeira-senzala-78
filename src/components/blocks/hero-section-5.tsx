@@ -70,7 +70,7 @@ export function HeroSection({
               )}
             </div>
           </div>
-          <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-48">
+          <div className="relative z-10 py-12 sm:py-16 md:pb-24 lg:pb-28 lg:pt-36">
             <div className="mx-auto flex max-w-7xl flex-col px-7 sm:px-6 lg:block lg:px-12">
               <div className="max-w-lg text-left lg:ml-0 lg:max-w-full">
                 <motion.h1
