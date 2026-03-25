@@ -314,6 +314,19 @@ const Navbar = () => {
 
             <div className="flex items-center">
               <div className="hidden md:flex items-center gap-3">
+                <a
+                  href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative p-1.5 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                  title="Uni Verde & Co — Association humanitaire"
+                >
+                  <img
+                    src="/images/univerde/logo_univerde.png"
+                    alt="Uni Verde & Co"
+                    className="w-8 h-8 rounded"
+                  />
+                </a>
                 <button
                   onClick={openFromNavbar}
                   className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
