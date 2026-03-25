@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ExternalLink, QrCode } from 'lucide-react';
+import { ExternalLink, QrCode, Heart } from 'lucide-react';
 import { useState } from 'react';
 
 export default function UniVerdeBanner() {
@@ -24,8 +24,9 @@ export default function UniVerdeBanner() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 text-sm font-medium mb-4 border border-green-500/20">
-                Association partenaire
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 text-sm font-medium mb-4 border border-green-500/20">
+                <Heart className="w-3.5 h-3.5 fill-green-400" />
+                Association humanitaire partenaire
               </span>
             </motion.div>
 
@@ -55,8 +56,8 @@ export default function UniVerdeBanner() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Découvrez Uni Verde & Co, association partenaire du Grupo Senzala 78.
-              Rejoignez le mouvement en devenant adhérent !
+              Uni Verde & Co est une association humanitaire partenaire du Grupo Senzala 78,
+              engagée dans des actions solidaires et sociales. Adhérez ou participez à leurs initiatives !
             </motion.p>
 
             <motion.div
@@ -73,7 +74,7 @@ export default function UniVerdeBanner() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-colors duration-300"
               >
                 <ExternalLink className="w-4 h-4" />
-                Devenir adhérent
+                Adhérez ou participez
               </a>
               <button
                 onClick={() => setShowQR(!showQR)}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { PartnersSection as PartnersGrid } from '@/components/ui/partners-section';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, ExternalLink, Star } from 'lucide-react';
+import { Phone, Mail, ExternalLink, Star, Heart } from 'lucide-react';
 
 export default function PartnersSection({ logos = [] }) {
   const partnersLogos = logos.map((logo) => ({
@@ -27,8 +27,9 @@ export default function PartnersSection({ logos = [] }) {
         >
           <div className="flex items-center justify-center gap-2 mb-8">
             <Star className="w-5 h-5 text-green-400 fill-green-400" />
-            <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">
-              Association partenaire à la une
+            <span className="text-green-400 font-semibold text-sm uppercase tracking-wider flex items-center gap-2">
+              <Heart className="w-4 h-4 fill-green-400 inline" />
+              Association humanitaire partenaire
             </span>
             <Star className="w-5 h-5 text-green-400 fill-green-400" />
           </div>
@@ -50,8 +51,8 @@ export default function PartnersSection({ logos = [] }) {
                   </h3>
                 </div>
                 <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                  Découvrez Uni Verde & Co, association partenaire du Grupo Senzala 78.
-                  Rejoignez le mouvement en devenant adhérent !
+                  Uni Verde & Co est une association humanitaire partenaire du Grupo Senzala 78,
+                  engagée dans des actions solidaires et sociales. Adhérez ou participez à leurs initiatives !
                 </p>
                 <a
                   href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
@@ -60,7 +61,7 @@ export default function PartnersSection({ logos = [] }) {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-colors duration-300"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Devenir adhérent
+                  Adhérez ou participez
                 </a>
               </div>
 

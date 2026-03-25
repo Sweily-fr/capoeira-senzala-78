@@ -52,13 +52,11 @@ export function PartnersSection({ partners = [], className }: PartnersSectionPro
           className="mx-auto grid max-w-4xl grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-14 place-items-center"
         >
           {partners.map((logo, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="flex items-center justify-center w-full">
               <img
-                className={`mx-auto h-auto w-fit max-h-16 sm:max-h-20 ${logo.imgClassName ?? ""}`}
+                className={`max-h-12 sm:max-h-16 md:max-h-20 w-auto object-contain ${logo.imgClassName ?? ""}`}
                 src={logo.src}
                 alt={logo.alt}
-                height={logo.height}
-                width="auto"
               />
             </div>
           ))}
