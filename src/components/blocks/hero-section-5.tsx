@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { cn } from "@/lib/utils";
-import { ChevronRight, Bell } from "lucide-react";
+import { ChevronRight, Bell, Heart } from "lucide-react";
 import { useScroll, motion } from "motion/react";
 import Image from "next/image";
 import { Menu as MenuIcon, X } from "lucide-react";
@@ -408,6 +408,32 @@ const Navbar = () => {
               ))}
             </ul>
           </nav>
+
+          {/* Uni Verde banner */}
+          <div className="flex-shrink-0 mx-5 mb-3">
+            <a
+              href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3 rounded-xl bg-green-900/20 border border-green-500/15 hover:bg-green-900/30 transition-colors"
+            >
+              <img
+                src="/images/univerde/logo_univerde.png"
+                alt="Uni Verde & Co"
+                className="w-10 h-10 rounded-lg flex-shrink-0"
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5">
+                  <Heart className="w-3 h-3 text-green-400 fill-green-400 flex-shrink-0" />
+                  <span className="text-green-400 text-xs font-semibold">Association humanitaire</span>
+                </div>
+                <p className="text-white text-sm font-medium mt-0.5">Jumelé à Uni Verde & Co</p>
+              </div>
+              <span className="flex-shrink-0 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-full transition-colors">
+                Adhérer
+              </span>
+            </a>
+          </div>
 
           {/* Bottom actions */}
           <div className="flex-shrink-0 px-5 py-4 border-t border-white/10 flex items-center gap-3">
