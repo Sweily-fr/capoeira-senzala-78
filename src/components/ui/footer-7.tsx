@@ -109,17 +109,31 @@ export const Footer7 = ({
               ))}
             </ul>
           </div>
-          <div className="grid w-full gap-6 md:grid-cols-2 lg:gap-20">
+          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-16">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h3 className="mb-4 font-bold text-white">{section.title}</h3>
+                {section.title === "Partenaire" && (
+                  <a
+                    href={section.links[0]?.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mb-3"
+                  >
+                    <img
+                      src="/images/univerde/logo_univerde.png"
+                      alt="Uni Verde & Co"
+                      className="h-12 w-auto rounded-lg"
+                    />
+                  </a>
+                )}
                 <ul className="space-y-5 text-sm">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
                       className="font-normal text-white/60 hover:text-[#EAB308] transition-colors"
                     >
-                      <a href={link.href} className="py-1">{link.name}</a>
+                      <a href={link.href} target={section.title === "Partenaire" ? "_blank" : undefined} rel={section.title === "Partenaire" ? "noopener noreferrer" : undefined} className="py-1">{link.name}</a>
                     </li>
                   ))}
                 </ul>

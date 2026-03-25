@@ -9,6 +9,7 @@ import { Cta4 } from './ui/cta-4';
 import { Faq5 } from './ui/faq-5';
 import { Feature } from './ui/feature-with-image-carousel';
 import { AutoPlayVideoGallery } from './ui/auto-play-video-gallery';
+import UniVerdeBanner from './custom/UniVerdeBanner';
 
 const SectionCard = ({ title, description, icon, color, buttonText, buttonVariant = 'primary' }) => (
   <div className="bg-dark-blue/5 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col backdrop-blur-sm">
@@ -130,6 +131,7 @@ const HomeSections = ({ prestationImages = [] }) => {
       <LandingAccordionItem />
       {/* Video Gallery Section with Auto-Play */}
       <AutoPlayVideoGallery videos={videos} autoPlayDuration={15000} />
+      <UniVerdeBanner />
       <Faq5 />
       <Cta4 />
     </div>

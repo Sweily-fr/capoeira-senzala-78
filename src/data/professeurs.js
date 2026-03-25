@@ -17,7 +17,7 @@ export const professeurs = [
     photo: '/images/professeurs/orlane.jpg',
     email: 'mariana.santos@example.com',
     telephone: '06 23 45 67 89',
-    villes: ['triel', 'vernouillet', 'verneuil']
+    villes: ['triel', 'verneuil']
   },
   {
     id: 'hanaa-aangour',
@@ -112,7 +112,7 @@ export const professeurs = [
     photo: '/images/professeurs/estrelinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['gaillon']
+    villes: ['gaillon', 'maisons-laffitte']
   },
   {
     id: 'roland',
@@ -149,7 +149,7 @@ export const professeurs = [
     photo: '/images/professeurs/claudinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['ville-avray', 'le-vesinet']
+    villes: ['ville-avray', 'le-vesinet', "croissy-seine"]
   },
   {
     id: 'brazil',
@@ -158,7 +158,7 @@ export const professeurs = [
     photo: '/images/professeurs/brazil.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['triel']
+    villes: ['vernouillet']
   },
   {
     id: 'bombeiro',
@@ -206,17 +206,17 @@ export const professeurs = [
     focus: 'top',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['saint-germain']
+    villes: ['vernouillet']
   },
   {
     id: 'levezinha',
-    nom: 'Levazinha',
+    nom: 'Levezinha',
     prenom: 'Instrutora',
     photo: '/images/professeurs/levezinha.jpg',
     focus: 'top',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['saint-germain']
+    villes: ['vernouillet']
   },
   {
     id: 'esqueleto',

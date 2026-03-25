@@ -21,6 +21,12 @@ export default function Footer() {
         { name: "contact@capoeirasenzala78.fr", href: "mailto:contact@capoeirasenzala78.fr" },
         { name: "06 24 85 12 99", href: "tel:+33624851299" }
       ]
+    },
+    {
+      title: "Partenaire",
+      links: [
+        { name: "Uni Verde & Co", href: "https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co" }
+      ]
     }
   ];
 

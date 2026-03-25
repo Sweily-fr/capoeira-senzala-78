@@ -1,9 +1,10 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { PartnersSection as PartnersGrid } from '@/components/ui/partners-section';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, ExternalLink, Star } from 'lucide-react';
 
 export default function PartnersSection({ logos = [] }) {
   const partnersLogos = logos.map((logo) => ({
@@ -16,7 +17,72 @@ export default function PartnersSection({ logos = [] }) {
   return (
     <div className="py-10 sm:py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        
+
+        {/* Uni Verde Featured Section */}
+        <motion.div
+          className="mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <Star className="w-5 h-5 text-green-400 fill-green-400" />
+            <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">
+              Association partenaire à la une
+            </span>
+            <Star className="w-5 h-5 text-green-400 fill-green-400" />
+          </div>
+
+          <div className="bg-gradient-to-br from-green-900/20 to-green-800/5 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-green-500/15">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Logo + Info */}
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
+                  <Image
+                    src="/images/univerde/logo_univerde.png"
+                    alt="Uni Verde & Co"
+                    width={56}
+                    height={56}
+                    className="rounded-xl"
+                  />
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                    Uni Verde & Co
+                  </h3>
+                </div>
+                <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-lg mx-auto md:mx-0">
+                  Découvrez Uni Verde & Co, association partenaire du Grupo Senzala 78.
+                  Rejoignez le mouvement en devenant adhérent !
+                </p>
+                <a
+                  href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-colors duration-300"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Devenir adhérent
+                </a>
+              </div>
+
+              {/* QR Code */}
+              <div className="flex-shrink-0">
+                <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-lg">
+                  <Image
+                    src="/images/univerde/QR CODE ADHESION UNIVERDE AND CO.png"
+                    alt="QR Code adhésion Uni Verde & Co"
+                    width={180}
+                    height={180}
+                    className="w-36 h-36 sm:w-44 sm:h-44"
+                  />
+                  <p className="text-center text-gray-600 text-xs mt-2 font-medium">
+                    Scannez pour adhérer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Header Section */}
         <div className="text-center mb-16">
           <motion.h2
