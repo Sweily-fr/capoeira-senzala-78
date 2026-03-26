@@ -208,8 +208,6 @@ export function HeroSection({
 }
 
 const navItems = [
-  { name: "Accueil", href: "/" },
-
   { name: "Cours et Tarifs", href: "/cours-tarifs" },
   { name: "Événements à venir", href: "/evenements" },
   { name: "Tenues & Instruments", href: "/achats" },
@@ -318,14 +316,15 @@ const Navbar = () => {
                   href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative p-1.5 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-                  title="Uni Verde & Co — Association humanitaire"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-green-600/20 hover:bg-green-600/30 rounded-full transition-colors"
+                  title="Uni Verde & Co — Jumelé à l'association humanitaire"
                 >
                   <img
                     src="/images/univerde/logo_univerde.png"
                     alt="Uni Verde & Co"
                     className="w-8 h-8 rounded"
                   />
+                  <span className="text-green-400 text-xs font-medium">Asso. Humanitaire</span>
                 </a>
                 <button
                   onClick={openFromNavbar}
@@ -438,7 +437,7 @@ const Navbar = () => {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
                   <Heart className="w-3 h-3 text-green-400 fill-green-400 flex-shrink-0" />
-                  <span className="text-green-400 text-xs font-semibold">Association humanitaire</span>
+                  <span className="text-green-400 text-xs font-semibold">Jumelé à l'association humanitaire</span>
                 </div>
                 <p className="text-white text-sm font-medium mt-0.5">Jumelé à Uni Verde & Co</p>
               </div>

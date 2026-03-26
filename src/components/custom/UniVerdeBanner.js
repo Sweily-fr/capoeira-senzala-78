@@ -26,7 +26,7 @@ export default function UniVerdeBanner() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 text-sm font-medium mb-4 border border-green-500/20">
                 <Heart className="w-3.5 h-3.5 fill-green-400" />
-                Association humanitaire partenaire
+                Jumelé à l'association humanitaire
               </span>
             </motion.div>
 
@@ -56,7 +56,7 @@ export default function UniVerdeBanner() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Uni Verde & Co est une association humanitaire partenaire du Grupo Senzala 78,
+              Le Grupo Senzala 78 est jumelé à Uni Verde & Co, association humanitaire
               engagée dans des actions solidaires et sociales. Adhérez ou participez à leurs initiatives !
             </motion.p>
 

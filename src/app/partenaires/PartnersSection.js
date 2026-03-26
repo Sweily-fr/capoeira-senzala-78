@@ -29,7 +29,7 @@ export default function PartnersSection({ logos = [] }) {
             <Star className="w-5 h-5 text-green-400 fill-green-400" />
             <span className="text-green-400 font-semibold text-sm uppercase tracking-wider flex items-center gap-2">
               <Heart className="w-4 h-4 fill-green-400 inline" />
-              Association humanitaire partenaire
+              Jumelé à l'association humanitaire
             </span>
             <Star className="w-5 h-5 text-green-400 fill-green-400" />
           </div>
@@ -51,7 +51,7 @@ export default function PartnersSection({ logos = [] }) {
                   </h3>
                 </div>
                 <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                  Uni Verde & Co est une association humanitaire partenaire du Grupo Senzala 78,
+                  Le Grupo Senzala 78 est jumelé à Uni Verde & Co, association humanitaire
                   engagée dans des actions solidaires et sociales. Adhérez ou participez à leurs initiatives !
                 </p>
                 <a
