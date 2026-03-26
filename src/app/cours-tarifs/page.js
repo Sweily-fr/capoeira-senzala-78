@@ -22,7 +22,9 @@ export default function CoursEtTarifs() {
         <div className="bg-dark-blue text-white py-16">
           
           {/* Liste des villes et cours */}
-          <VillesList />
+          <div id="cours">
+            <VillesList />
+          </div>
           
         </div>
       </main>

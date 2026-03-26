@@ -111,7 +111,7 @@ export function HeroSection({
                       size="lg"
                       className="h-11 sm:h-13 rounded-full pl-5 sm:pl-6 pr-3 sm:pr-4 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-auto cursor-pointer"
                     >
-                      <Link href="/cours-tarifs">
+                      <Link href="/cours-tarifs#cours">
                         <span className="text-nowrap">Découvrir nos cours</span>
                         <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                       </Link>
@@ -122,7 +122,7 @@ export function HeroSection({
                       variant="outline"
                       className="h-11 sm:h-13 rounded-full px-5 sm:px-6 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm sm:text-base w-auto cursor-pointer"
                     >
-                      <Link href="/cours-tarifs">
+                      <Link href="/cours-tarifs#cours">
                         <span className="text-nowrap">Où pratiquer ?</span>
                       </Link>
                     </Button>
@@ -145,7 +145,7 @@ export function HeroSection({
                 size="lg"
                 className="h-11 rounded-full pl-5 pr-3 text-darker-blue font-semibold bg-primary-500 hover:bg-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transition-all duration-200 text-sm w-full cursor-pointer"
               >
-                <Link href="/cours-tarifs">
+                <Link href="/cours-tarifs#cours">
                   <span className="text-nowrap">Découvrir nos cours</span>
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -156,7 +156,7 @@ export function HeroSection({
                 variant="outline"
                 className="h-11 rounded-full px-5 text-white border-2 border-primary-500/40 hover:border-primary-500 hover:bg-primary-500/10 backdrop-blur-sm transition-all duration-200 text-sm w-full cursor-pointer"
               >
-                <Link href="/cours-tarifs">
+                <Link href="/cours-tarifs#cours">
                   <span className="text-nowrap">Où pratiquer ?</span>
                 </Link>
               </Button>

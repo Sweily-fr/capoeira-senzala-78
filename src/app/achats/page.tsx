@@ -1,5 +1,6 @@
 import HeroWithPartners from "@/components/blocks/HeroWithPartners";
 import AchatsContent from "./AchatsContent";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: 'Boutique Adhérents',
@@ -16,6 +17,7 @@ export default function AchatsPage() {
         heroImage="/images/hero-section-img/boutique.JPG"
       />
       <AchatsContent />
+      <Footer />
     </div>
   );
 }

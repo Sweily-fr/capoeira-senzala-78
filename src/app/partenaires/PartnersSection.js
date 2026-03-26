@@ -125,13 +125,17 @@ export default function PartnersSection({ logos = [] }) {
               Rejoignez notre réseau de partenaires. Découvrez les opportunités de collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
-                <Phone className="w-4 h-4 mr-2" />
-                Nous contacter
+              <Button asChild size="lg" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
+                <a href="/contact">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Nous contacter
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                <Mail className="w-4 h-4 mr-2" />
-                Nos prestations
+              <Button asChild size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <a href="/prestations">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Nos prestations
+                </a>
               </Button>
             </div>
           </div>
