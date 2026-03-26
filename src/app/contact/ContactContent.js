@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin, Mail, Phone, Clock, Instagram, Facebook, Youtube, ArrowRight, MessageCircle } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, Youtube, ArrowRight, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Cta4 } from '@/components/ui/cta-4';
@@ -22,19 +22,6 @@ const contactInfo = [
     value: "+33 6 12 34 56 78",
     href: "tel:+33612345678",
     description: "Du lundi au vendredi"
-  },
-  {
-    icon: MapPin,
-    title: "Adresse",
-    value: "78000 Versailles",
-    href: "https://maps.google.com",
-    description: "Yvelines, France"
-  },
-  {
-    icon: Clock,
-    title: "Horaires",
-    value: "Lun-Ven: 9h-21h",
-    description: "Sam: 10h-18h"
   }
 ];
 
@@ -66,7 +53,7 @@ export default function ContactContent() {
 
         {/* Cards de contact */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-16 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
