@@ -435,11 +435,8 @@ const Navbar = () => {
                 className="w-10 h-10 rounded-lg flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <Heart className="w-3 h-3 text-green-400 fill-green-400 flex-shrink-0" />
-                  <span className="text-green-400 text-xs font-semibold">Jumelé à l'association humanitaire</span>
-                </div>
-                <p className="text-white text-sm font-medium mt-0.5">Jumelé à Uni Verde & Co</p>
+                <span className="text-green-400 text-xs font-semibold">Jumelé à l'association humanitaire</span>
+                <p className="text-white text-sm font-medium mt-0.5">Uni Verde & Co</p>
               </div>
               <span className="flex-shrink-0 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-full transition-colors">
                 Adhérer
