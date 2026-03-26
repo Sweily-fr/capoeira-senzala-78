@@ -150,6 +150,7 @@ export const Footer7 = ({
               </li>
             ))}
           </ul>
+          <p className="order-3 text-white/50">Fait avec <span className="text-red-500">❤</span> par <a href="https://www.sweily.fr" target="_blank" rel="noopener noreferrer" className="text-[#EAB308] hover:underline">Sweily</a></p>
         </div>
       </div>
     </section>

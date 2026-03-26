@@ -154,12 +154,16 @@ export default function EventsList() {
                     <div className="text-2xl font-bold text-primary-500">
                       {featuredEvent.price}
                     </div>
-                    <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
-                      <a href={featuredEvent.externalLink} target="_blank" rel="noopener noreferrer">
-                        S'inscrire
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    {featuredEvent.externalLink ? (
+                      <Button asChild className="bg-primary-500 text-darker-blue hover:bg-primary-600">
+                        <a href={featuredEvent.externalLink} target="_blank" rel="noopener noreferrer">
+                          S&apos;inscrire
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                    ) : (
+                      <span className="text-green-400 font-medium">Entrée libre</span>
+                    )}
                   </div>
                 </CardContent>
               </div>
@@ -287,7 +291,7 @@ export default function EventsList() {
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${!past ? 'group-hover:scale-110 transition-transform duration-500' : ''}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   </div>
@@ -295,7 +299,9 @@ export default function EventsList() {
                     <Badge className={past ? "bg-gray-400 text-gray-700" : "bg-primary-500/20 text-primary-500"}>{event.category}</Badge>
                     <Badge className={`${status.color} text-white`}>{status.text}</Badge>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+
+                  {/* Default Content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-opacity duration-300 group-hover:opacity-0">
                     <CardTitle className="text-xl text-white mb-3">{event.title}</CardTitle>
                     <div className="flex flex-wrap items-center text-white/80 text-sm gap-4">
                       <div className="flex items-center gap-1">
@@ -312,6 +318,43 @@ export default function EventsList() {
                       </div>
                     </div>
                   </div>
+
+                  {/* Hover Content */}
+                  {!past && (
+                    <div className="absolute inset-0 bg-black/95 pt-16 px-6 pb-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                      <div>
+                        <CardTitle className="text-xl text-white mb-3">
+                          {event.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-300 text-sm mb-4 line-clamp-3">
+                          {event.description}
+                        </CardDescription>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex items-center gap-2 text-white/80">
+                            <Calendar className="w-4 h-4 text-primary-500" />
+                            {new Date(event.date).toLocaleDateString('fr-FR')} à {event.time}
+                          </div>
+                          <div className="flex items-center gap-2 text-white/80">
+                            <MapPin className="w-4 h-4 text-primary-500" />
+                            {event.location}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="pt-4 border-t border-white/10">
+                        <div className="flex items-center justify-between text-sm mb-3">
+                          <span className="text-gray-400">Organisateur</span>
+                          <span className="text-white">{event.organizer}</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="text-xl font-bold text-primary-500">
+                            {event.price}
+                          </div>
+                          <span className="text-green-400 font-medium">Entrée libre</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 )}
               </motion.div>

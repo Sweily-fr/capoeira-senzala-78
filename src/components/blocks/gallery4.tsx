@@ -20,6 +20,7 @@ export interface Gallery4Item {
   image: string;
   startDate: string;
   endDate?: string;
+  hasExternalLink?: boolean;
 }
 
 export interface Gallery4Props {
@@ -34,10 +35,11 @@ const transformEventsToGalleryItems = (): Gallery4Item[] => {
     id: event.id.toString(),
     title: event.title,
     description: event.description,
-    href: event.externalLink || `/evenements/${event.id}`,
+    href: event.externalLink || `/evenements#liste`,
     image: event.image,
     startDate: event.date,
     endDate: event.date,
+    hasExternalLink: !!event.externalLink,
   }));
 };
 
@@ -190,7 +192,7 @@ const Gallery4 = ({
                 className="max-w-[260px] sm:max-w-[300px] md:max-w-[320px] pl-0 pr-3 sm:pr-5 lg:max-w-[360px]"
               >
                 {isEventPast(item.startDate, item.endDate) ? (
-                  <div className="rounded-xl">
+                  <div className="rounded-xl grayscale opacity-50">
                     <div className="relative h-full min-h-[20rem] sm:min-h-[24rem] md:min-h-[27rem] max-w-full overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[5/4] lg:aspect-[16/9]">
                       <img
                         src={item.image}
@@ -226,10 +228,12 @@ const Gallery4 = ({
                           <CalendarDays className="h-5 w-5" />
                           <span>{formatDateRange(item.startDate, item.endDate)}</span>
                         </div>
-                        <div className="mt-4 flex items-center text-sm">
-                          S'inscrire à l'événement{" "}
-                          <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                        </div>
+                        {item.hasExternalLink && (
+                          <div className="mt-4 flex items-center text-sm">
+                            S&apos;inscrire à l&apos;événement{" "}
+                            <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                          </div>
+                        )}
                       </div>
                     </div>
                   </a>

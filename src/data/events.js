@@ -1,6 +1,26 @@
 // Centralized events data
 export const events = [
   {
+    id: 12,
+    title: "Oficina de Capoeira com Mestre Lucas de Santo Amaro",
+    description: "Oficina de capoeira avec Mestre Lucas de Santo Amaro. Deux jours de stage ouverts à toutes et tous !",
+    fullDescription: "Oficina de capoeira avec Mestre Lucas de Santo Amaro, figure emblématique de la capoeira brésilienne. Deux sessions exceptionnelles ouvertes à toutes et tous :\n\n• Mardi 31 mars 2026 — 19h à 21h, Salle Vestris, 1 Rue de l'Asile, 78400 Chatou (RER A)\n• Mercredi 1er avril 2026 — 20h à 22h30, TUESG – Gymnase Armagis, 11 Rue Armagis, Saint-Germain-en-Laye (RER A)\n\nTarif : 15€ hors EFB (gratuit pour les adhérents EFB).",
+    date: "2026-03-31",
+    time: "19:00",
+    endTime: "21:00",
+    location: "Salle Vestris / TUESG Gymnase Armagis",
+    address: "1 Rue de l'Asile, 78400 Chatou / 11 Rue Armagis, Saint-Germain-en-Laye",
+    category: "Stage",
+    price: "15€ hors EFB",
+    capacity: null,
+    registered: null,
+    image: "/images/events/mestre_lucas_Oficina_Mars_2026.png",
+    featured: true,
+    tags: ["oficina", "mestre", "capoeira", "stage", "mestre lucas"],
+    organizer: "Grupo Senzala 78",
+    externalLink: null
+  },
+  {
     id: 1,
     title: "Tem mulher na roda",
     description: "O nosso evento Tem Mulher Na Roda tá chegando muito rapidinho com muita energia positiva.",

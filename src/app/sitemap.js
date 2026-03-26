@@ -1,4 +1,3 @@
-import { events } from '@/data/events';
 import { articles } from '@/data/articles';
 
 export default function sitemap() {
@@ -18,13 +17,6 @@ export default function sitemap() {
     { url: `${baseUrl}/legal`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  const eventPages = events.map((event) => ({
-    url: `${baseUrl}/evenements/${event.id}`,
-    lastModified: new Date(event.date),
-    changeFrequency: 'weekly',
-    priority: 0.6,
-  }));
-
   const articlePages = articles.map((article) => ({
     url: `${baseUrl}/actualites/${article.id}`,
     lastModified: new Date(article.date),
@@ -32,5 +24,5 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...eventPages, ...articlePages];
+  return [...staticPages, ...articlePages];
 }

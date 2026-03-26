@@ -27,10 +27,10 @@ export default function LeGroupeContent() {
             </div>
             <div className="w-full max-w-4xl mx-auto mt-12">
               <VideoPlayer
-                thumbnailUrl="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?q=80&w=2069&auto=format&fit=crop"
-                videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                title="Building the Future"
-                description="A look into modern architecture and design."
+                thumbnailUrl="https://img.youtube.com/vi/kk9zFDcTwkY/maxresdefault.jpg"
+                videoUrl="https://www.youtube.com/embed/kk9zFDcTwkY?autoplay=1"
+                title="Grupo Senzala"
+                description="L'histoire du Grupo Senzala"
                 className="rounded-xl w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px]"
               />
             </div>

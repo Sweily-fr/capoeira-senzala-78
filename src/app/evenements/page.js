@@ -19,7 +19,7 @@ export default function EvenementsAVenir() {
           customBackground={<EventsHeroBackground />}
         />
         
-        <div className="bg-dark-blue text-white">
+        <div id="liste" className="bg-dark-blue text-white">
           <EventsList />
         </div>
       </main>

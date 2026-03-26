@@ -23,7 +23,7 @@ export default function LegalPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Éditeur</h2>
               <p>
-                Le site internet www.capoeirasenzala78.fr est édité et diffusé par Kevin PAM en
+                Le site internet www.capoeirasenzala78.fr est édité et diffusé par <a href="https://www.sweily.fr" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:underline">Sweily</a> en
                 collaboration avec l&apos;Association Capoeira Saint Germain (ou Association Escola
                 de Capoeira Grupo Senzala).
               </p>
@@ -68,13 +68,6 @@ export default function LegalPage() {
               <p>
                 Une simple consultation du site « www.capoeirasenzala78.fr » n&apos;entraîne pas
                 d&apos;enregistrement de données à caractère personnel.
-              </p>
-              <p className="mt-4">
-                Toutefois, en cas de prise de contact via le formulaire prévu à cet effet ou
-                enregistrement via l&apos;interface « Mon Compte ». La société éditrice,
-                l&apos;Association Escola de Capoeira Grupo Senzala 78, collectera auprès de chaque
-                utilisateur un certain nombre de données utiles à caractère personnel (nom, email,
-                coordonnées …).
               </p>
               <p className="mt-4">
                 En cas de demande d&apos;informations ou de documentation, la société éditrice peut
@@ -173,51 +166,9 @@ export default function LegalPage() {
               <h3 className="text-xl font-semibold text-white mt-6 mb-3">Scripts</h3>
               <p>Le site utilise les technologies suivantes :</p>
               <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Script JQuery UI open-source utilisé sous licence MIT</li>
-                <li>
-                  Google Maps API : Utilisation libre de droit. Scripts sous licences Apache 2.0.
-                </li>
                 <li>
                   Google Font API : Utilisation libre de droit (condition d&apos;utilisation liée à la
                   police choisie). Scripts sous licences Apache 2.0.
-                </li>
-              </ul>
-
-              <h3 className="text-xl font-semibold text-white mt-6 mb-3">Images</h3>
-              <ul className="list-disc list-inside mt-2 space-y-2">
-                <li>
-                  Planche 41 – Tome 2 — « Voyage pittoresque et historique au Brésil » par
-                  Jean-Baptiste Debret
-                </li>
-                <li>Œuvre « Danse de la Guerre » par Johann Moritz Rugendas</li>
-                <li>
-                  Photo de Mestre Pastinha : Tous droits réservés à Pierre Verger ©.{' '}
-                  <a
-                    href="http://www.pierreverger.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-500 hover:underline"
-                  >
-                    pierreverger.org
-                  </a>
-                </li>
-                <li>
-                  Photo de Mestre Bimba : Aucun auteur trouvé. Tous droits réservés à son auteur
-                  original.
-                </li>
-                <li>
-                  Illustration Maculélé et Forro : Signée par Robert Sardu © – Tous droits réservés.
-                </li>
-                <li>
-                  Photo de Frévo : Signée Sérgio Bernardo © – Tous droits réservés. Utilisée sous
-                  licence Creative Commons Attribution 2.5
-                </li>
-                <li>
-                  Illustration Batucada : Signée Marie-Églé de Lardemelle © – Tous droits réservés.
-                </li>
-                <li>
-                  Photo d&apos;entrée dans la ronde : Pascal Vo (alias Professor Deitado) – © Tous
-                  droits réservés.
                 </li>
               </ul>
 
@@ -226,8 +177,6 @@ export default function LegalPage() {
                 Toute vidéo partagée sur le site respecte les conditions de la licence Creative Commons
                 Attribution 2.5. Les droits en reviennent à leurs auteurs respectifs.
               </p>
-
-
             </div>
           </div>
         </section>
