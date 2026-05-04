@@ -6,6 +6,11 @@ const EXTENSIONS = [".png", ".jpg", ".jpeg", ".svg", ".webp"];
 // Logos with these keywords in filename are dark and need invert to display white
 const DARK_KEYWORDS = ["noir", "black", "dark"];
 
+// Map a logo filename (lowercase) to an external partner URL
+const PARTNER_LINKS = {
+  "logo_texte_white.png": "https://www.newbi.fr",
+};
+
 export function getPartenaires() {
   const dir = path.join(process.cwd(), "public/images/partenaires");
 
@@ -27,6 +32,7 @@ export function getPartenaires() {
         alt: name,
         filename: file,
         invert: isDark,
+        link: PARTNER_LINKS[lowerFile] ?? null,
       };
     });
 }

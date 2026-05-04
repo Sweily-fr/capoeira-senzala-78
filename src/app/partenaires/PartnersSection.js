@@ -12,6 +12,7 @@ export default function PartnersSection({ logos = [] }) {
     alt: logo.alt,
     height: 32,
     imgClassName: logo.invert ? "invert" : "",
+    link: logo.link ?? undefined,
   }));
 
   return (

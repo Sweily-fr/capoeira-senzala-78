@@ -26,6 +26,7 @@ export interface PartnerLogo {
   alt: string
   height: number
   imgClassName?: string
+  link?: string
 }
 
 interface PartnersSectionProps {
@@ -51,15 +52,32 @@ export function PartnersSection({ partners = [], className }: PartnersSectionPro
           }}
           className="mx-auto grid max-w-4xl grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-14 place-items-center"
         >
-          {partners.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center w-full">
+          {partners.map((logo, index) => {
+            const img = (
               <img
                 className={`max-h-12 sm:max-h-16 md:max-h-20 w-auto object-contain ${logo.imgClassName ?? ""}`}
                 src={logo.src}
                 alt={logo.alt}
               />
-            </div>
-          ))}
+            )
+            return (
+              <div key={index} className="flex items-center justify-center w-full">
+                {logo.link ? (
+                  <a
+                    href={logo.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={logo.alt}
+                    className="transition-opacity hover:opacity-80"
+                  >
+                    {img}
+                  </a>
+                ) : (
+                  img
+                )}
+              </div>
+            )
+          })}
         </AnimatedGroup>
       </div>
     </section>

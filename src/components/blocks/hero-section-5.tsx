@@ -30,7 +30,7 @@ export function HeroSection({
   showFlags?: boolean;
   heroImage?: string;
   customBackground?: React.ReactNode;
-  partnerLogos?: { src: string; alt: string; filename?: string; invert?: boolean }[];
+  partnerLogos?: { src: string; alt: string; filename?: string; invert?: boolean; link?: string | null }[];
 } = {}) {
   const heroRef = useRef<HTMLElement>(null);
   const [heroHeight, setHeroHeight] = useState<number | null>(null);
@@ -172,8 +172,8 @@ export function HeroSection({
               </div>
               <div className="relative py-4 sm:py-6 w-full md:flex-1 overflow-hidden">
                 <InfiniteSlider durationOnHover={20} duration={40} gap={56}>
-                  {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                    <div key={i} className="flex shrink-0 items-center">
+                  {[...partnerLogos, ...partnerLogos].map((logo, i) => {
+                    const img = (
                       <img
                         className={`mx-auto h-6 sm:h-8 w-auto max-w-[100px] sm:max-w-none object-contain rounded ${logo.invert ? "invert" : ""}`}
                         src={logo.src}
@@ -181,8 +181,25 @@ export function HeroSection({
                         height="32"
                         width="auto"
                       />
-                    </div>
-                  ))}
+                    );
+                    return (
+                      <div key={i} className="flex shrink-0 items-center">
+                        {logo.link ? (
+                          <a
+                            href={logo.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={logo.alt}
+                            className="transition-opacity hover:opacity-80"
+                          >
+                            {img}
+                          </a>
+                        ) : (
+                          img
+                        )}
+                      </div>
+                    );
+                  })}
                 </InfiniteSlider>
 
                 <div className="bg-linear-to-r from-dark-blue absolute inset-y-0 left-0 w-20"></div>
