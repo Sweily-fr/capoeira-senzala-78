@@ -166,20 +166,29 @@ export default function VillesList() {
                           {profs.length > 1 ? 'Professeurs' : 'Professeur'}
                         </h4>
                         <div className="flex flex-wrap gap-4">
-                          {profs.map((prof) => (
-                            <div key={prof.id} className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3">
-                              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white/10">
-                                <Image
-                                  src={prof.photo}
-                                  alt={prof.nomComplet}
-                                  fill
-                                  className={`object-cover ${prof.focus === 'top' ? 'object-top' : prof.focus === 'bottom' ? 'object-bottom' : ''}`}
-                                  sizes="48px"
-                                />
+                          {profs.map((prof) => {
+                            const initial = (prof.nomComplet.match(/\b\p{L}/u)?.[0] ?? '?').toUpperCase();
+                            return (
+                              <div key={prof.id} className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3">
+                                <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white/10 flex items-center justify-center">
+                                  {prof.photo ? (
+                                    <Image
+                                      src={prof.photo}
+                                      alt={prof.nomComplet}
+                                      fill
+                                      className={`object-cover ${prof.focus === 'top' ? 'object-top' : prof.focus === 'bottom' ? 'object-bottom' : ''}`}
+                                      sizes="48px"
+                                    />
+                                  ) : (
+                                    <span className="text-base font-semibold text-white/70" aria-hidden="true">
+                                      {initial}
+                                    </span>
+                                  )}
+                                </div>
+                                <span className="text-sm md:text-base font-medium">{prof.nomComplet}</span>
                               </div>
-                              <span className="text-sm md:text-base font-medium">{prof.nomComplet}</span>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     );

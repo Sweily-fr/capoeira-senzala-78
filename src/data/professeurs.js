@@ -62,7 +62,7 @@ export const professeurs = [
     id: 'christian-tavares',
     nom: 'Bicho do mato',
     prenom: 'Contra-mestre',
-    photo: '/images/professeurs/cathy.jpeg',
+    photo: null,
     email: 'camila.martins@example.com',
     telephone: '06 67 89 01 23',
     villes: ['carrieres-poissy', 'mesnil', 'maisons-laffitte']
@@ -80,7 +80,7 @@ export const professeurs = [
     id: 'fabio',
     nom: 'Canela',
     prenom: 'Contra-mestre',
-    photo: '/images/professeurs/cathy.jpeg',
+    photo: null,
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['jouy']
