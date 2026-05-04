@@ -27,7 +27,7 @@ export const professeurs = [
     photo: '/images/professeurs/hanaa.jpeg',
     email: 'rafael.oliveira@example.com',
     telephone: '06 34 56 78 90',
-    villes: ['triel']
+    villes: ['triel', 'saint-germain']
   },
   {
     id: 'treme-treme',
@@ -231,7 +231,7 @@ export const professeurs = [
     id: 'valdir',
     nom: 'Valdir',
     prenom: '',
-    photo: null,
+    photo: '/images/professeurs/valdir.jpeg',
     email: '',
     telephone: '',
     villes: ['batucada']
