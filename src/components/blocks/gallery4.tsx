@@ -38,7 +38,7 @@ const transformEventsToGalleryItems = (): Gallery4Item[] => {
     href: event.externalLink || `/evenements#liste`,
     image: event.image,
     startDate: event.date,
-    endDate: event.date,
+    endDate: event.endDate || event.date,
     hasExternalLink: !!event.externalLink,
   }));
 };

@@ -26,7 +26,7 @@ export default function EventsList() {
   };
 
   const featuredEvent = events.find(event => event.featured);
-  const regularEvents = filteredEvents.filter(event => !event.featured);
+  const regularEvents = filteredEvents.filter(event => event.id !== featuredEvent?.id);
 
   const getEventStatus = (event) => {
     const eventDate = new Date(event.date);
@@ -46,6 +46,13 @@ export default function EventsList() {
     if (percentage >= 100) return { text: "Complet", color: "text-red-400" };
     if (percentage >= 80) return { text: "Presque complet", color: "text-orange-400" };
     return { text: "Places disponibles", color: "text-green-400" };
+  };
+
+  const formatEventDate = (event) => {
+    const start = new Date(event.date).toLocaleDateString('fr-FR');
+    if (!event.endDate || event.endDate === event.date) return start;
+    const end = new Date(event.endDate).toLocaleDateString('fr-FR');
+    return `${start} – ${end}`;
   };
 
   return (
@@ -124,12 +131,14 @@ export default function EventsList() {
                     <div className="flex items-center text-gray-400 text-sm gap-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {new Date(featuredEvent.date).toLocaleDateString('fr-FR')}
+                        {formatEventDate(featuredEvent)}
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {featuredEvent.time}
-                      </div>
+                      {featuredEvent.time && (
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {featuredEvent.time}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <CardTitle className="text-2xl text-white mb-4">
@@ -222,19 +231,21 @@ export default function EventsList() {
                     <div className="flex flex-wrap items-center text-white/80 text-sm gap-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {new Date(event.date).toLocaleDateString('fr-FR')}
+                        {formatEventDate(event)}
                       </div>
+                      {event.time && (
                       <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         {event.time}
                       </div>
+                      )}
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
                         <span className="truncate">{event.location}</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Hover Content (all details) */}
                   <div className="absolute inset-0 bg-black/95 pt-16 px-6 pb-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
                     <div>
@@ -247,7 +258,7 @@ export default function EventsList() {
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2 text-white/80">
                           <Calendar className="w-4 h-4 text-primary-500" />
-                          {new Date(event.date).toLocaleDateString('fr-FR')} à {event.time}
+                          {formatEventDate(event)}{event.time ? ` à ${event.time}` : ''}
                         </div>
                         <div className="flex items-center gap-2 text-white/80">
                           <MapPin className="w-4 h-4 text-primary-500" />
@@ -306,12 +317,14 @@ export default function EventsList() {
                     <div className="flex flex-wrap items-center text-white/80 text-sm gap-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {new Date(event.date).toLocaleDateString('fr-FR')}
+                        {formatEventDate(event)}
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {event.time}
-                      </div>
+                      {event.time && (
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {event.time}
+                        </div>
+                      )}
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
                         <span className="truncate">{event.location}</span>
@@ -332,7 +345,7 @@ export default function EventsList() {
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center gap-2 text-white/80">
                             <Calendar className="w-4 h-4 text-primary-500" />
-                            {new Date(event.date).toLocaleDateString('fr-FR')} à {event.time}
+                            {formatEventDate(event)}{event.time ? ` à ${event.time}` : ''}
                           </div>
                           <div className="flex items-center gap-2 text-white/80">
                             <MapPin className="w-4 h-4 text-primary-500" />

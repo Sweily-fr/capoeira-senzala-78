@@ -1,15 +1,18 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { events } from '@/data/events';
 
 const EventCard = ({ event }) => {
   return (
-    <div className="flex-shrink-0 w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 rounded-xl overflow-hidden border border-white/10 bg-dark-blue/50 backdrop-blur-sm">
+    <div className="flex-shrink-0 w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 rounded-xl overflow-hidden border border-white/10 bg-dark-blue/50">
       <div className="relative w-full h-full">
-        <img
+        <Image
           src={event.image}
           alt={event.title}
-          className="w-full h-full object-cover opacity-60"
+          fill
+          sizes="200px"
+          className="object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-3">
@@ -24,23 +27,22 @@ const EventCard = ({ event }) => {
 };
 
 const ScrollingRow = ({ events: rowEvents, direction = 'left', speed = 30 }) => {
-  const duplicatedEvents = [...rowEvents, ...rowEvents, ...rowEvents, ...rowEvents, ...rowEvents, ...rowEvents];
-  
+  // Two copies are enough to loop seamlessly with translateX(-50%)
+  const duplicatedEvents = [...rowEvents, ...rowEvents];
+
   return (
     <div className="flex overflow-hidden">
-      <div 
+      <div
         className="flex gap-4"
         style={{
-          animation: direction === 'left' 
+          animation: direction === 'left'
             ? `scrollLeft ${speed}s linear infinite`
             : `scrollRight ${speed}s linear infinite`,
+          willChange: 'transform',
         }}
       >
         {duplicatedEvents.map((event, index) => (
           <EventCard key={`${event.id}-${index}`} event={event} />
-        ))}
-        {duplicatedEvents.map((event, index) => (
-          <EventCard key={`${event.id}-${index}-dup`} event={event} />
         ))}
       </div>
     </div>
