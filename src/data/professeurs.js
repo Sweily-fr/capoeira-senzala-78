@@ -240,7 +240,7 @@ export const professeurs = [
     id: 'aurelie',
     nom: 'Aurélie',
     prenom: '',
-    photo: null,
+    photo: '/images/professeurs/aurelie.jpeg',
     email: '',
     telephone: '',
     villes: ['batucada']
