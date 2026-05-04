@@ -16,8 +16,6 @@ export interface EmailData {
   read: boolean;
 }
 
-const ALLOWED_RECIPIENT = "app@email-assoconnect.com";
-
 async function fetchEmails(): Promise<EmailData[]> {
   const client = new ImapFlow({
     host: process.env.IMAP_HOST || "",
@@ -44,27 +42,17 @@ async function fetchEmails(): Promise<EmailData[]> {
       return [];
     }
 
-    // Rechercher uniquement les emails à destination de l'adresse AssoConnect
-    const matchingUids = await client.search(
-      { to: ALLOWED_RECIPIENT },
-      { uid: true }
-    );
-
-    if (!matchingUids || matchingUids.length === 0) {
-      await client.logout();
-      return [];
-    }
-
-    // Garder les N plus récents (les UIDs sont croissants par ordre d'arrivée)
-    const lastUids = matchingUids.slice(-fetchCount);
-    const range = lastUids.join(",");
+    // Calculer la plage des derniers emails
+    const totalMessages = mailbox.exists;
+    const startSeq = Math.max(1, totalMessages - fetchCount + 1);
+    const range = `${startSeq}:${totalMessages}`;
 
     // Récupérer les emails
-    for await (const message of client.fetch(
-      range,
-      { envelope: true, source: true, flags: true },
-      { uid: true }
-    )) {
+    for await (const message of client.fetch(range, {
+      envelope: true,
+      source: true,
+      flags: true,
+    })) {
       const envelope = message.envelope;
       const fromAddress = envelope.from?.[0];
 
