@@ -56,7 +56,7 @@ export const professeurs = [
     photo: '/images/professeurs/cathy.jpeg',
     email: 'lucas.costa@example.com',
     telephone: '06 56 78 90 12',
-    villes: ['saint-germain']
+    villes: ['saint-germain', 'poissy']
   },
   {
     id: 'christian-tavares',
@@ -74,7 +74,7 @@ export const professeurs = [
     photo: '/images/professeurs/india.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['carrieres-seine']
+    villes: ['carrieres-seine', 'chatou']
   },
   {
     id: 'fabio',
@@ -167,7 +167,7 @@ export const professeurs = [
     photo: '/images/professeurs/bombeiro.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['triel', 'sarre-union', 'diemeringen']
+    villes: ['sarre-union', 'diemeringen']
   },
   {
     id: 'flor',
@@ -177,7 +177,7 @@ export const professeurs = [
     photo: '/images/professeurs/flor.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['triel', 'sarre-union', 'diemeringen']
+    villes: ['sarre-union', 'diemeringen']
   },
   {
     id: 'anginho',
@@ -186,7 +186,7 @@ export const professeurs = [
     photo: '/images/professeurs/anginho.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['triel', 'sarre-union', 'diemeringen']
+    villes: ['sarre-union', 'diemeringen']
   },
   {
     id: 'musico',
@@ -196,7 +196,7 @@ export const professeurs = [
     photo: '/images/professeurs/musico.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['triel', 'sarre-union', 'diemeringen']
+    villes: ['sarre-union', 'diemeringen']
   },
   {
     id: 'pena',
@@ -226,6 +226,24 @@ export const professeurs = [
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['saleilles', 'le-boulou']
+  },
+  {
+    id: 'valdir',
+    nom: 'Valdir',
+    prenom: '',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['batucada']
+  },
+  {
+    id: 'aurelie',
+    nom: 'Aurélie',
+    prenom: '',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['batucada']
   }
 ];
 
@@ -235,7 +253,7 @@ export function getProfesseursParVille(villeId) {
     .filter(prof => prof.villes.includes(villeId))
     .map(prof => ({
       id: prof.id,
-      nomComplet: `${prof.prenom} ${prof.nom}`,
+      nomComplet: `${prof.prenom} ${prof.nom}`.trim(),
       photo: prof.photo,
       focus: prof.focus || 'center'
     }));

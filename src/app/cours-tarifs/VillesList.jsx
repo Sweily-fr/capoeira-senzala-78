@@ -157,13 +157,17 @@ export default function VillesList() {
                   </div>
 
                   {/* Professeurs de la ville */}
-                  {activeTab === 'capoeira' && (() => {
-                    const profs = getProfesseursParVille(selectedVille);
+                  {(() => {
+                    const profsKey = activeTab === 'capoeira' ? selectedVille : 'batucada';
+                    const profs = getProfesseursParVille(profsKey);
                     if (profs.length === 0) return null;
+                    const label = activeTab === 'batucada'
+                      ? 'Intervenants'
+                      : (profs.length > 1 ? 'Professeurs' : 'Professeur');
                     return (
                       <div className="mb-4 md:mb-6">
                         <h4 className="font-semibold mb-3 text-sm md:text-base text-gray-300">
-                          {profs.length > 1 ? 'Professeurs' : 'Professeur'}
+                          {label}
                         </h4>
                         <div className="flex flex-wrap gap-4">
                           {profs.map((prof) => {
