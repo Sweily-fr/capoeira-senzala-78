@@ -313,9 +313,9 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`font-normal text-sm transition-colors duration-200 ${
-                        pathname === item.href 
-                          ? 'text-primary-500' 
+                      className={`font-normal text-sm whitespace-nowrap transition-colors duration-200 ${
+                        pathname === item.href
+                          ? 'text-primary-500'
                           : 'text-white hover:text-primary-500'
                       }`}
                       onMouseEnter={() => setActive(null)}
@@ -333,15 +333,17 @@ const Navbar = () => {
                   href="https://www.helloasso.com/associations/uni-verde-and-co/adhesions/adhesion-uni-verde-and-co"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-1.5 bg-green-600/20 hover:bg-green-600/30 rounded-full transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-green-600/20 hover:bg-green-600/30 rounded-full transition-colors whitespace-nowrap"
                   title="Uni Verde & Co — Jumelé à l'association humanitaire"
                 >
                   <img
                     src="/images/univerde/logo_univerde.png"
                     alt="Uni Verde & Co"
+                    width="32"
+                    height="32"
                     className="w-8 h-8 rounded"
                   />
-                  <span className="text-green-400 text-xs font-medium">Asso. Humanitaire</span>
+                  <span className="text-green-400 text-xs font-medium whitespace-nowrap">Asso. Humanitaire</span>
                 </a>
                 <button
                   onClick={openFromNavbar}
@@ -499,8 +501,9 @@ const Logo = ({ className }: { className?: string }) => {
     <Image
       src="/images/logo-capoeirasenzala1.png"
       alt="Logo Capoeira Senzala"
-      width={180}
-      height={45}
+      width={160}
+      height={160}
+      priority
       className={cn("h-8 sm:h-10 md:h-12 w-auto", className)}
     />
   );
