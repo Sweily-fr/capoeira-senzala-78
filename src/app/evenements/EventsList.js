@@ -21,19 +21,23 @@ export default function EventsList() {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const isPastEvent = (event) => {
-    const eventDate = new Date(event.date);
-    return eventDate < today;
+    const eventEnd = new Date(event.endDate || event.date);
+    eventEnd.setHours(23, 59, 59, 999);
+    return eventEnd < today;
   };
 
-  const featuredEvent = events.find(event => event.featured);
+  const featuredEvent = events.find(event => event.featured && !isPastEvent(event));
   const regularEvents = filteredEvents.filter(event => event.id !== featuredEvent?.id);
 
   const getEventStatus = (event) => {
     const eventDate = new Date(event.date);
+    const eventEnd = new Date(event.endDate || event.date);
+    eventEnd.setHours(23, 59, 59, 999);
     const today = new Date();
     const daysUntil = Math.ceil((eventDate - today) / (1000 * 60 * 60 * 24));
-    
-    if (daysUntil < 0) return { text: "Terminé", color: "bg-gray-500" };
+
+    if (eventEnd < today) return { text: "Terminé", color: "bg-gray-500" };
+    if (eventDate <= today && today <= eventEnd) return { text: "En cours", color: "bg-red-500" };
     if (daysUntil === 0) return { text: "Aujourd'hui", color: "bg-red-500" };
     if (daysUntil <= 7) return { text: "Cette semaine", color: "bg-orange-500" };
     if (daysUntil <= 30) return { text: "Ce mois-ci", color: "bg-primary-500" };
