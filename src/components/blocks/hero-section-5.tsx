@@ -410,10 +410,10 @@ const Navbar = () => {
                             <Link
                               href={subItem.href}
                               onClick={() => setMobileOpen(false)}
-                              className={`block px-3 py-2.5 rounded-lg text-[15px] transition-colors duration-200 [-webkit-tap-highlight-color:transparent] ${
+                              className={`mobile-nav-link block px-3 py-2.5 rounded-lg text-[15px] transition-colors duration-200 ${
                                 pathname === subItem.href
                                   ? 'bg-primary-500/15 text-primary-500 font-medium'
-                                  : 'text-white/70 hover:bg-white/5 hover:text-white active:bg-primary-500/15 active:text-primary-500'
+                                  : 'text-white/70'
                               }`}
                             >
                               {subItem.name}
@@ -426,10 +426,10 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`block px-3 py-3 rounded-lg text-[15px] font-medium transition-colors duration-200 [-webkit-tap-highlight-color:transparent] ${
+                      className={`mobile-nav-link block px-3 py-3 rounded-lg text-[15px] font-medium transition-colors duration-200 ${
                         pathname === item.href
                           ? 'bg-primary-500/15 text-primary-500'
-                          : 'text-white hover:bg-white/5 active:bg-primary-500/15 active:text-primary-500'
+                          : 'text-white'
                       }`}
                     >
                       {item.name}

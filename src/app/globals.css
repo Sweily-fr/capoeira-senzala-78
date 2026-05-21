@@ -91,6 +91,21 @@ html, body {
   margin: 0;
 }
 
+.mobile-nav-link {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus,
+.mobile-nav-link:active,
+.mobile-nav-link:focus-visible {
+  color: #F9BB07 !important;
+  background-color: rgba(249, 187, 7, 0.15) !important;
+}
+
 html {
   position: relative;
   height: 100%;
