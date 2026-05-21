@@ -9,9 +9,9 @@ export default function Footer() {
       title: "Liens Rapides",
       links: [
         { name: "Accueil", href: "/" },
-        { name: "À propos", href: "/about" },
-        { name: "Cours", href: "/classes" },
-        { name: "Événements", href: "/events" },
+        { name: "À propos", href: "/le-groupe-senzala-78" },
+        { name: "Cours", href: "/cours-tarifs" },
+        { name: "Événements", href: "/evenements" },
         { name: "Contact", href: "/contact" }
       ]
     },
