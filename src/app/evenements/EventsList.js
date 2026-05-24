@@ -27,7 +27,9 @@ export default function EventsList() {
   };
 
   const featuredEvent = events.find(event => event.featured && !isPastEvent(event));
-  const regularEvents = filteredEvents.filter(event => event.id !== featuredEvent?.id);
+  const regularEvents = selectedCategory === "Tous"
+    ? filteredEvents.filter(event => event.id !== featuredEvent?.id)
+    : filteredEvents;
 
   const getEventStatus = (event) => {
     const eventDate = new Date(event.date);
