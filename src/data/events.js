@@ -1,6 +1,26 @@
 // Centralized events data
 export const events = [
   {
+    id: 15,
+    title: "Oficina de Capoeira com Mestre Negoativo",
+    description: "Oficina de capoeira avec Mestre Negoativo. Deux jours de stage ouverts à toutes et tous !",
+    fullDescription: "Oficina de capoeira avec Mestre Negoativo. Deux sessions exceptionnelles ouvertes à toutes et tous :\n\n• Lundi 15 juin 2026 — 18h30 à 22h30, TUESG – Gymnase Armagis, 11 Rue Armagis, Saint-Germain-en-Laye (RER A)\n• Mardi 16 juin 2026 — 19h30 à 21h00, École Mercier, Chemin de la Remise, 93470 Coubron\n\nTarif : 25€ hors EFB.\n\nContact : 06 24 85 12 99 — capoeira78szl@gmail.com",
+    date: "2026-06-15",
+    time: "18:30",
+    endTime: "22:30",
+    location: "TUESG – Gymnase Armagis / École Mercier",
+    address: "11 Rue Armagis, Saint-Germain-en-Laye / Chemin de la Remise, 93470 Coubron",
+    category: "Stage",
+    price: "25€ hors EFB",
+    capacity: null,
+    registered: null,
+    image: "/images/events/oficina-negoativo-juin-2026.jpg",
+    featured: true,
+    tags: ["oficina", "mestre", "capoeira", "stage", "negoativo"],
+    organizer: "Grupo Senzala 78",
+    externalLink: null
+  },
+  {
     id: 14,
     title: "Reencontro França-Brazil de Capoeira",
     description: "Reencontro França-Brazil de Capoeira — quatre jours de stages, rodas et échanges à Jouy-le-Moutier.",
