@@ -88,7 +88,7 @@ export const professeurs = [
   {
     id: 'lea',
     nom: 'Ligeirinha',
-    prenom: 'Instrutora',
+    prenom: 'Professora',
     photo: '/images/professeurs/ligeirinha.jpg',
     focus: 'top',
     email: 'diego.ferreira@example.com',
