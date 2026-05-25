@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-        <HeroWithPartners showFlags />
+        <HeroWithPartners showFlags title="Escola de Capoeira grupo Senzala de Teresópolis núcleo senzala78" />
         <div className="bg-dark-blue">
           <HomeSections prestationImages={prestationImages} />
         </div>
