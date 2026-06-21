@@ -12,9 +12,15 @@ export const metadata = {
 
 export default function Home() {
   const professionnelleDir = path.join(process.cwd(), 'public/images/professionnelle');
-  const prestationImages = fs.readdirSync(professionnelleDir)
-    .filter((file) => /\.(jpg|jpeg|png|webp|avif)$/i.test(file))
-    .map((file) => `/images/professionnelle/${file}`);
+  let prestationImages = [];
+  try {
+    prestationImages = fs.readdirSync(professionnelleDir)
+      .filter((file) => /\.(jpg|jpeg|png|webp|avif)$/i.test(file))
+      .map((file) => `/images/professionnelle/${file}`);
+  } catch {
+    // Le dossier peut ne pas exister (ex. dossier vide non suivi par git sur Vercel)
+    prestationImages = [];
+  }
 
   return (
     <>
