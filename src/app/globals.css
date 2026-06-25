@@ -480,12 +480,19 @@ body {
 .email-html-content td,
 .email-html-content th {
   padding: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   vertical-align: top;
 }
 
+/* Rendre transparentes les bordures qui séparent les sections du mail. */
+.email-html-content table,
+.email-html-content tr,
+.email-html-content td,
+.email-html-content th {
+  border-color: transparent !important;
+}
+
 .email-html-content hr {
-  border-color: rgba(0, 0, 0, 0.15);
+  border-color: transparent !important;
   margin: 0.75rem 0;
 }
 
@@ -505,21 +512,6 @@ body {
   margin: 0.25rem 0;
 }
 
-/* Forcer le texte blanc des emails (illisible sur fond clair) à s'afficher
-   dans le jaune/orange du site pour rester lisible quel que soit le fond.
-   Cible les couleurs blanches déclarées en style inline ou via attribut. */
-.email-html-content [style*="color:#fff" i],
-.email-html-content [style*="color: #fff" i],
-.email-html-content [style*="color:#ffffff" i],
-.email-html-content [style*="color: #ffffff" i],
-.email-html-content [style*="color:white" i],
-.email-html-content [style*="color: white" i],
-.email-html-content [style*="color:rgb(255,255,255)" i],
-.email-html-content [style*="color: rgb(255, 255, 255)" i],
-.email-html-content [style*="color:rgba(255,255,255" i],
-.email-html-content [style*="color: rgba(255, 255, 255" i],
-.email-html-content font[color="#fff" i],
-.email-html-content font[color="#ffffff" i],
-.email-html-content font[color="white" i] {
-  color: #B27D00 !important;
-}
+/* La recoloration du texte blanc en jaune/orange est gérée côté JS (parcours
+   du DOM) afin de tenir compte du fond : on ne recolore que le texte blanc
+   posé sur le fond clair, pas celui des boutons/bandeaux à fond coloré. */

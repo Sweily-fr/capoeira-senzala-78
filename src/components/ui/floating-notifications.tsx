@@ -29,22 +29,70 @@ export function FloatingNotifications() {
       ADD_TAGS: ["style"],
       ADD_ATTR: ["target"],
     });
-    // Le contenu de l'email est affiché sur une carte blanche : on recolore tout
-    // texte blanc (illisible sur fond blanc) dans le jaune/orange du site. On
-    // traite ici les couleurs déclarées en style inline ET dans les balises
-    // <style>, en évitant de toucher aux fonds (background-color, bgcolor).
+    if (typeof window === "undefined") return clean;
+
+    // Le contenu de l'email est affiché sur une carte blanche. On recolore le
+    // texte blanc (illisible sur fond blanc) en jaune/orange du site — MAIS
+    // uniquement s'il n'est pas posé sur un fond coloré (boutons/bandeaux), où
+    // le texte blanc doit rester blanc. On parcourt donc le DOM en suivant le
+    // fond hérité des éléments parents.
     const GOLD = "#B27D00";
-    return clean
-      .replace(/(^|[^-])color\s*:\s*#fff(fff)?\b/gi, `$1color:${GOLD}`)
-      .replace(/(^|[^-])color\s*:\s*white\b/gi, `$1color:${GOLD}`)
-      .replace(
-        /(^|[^-])color\s*:\s*rgba?\(\s*255\s*,\s*255\s*,\s*255[^)]*\)/gi,
-        `$1color:${GOLD}`
-      )
-      .replace(
-        /(<font[^>]*\bcolor\s*=\s*["']?)(#fff(?:fff)?|white)(["']?)/gi,
-        `$1${GOLD}$3`
+
+    const isWhite = (c?: string | null) => {
+      if (!c) return false;
+      const v = c.trim().toLowerCase();
+      return (
+        v === "#fff" ||
+        v === "#ffffff" ||
+        v === "white" ||
+        /^rgba?\(\s*255\s*,\s*255\s*,\s*255/.test(v)
       );
+    };
+
+    const hasColoredBg = (el: Element) => {
+      const candidates: string[] = [];
+      const style = el.getAttribute("style") || "";
+      const m = style.match(/background(?:-color)?\s*:\s*([^;]+)/i);
+      if (m) candidates.push(m[1]);
+      const bgAttr = el.getAttribute("bgcolor");
+      if (bgAttr) candidates.push(bgAttr);
+      return candidates.some((bg) => {
+        const v = bg.trim().toLowerCase();
+        if (!v || v === "transparent" || v === "none") return false;
+        if (isWhite(v)) return false;
+        return /#|rgb|hsl|[a-z]/.test(v);
+      });
+    };
+
+    try {
+      const doc = new DOMParser().parseFromString(clean, "text/html");
+
+      const walk = (el: Element, onColoredBg: boolean) => {
+        const colored = onColoredBg || hasColoredBg(el);
+
+        if (!colored) {
+          const style = el.getAttribute("style");
+          if (style) {
+            const newStyle = style.replace(
+              /(^|[^-])(color\s*:\s*)([^;]+)/gi,
+              (full, pre, prop, val) =>
+                isWhite(val) ? `${pre}${prop}${GOLD}` : full
+            );
+            if (newStyle !== style) el.setAttribute("style", newStyle);
+          }
+          if (el.tagName === "FONT" && isWhite(el.getAttribute("color"))) {
+            el.setAttribute("color", GOLD);
+          }
+        }
+
+        Array.from(el.children).forEach((child) => walk(child, colored));
+      };
+
+      Array.from(doc.body.children).forEach((child) => walk(child, false));
+      return doc.body.innerHTML;
+    } catch {
+      return clean;
+    }
   }, [selectedEmail?.htmlContent]);
 
   const handleEmailClick = (email: Email) => {
