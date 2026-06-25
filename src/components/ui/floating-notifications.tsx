@@ -25,10 +25,26 @@ export function FloatingNotifications() {
 
   const sanitizedHtml = useMemo(() => {
     if (!selectedEmail?.htmlContent) return "";
-    return DOMPurify.sanitize(selectedEmail.htmlContent, {
+    const clean = DOMPurify.sanitize(selectedEmail.htmlContent, {
       ADD_TAGS: ["style"],
       ADD_ATTR: ["target"],
     });
+    // Le contenu de l'email est affiché sur une carte blanche : on recolore tout
+    // texte blanc (illisible sur fond blanc) dans le jaune/orange du site. On
+    // traite ici les couleurs déclarées en style inline ET dans les balises
+    // <style>, en évitant de toucher aux fonds (background-color, bgcolor).
+    const GOLD = "#B27D00";
+    return clean
+      .replace(/(^|[^-])color\s*:\s*#fff(fff)?\b/gi, `$1color:${GOLD}`)
+      .replace(/(^|[^-])color\s*:\s*white\b/gi, `$1color:${GOLD}`)
+      .replace(
+        /(^|[^-])color\s*:\s*rgba?\(\s*255\s*,\s*255\s*,\s*255[^)]*\)/gi,
+        `$1color:${GOLD}`
+      )
+      .replace(
+        /(<font[^>]*\bcolor\s*=\s*["']?)(#fff(?:fff)?|white)(["']?)/gi,
+        `$1${GOLD}$3`
+      );
   }, [selectedEmail?.htmlContent]);
 
   const handleEmailClick = (email: Email) => {

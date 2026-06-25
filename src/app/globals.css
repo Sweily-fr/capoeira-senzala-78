@@ -419,9 +419,15 @@ body {
   }
 }
 
-/* Styles pour le contenu HTML des emails dans le lecteur de notifications */
+/* Styles pour le contenu HTML des emails dans le lecteur de notifications.
+   Le contenu est normalisé comme une "carte" claire (fond blanc, texte sombre)
+   afin que les emails — quels que soient leurs styles d'origine — restent
+   lisibles. Le texte blanc explicite est recoloré en jaune/orange du site. */
 .email-html-content {
-  color: rgba(255, 255, 255, 0.85);
+  color: #1f2937;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.75rem;
   word-break: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
@@ -441,13 +447,13 @@ body {
 }
 
 .email-html-content a {
-  color: #F9BB07;
+  color: #B27D00;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .email-html-content a:hover {
-  color: #fcd34d;
+  color: #F9BB07;
 }
 
 .email-html-content p {
@@ -458,7 +464,7 @@ body {
 .email-html-content h2,
 .email-html-content h3,
 .email-html-content h4 {
-  color: white;
+  color: #111827;
   margin: 0.75rem 0 0.25rem;
   font-weight: 600;
 }
@@ -474,18 +480,18 @@ body {
 .email-html-content td,
 .email-html-content th {
   padding: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   vertical-align: top;
 }
 
 .email-html-content hr {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
   margin: 0.75rem 0;
 }
 
 .email-html-content strong,
 .email-html-content b {
-  color: white;
+  color: inherit;
   font-weight: 600;
 }
 
@@ -515,5 +521,5 @@ body {
 .email-html-content font[color="#fff" i],
 .email-html-content font[color="#ffffff" i],
 .email-html-content font[color="white" i] {
-  color: #F9BB07 !important;
+  color: #B27D00 !important;
 }
