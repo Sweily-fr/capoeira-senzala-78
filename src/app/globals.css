@@ -498,3 +498,22 @@ body {
 .email-html-content li {
   margin: 0.25rem 0;
 }
+
+/* Forcer le texte blanc des emails (illisible sur fond clair) à s'afficher
+   dans le jaune/orange du site pour rester lisible quel que soit le fond.
+   Cible les couleurs blanches déclarées en style inline ou via attribut. */
+.email-html-content [style*="color:#fff" i],
+.email-html-content [style*="color: #fff" i],
+.email-html-content [style*="color:#ffffff" i],
+.email-html-content [style*="color: #ffffff" i],
+.email-html-content [style*="color:white" i],
+.email-html-content [style*="color: white" i],
+.email-html-content [style*="color:rgb(255,255,255)" i],
+.email-html-content [style*="color: rgb(255, 255, 255)" i],
+.email-html-content [style*="color:rgba(255,255,255" i],
+.email-html-content [style*="color: rgba(255, 255, 255" i],
+.email-html-content font[color="#fff" i],
+.email-html-content font[color="#ffffff" i],
+.email-html-content font[color="white" i] {
+  color: #F9BB07 !important;
+}
