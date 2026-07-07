@@ -8,7 +8,7 @@ export const professeurs = [
     photo: '/images/professeurs/banana.jpg',
     email: 'carlos.silva@example.com',
     telephone: '06 12 34 56 78',
-    villes: ['saint-germain', 'poissy', 'triel', 'chatou', 'le-vesinet', 'montesson']
+    villes: ['saint-germain', 'poissy', 'triel', 'chatou']
   },
   {
     id: 'orlane-silva',
@@ -17,7 +17,7 @@ export const professeurs = [
     photo: '/images/professeurs/orlane.jpg',
     email: 'mariana.santos@example.com',
     telephone: '06 23 45 67 89',
-    villes: ['triel', 'verneuil']
+    villes: ['triel', 'verneuil', 'le-vesinet']
   },
   {
     id: 'hanaa-aangour',
@@ -27,7 +27,7 @@ export const professeurs = [
     photo: '/images/professeurs/hanaa.jpeg',
     email: 'rafael.oliveira@example.com',
     telephone: '06 34 56 78 90',
-    villes: ['triel', 'saint-germain']
+    villes: ['triel', 'saint-germain', 'le-vesinet']
   },
   {
     id: 'treme-treme',
@@ -93,7 +93,7 @@ export const professeurs = [
     focus: 'top',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['vaucresson']
+    villes: ['vaucresson', 'le-vesinet']
   },
   {
     id: 'coqueiro',
@@ -149,7 +149,34 @@ export const professeurs = [
     photo: '/images/professeurs/claudinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['ville-avray', 'le-vesinet', "croissy-seine"]
+    villes: []
+  },
+  {
+    id: 'pica-pau',
+    nom: 'Pica-Pau',
+    prenom: 'Professor',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['montesson']
+  },
+  {
+    id: 'he-man',
+    nom: 'He-man',
+    prenom: '',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['ville-avray']
+  },
+  {
+    id: 'viking',
+    nom: 'Viking',
+    prenom: '',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['croissy-seine']
   },
   {
     id: 'brazil',
