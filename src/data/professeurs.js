@@ -163,8 +163,8 @@ export const professeurs = [
   {
     id: 'he-man',
     nom: 'He-man',
-    prenom: '',
-    photo: null,
+    prenom: 'Contra mestre',
+    photo: '/images/professeurs/he-man.jpg',
     email: '',
     telephone: '',
     villes: ['ville-avray']
@@ -173,7 +173,7 @@ export const professeurs = [
     id: 'viking',
     nom: 'Viking',
     prenom: '',
-    photo: null,
+    photo: '/images/professeurs/viking.jpg',
     email: '',
     telephone: '',
     villes: ['croissy-seine']
