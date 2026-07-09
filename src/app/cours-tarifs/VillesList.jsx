@@ -10,8 +10,15 @@ export default function VillesList() {
   const [selectedVille, setSelectedVille] = useState(Object.keys(coursParVille).filter(key => key !== 'batucada')[0]);
   const [searchQuery, setSearchQuery] = useState('');
   
-  // Filtrer les villes pour exclure batucada
-  const allVilles = Object.entries(coursParVille).filter(([key]) => key !== 'batucada');
+  // Filtrer les villes pour exclure batucada, puis trier par ordre alphabétique
+  // (Saint-Germain-en-Laye reste toujours en première position)
+  const allVilles = Object.entries(coursParVille)
+    .filter(([key]) => key !== 'batucada')
+    .sort(([keyA, villeA], [keyB, villeB]) => {
+      if (keyA === 'saint-germain') return -1;
+      if (keyB === 'saint-germain') return 1;
+      return villeA.nom.localeCompare(villeB.nom, 'fr', { sensitivity: 'base' });
+    });
   
   // Filtrer les villes selon la recherche
   const villes = allVilles.filter(([key, ville]) => 
