@@ -9,6 +9,7 @@ import poissy from './cours/poissy.json';
 import vaucresson from './cours/vaucresson.json';
 import billy from './cours/bailly.json';
 import gaillon from './cours/gaillon.json';
+import hardricourt from './cours/hardricourt.json';
 import verneuil from './cours/verneuil.json';
 import vernouillet from './cours/vernouillet.json';
 import guyancourt from './cours/guyancourt.json';
@@ -21,7 +22,6 @@ import saintNomLaBreteche from './cours/saint-nom-la-breteche.json';
 import villeAvray from './cours/ville-avray.json';
 import montesson from './cours/montesson.json';
 import leVesinet from './cours/le-vesinet.json';
-import maisonsLaffitte from './cours/maisons-laffitte.json';
 import croissySeine from './cours/croissy-seine.json';
 import sarreUnion from './cours/sarre-union.json';
 import diemeringen from './cours/diemeringen.json';
@@ -42,6 +42,7 @@ const coursParVille = {
   'vaucresson': vaucresson,
   'bailly': billy,
   'gaillon': gaillon,
+  'hardricourt': hardricourt,
   'verneuil': verneuil,
   'vernouillet': vernouillet,
   'guyancourt': guyancourt,
@@ -54,7 +55,6 @@ const coursParVille = {
   'ville-avray': villeAvray,
   'montesson': montesson,
   'le-vesinet': leVesinet,
-  'maisons-laffitte': maisonsLaffitte,
   'croissy-seine': croissySeine,
   'sarre-union': sarreUnion,
   'diemeringen': diemeringen,

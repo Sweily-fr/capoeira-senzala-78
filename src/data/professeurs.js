@@ -65,7 +65,7 @@ export const professeurs = [
     photo: null,
     email: 'camila.martins@example.com',
     telephone: '06 67 89 01 23',
-    villes: ['carrieres-poissy', 'mesnil', 'maisons-laffitte']
+    villes: ['carrieres-poissy', 'mesnil']
   },
   {
     id: 'india',
@@ -112,7 +112,7 @@ export const professeurs = [
     photo: '/images/professeurs/estrelinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['gaillon', 'maisons-laffitte']
+    villes: ['gaillon', 'hardricourt']
   },
   {
     id: 'roland',
@@ -330,6 +330,11 @@ export const villes = [
     professeurs: getProfesseursParVille('gaillon')
   },
   {
+    id: 'hardricourt',
+    nom: 'Hardricourt',
+    professeurs: getProfesseursParVille('hardricourt')
+  },
+  {
     id: 'verneuil',
     nom: 'Verneuil-sur-Seine',
     professeurs: getProfesseursParVille('verneuil')
@@ -388,11 +393,6 @@ export const villes = [
     id: 'le-vesinet',
     nom: 'Le Vésinet',
     professeurs: getProfesseursParVille('le-vesinet')
-  },
-  {
-    id: 'maisons-laffitte',
-    nom: 'Maisons-Laffitte',
-    professeurs: getProfesseursParVille('maisons-laffitte')
   },
   {
     id: 'croissy-seine',

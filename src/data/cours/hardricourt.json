@@ -1,0 +1,15 @@
+{
+  "nom": "Hardricourt",
+  "cours": [
+    {
+      "jour": "Mercredi",
+      "cours": [
+        {
+          "heure": "10h00 - 11h00",
+          "age": "Enfants de 4 à 5 ans (Maternelle MS et GS)",
+          "lieu": "L'espace 1901 - 18 rue Guillaume de Beaumont - 78250 Hardricourt"
+        }
+      ]
+    }
+  ]
+}
