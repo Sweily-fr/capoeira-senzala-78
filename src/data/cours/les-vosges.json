@@ -1,0 +1,26 @@
+{
+  "nom": "Les Vosges",
+  "inscriptionHref": "",
+  "cours": [
+    {
+      "jour": "Mercredi",
+      "cours": [
+        {
+          "heure": "17h00 - 18h00",
+          "age": "Enfants de 6 à 12 ans - Tous niveaux",
+          "lieu": "Palais Omnisports Joseph Claudel - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
+        }
+      ]
+    },
+    {
+      "jour": "Vendredi",
+      "cours": [
+        {
+          "heure": "17h00 - 18h00",
+          "age": "Ados à partir de 13 ans et adultes",
+          "lieu": "Palais Omnisports Joseph Claudel - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,7 @@ import sarreUnion from './cours/sarre-union.json';
 import diemeringen from './cours/diemeringen.json';
 import saleilles from './cours/saleilles.json';
 import leBoulou from './cours/le-boulou.json';
+import lesVosges from './cours/les-vosges.json';
 // Import du fichier batucada
 import batucada from './cours/batucada.json';
 
@@ -60,6 +61,7 @@ const coursParVille = {
   'diemeringen': diemeringen,
   'saleilles': saleilles,
   'le-boulou': leBoulou,
+  'les-vosges': lesVosges,
   'batucada': batucada
 };
 

@@ -255,6 +255,15 @@ export const professeurs = [
     villes: ['saleilles', 'le-boulou']
   },
   {
+    id: 'claudia',
+    nom: 'Claudia',
+    prenom: '',
+    photo: null,
+    email: '',
+    telephone: '',
+    villes: ['les-vosges']
+  },
+  {
     id: 'valdir',
     nom: 'Valdir',
     prenom: '',
@@ -418,6 +427,11 @@ export const villes = [
     id: 'le-boulou',
     nom: 'Le Boulou',
     professeurs: getProfesseursParVille('le-boulou')
+  },
+  {
+    id: 'les-vosges',
+    nom: 'Les Vosges',
+    professeurs: getProfesseursParVille('les-vosges')
   }
 ];
 
