@@ -149,7 +149,7 @@ export const professeurs = [
     photo: '/images/professeurs/claudinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: []
+    villes: ['les-vosges']
   },
   {
     id: 'pica-pau',
@@ -253,15 +253,6 @@ export const professeurs = [
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
     villes: ['saleilles', 'le-boulou']
-  },
-  {
-    id: 'claudia',
-    nom: 'Claudia',
-    prenom: '',
-    photo: null,
-    email: '',
-    telephone: '',
-    villes: ['les-vosges']
   },
   {
     id: 'valdir',
