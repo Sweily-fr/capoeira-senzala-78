@@ -33,7 +33,7 @@ export const products: Product[] = [
     ],
     category: 'Vêtements',
     gender: 'Homme',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': 'S, M, L, XL, XXL',
       'Matière': 'Coton 100%',
@@ -58,7 +58,7 @@ export const products: Product[] = [
     ],
     category: 'Vêtements',
     gender: 'Femme',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': 'XS, S, M, L, XL',
       'Matière': 'Coton 100%',
@@ -83,7 +83,7 @@ export const products: Product[] = [
     ],
     category: 'Vêtements',
     gender: 'Homme',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': 'S, M, L, XL, XXL',
       'Matière': 'Coton résistant',
@@ -108,7 +108,7 @@ export const products: Product[] = [
     ],
     category: 'Vêtements',
     gender: 'Femme',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': 'XS, S, M, L, XL',
       'Matière': 'Coton résistant',
@@ -132,7 +132,7 @@ export const products: Product[] = [
       '/images/boutique/tenue_enfants_04.jpg'
     ],
     category: 'Vêtements',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': '4 ans, 6 ans, 8 ans, 10 ans, 12 ans, 14 ans',
       'Matière': 'Coton 100%',
@@ -152,7 +152,7 @@ export const products: Product[] = [
       '/images/boutique/tenue_enfants_01.jpg'
     ],
     category: 'Vêtements',
-    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/choice/93016-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/730698-s-tenues-officielle-capoeira-senzala-78-tee-shirt-et-abada-2026-2027',
     details: {
       'Tailles': '4 ans, 6 ans, 8 ans, 10 ans, 12 ans, 14 ans',
       'Matière': 'Coton résistant',
