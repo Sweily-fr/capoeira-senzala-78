@@ -171,7 +171,7 @@ export const products: Product[] = [
       '/images/boutique/berimbau_03.jpg'
     ],
     category: 'Instruments',
-    orderLink: 'https://www.assoconnect.com/grupo-senzala-78/collect/description/401988-w-berimbau',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/731530-s-vente-instruments-de-musique-2026-2027',
     details: {
       'Origine': 'Brésil',
       'Type': 'Médio',
@@ -190,7 +190,7 @@ export const products: Product[] = [
       '/images/boutique/pandeiro_03.jpg'
     ],
     category: 'Instruments',
-    orderLink: 'https://www.assoconnect.com/grupo-senzala-78/collect/description/401988-w-pandeiro',
+    orderLink: 'https://capoeira-senzala-78.assoconnect.com/collect/description/731530-s-vente-instruments-de-musique-2026-2027',
     details: {
       'Diamètre': '10 pouces',
       'Peau': 'Naturelle',
