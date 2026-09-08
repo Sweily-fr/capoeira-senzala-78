@@ -6,12 +6,12 @@
       "jour": "Mardi",
       "cours": [
         {
-          "heure": "17h30 - 18h30",
+          "heure": "18h00 - 19h00",
           "age": "Enfants de 6 à 12 ans - Tous niveaux",
           "lieu": "Gymnase des Alouettes – Rue des Cent Arpents – 78420 Carrières Sur Seine"
         },
         {
-          "heure": "18h30 - 20h00",
+          "heure": "19h00 - 20h30",
           "age": "Ados/Adultes - Tous niveaux",
           "lieu": "Gymnase des Alouettes – Rue des Cent Arpents – 78420 Carrières Sur Seine"
         }
