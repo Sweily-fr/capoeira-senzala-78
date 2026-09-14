@@ -154,8 +154,9 @@ export const professeurs = [
   {
     id: 'pica-pau',
     nom: 'Pica-Pau',
-    prenom: 'Professor',
-    photo: null,
+    prenom: 'Instrutor',
+    focus: 'top',
+    photo: '/images/professeurs/pica-pau.jpeg',
     email: '',
     telephone: '',
     villes: ['montesson']
