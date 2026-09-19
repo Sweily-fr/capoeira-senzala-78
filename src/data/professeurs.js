@@ -126,7 +126,7 @@ export const professeurs = [
   {
     id: 'geraldine',
     nom: 'Calça Branca',
-    prenom: 'Instrutora',
+    prenom: 'Professora',
     photo: '/images/professeurs/calçabranca.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
@@ -249,7 +249,7 @@ export const professeurs = [
   {
     id: 'esqueleto',
     nom: 'Esqueleto',
-    prenom: 'Professor',
+    prenom: 'Contra-mestre',
     photo: '/images/professeurs/esqueleto.JPG',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',

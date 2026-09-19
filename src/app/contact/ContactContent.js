@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact@senzala78.fr",
-    href: "mailto:contact@senzala78.fr",
+    value: "contact@capoeirasenzala78.fr",
+    href: "mailto:contact@capoeirasenzala78.fr",
     description: "Réponse sous 24-48h"
   },
   {
@@ -158,7 +158,7 @@ export default function ContactContent() {
                       asChild
                       className="bg-primary-500 hover:bg-primary-600 text-dark-blue"
                     >
-                      <a href="mailto:contact@senzala78.fr">
+                      <a href="mailto:contact@capoeirasenzala78.fr">
                         <Mail className="w-4 h-4 mr-2" />
                         Envoyer un email
                       </a>
