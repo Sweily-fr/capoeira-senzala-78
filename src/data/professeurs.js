@@ -8,7 +8,7 @@ export const professeurs = [
     photo: '/images/professeurs/banana.jpg',
     email: 'carlos.silva@example.com',
     telephone: '06 12 34 56 78',
-    villes: ['saint-germain', 'poissy', 'triel', 'chatou']
+    villes: ['saint-germain', 'poissy', 'triel', 'chatou', 'le-vesinet']
   },
   {
     id: 'orlane-silva',
