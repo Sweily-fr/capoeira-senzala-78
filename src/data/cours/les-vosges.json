@@ -3,12 +3,27 @@
   "inscriptionHref": "https://capoeira-senzala-78.assoconnect.com/collect/description/743526-s-2026-2027-inscriptions-capoeira-saint-die-des-vosges",
   "cours": [
     {
+      "jour": "Mardi",
+      "cours": [
+        {
+          "heure": "17h00 - 18h00",
+          "age": "Enfants de 4 à 6 ans - Moyenne et Grande section maternelle",
+          "lieu": "Complexe sportif du Breuil - Rue du Breuil - 88210 Senones"
+        },
+        {
+          "heure": "18h00 - 19h00",
+          "age": "Enfants de 6 à 12 ans - Tous niveaux",
+          "lieu": "Complexe sportif du Breuil - Rue du Breuil - 88210 Senones"
+        }
+      ]
+    },
+    {
       "jour": "Mercredi",
       "cours": [
         {
           "heure": "17h00 - 18h00",
           "age": "Enfants de 6 à 12 ans - Tous niveaux",
-          "lieu": "Palais Omnisports Joseph Claudel - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
+          "lieu": "Palais Omnisports Joseph Claudel - Salle du dojo - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
         }
       ]
     },
@@ -18,7 +33,27 @@
         {
           "heure": "17h00 - 18h00",
           "age": "Ados à partir de 13 ans et adultes",
-          "lieu": "Palais Omnisports Joseph Claudel - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
+          "lieu": "Palais Omnisports Joseph Claudel - Salle du dojo - Rue du 12ème d'artillerie Prolongée - 88100 Saint-Dié-des-Vosges"
+        },
+        {
+          "heure": "20h00 - 21h30",
+          "age": "Ados à partir de 13 ans et adultes",
+          "lieu": "Complexe sportif du Breuil - Rue du Breuil - 88210 Senones"
+        }
+      ]
+    },
+    {
+      "jour": "Samedi",
+      "cours": [
+        {
+          "heure": "16h30 - 17h30",
+          "age": "Enfants de 4 à 6 ans - Moyenne et Grande section maternelle",
+          "lieu": "Complexe sportif du Breuil - Rue du Breuil - 88210 Senones"
+        },
+        {
+          "heure": "17h30 - 19h00",
+          "age": "Ados à partir de 13 ans et adultes",
+          "lieu": "Complexe sportif du Breuil - Rue du Breuil - 88210 Senones"
         }
       ]
     }

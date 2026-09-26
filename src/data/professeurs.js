@@ -168,7 +168,7 @@ export const professeurs = [
     photo: '/images/professeurs/he-man.jpg',
     email: '',
     telephone: '',
-    villes: ['ville-avray']
+    villes: ['ville-avray', 'les-vosges']
   },
   {
     id: 'viking',
