@@ -149,7 +149,7 @@ export const professeurs = [
     photo: '/images/professeurs/claudinha.jpg',
     email: 'diego.ferreira@example.com',
     telephone: '06 78 90 12 34',
-    villes: ['les-vosges']
+    villes: ['saint-die-des-vosges', 'senones']
   },
   {
     id: 'pica-pau',
@@ -168,7 +168,7 @@ export const professeurs = [
     photo: '/images/professeurs/he-man.jpg',
     email: '',
     telephone: '',
-    villes: ['ville-avray', 'les-vosges']
+    villes: ['ville-avray', 'senones']
   },
   {
     id: 'viking',
@@ -421,9 +421,14 @@ export const villes = [
     professeurs: getProfesseursParVille('le-boulou')
   },
   {
-    id: 'les-vosges',
-    nom: 'Les Vosges',
-    professeurs: getProfesseursParVille('les-vosges')
+    id: 'saint-die-des-vosges',
+    nom: 'Saint-Dié-des-Vosges',
+    professeurs: getProfesseursParVille('saint-die-des-vosges')
+  },
+  {
+    id: 'senones',
+    nom: 'Senones',
+    professeurs: getProfesseursParVille('senones')
   }
 ];
 
