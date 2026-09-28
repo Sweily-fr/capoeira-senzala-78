@@ -1,6 +1,7 @@
 import './globals.css';
 import { NotificationProvider } from '@/context/NotificationContext';
 import { FloatingNotifications } from '@/components/ui/floating-notifications';
+import EventsCalendar from '@/components/custom/EventsCalendar';
 
 export const metadata = {
   metadataBase: new URL('https://capoeirasenzala78.fr'),
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
         />
         <NotificationProvider>
           {children}
+          <EventsCalendar />
           <FloatingNotifications />
         </NotificationProvider>
       </body>
