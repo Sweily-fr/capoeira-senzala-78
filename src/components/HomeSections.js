@@ -66,6 +66,11 @@ const HomeSections = ({ prestationImages = [] }) => {
 
   const videos = [
     {
+      id: 12,
+      videoUrl: "https://www.youtube.com/watch?v=qBH4M6ir0Gk",
+      title: "Capoeira Senzala 78",
+    },
+    {
       id: 1,
       videoUrl: "https://www.youtube.com/watch?v=FM8i00JvbGc",
       title: "Capoeira Senzala 78",
