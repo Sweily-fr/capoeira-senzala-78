@@ -1,6 +1,27 @@
 // Centralized events data
 export const events = [
   {
+    id: 16,
+    title: "Eu Quero Aprender – Cria Da Casa 2026",
+    description: "Week-end de stages de Capoeira et Batucada avec Contramestre Sonic et Maestro Bolo, pour tous les âges dès 6 ans et tous les niveaux.",
+    fullDescription: "Événement de Capoeira et Batucada \"EU QUERO APRENDER – Cria Da Casa\" les samedi 5 et dimanche 6 décembre 2026, à Saint-Germain-en-Laye et Chatou.\n\nContramestre Sonic et Maestro Bolo viendront animer des stages pour tous les âges dès 6 ans et pour tous les niveaux.\n\nStages Capoeira :\n• Samedi 5 décembre — 14h à 17h, TUESG, 11 rue Armagis, 78100 Saint-Germain-en-Laye\n• Dimanche 6 décembre — 10h30 à 16h30, Complexe Sportif Roger Corbin, 80 rue Auguste Renoir, 78400 Chatou\n\nStages Batucada pour expérimentés (2 ans de pratique) :\n• Samedi 5 décembre — 10h à 12h30, La CLEF, 46 rue de Mareil, 78100 Saint-Germain-en-Laye\n• Dimanche 6 décembre — 10h30 à 12h30, Complexe Sportif Roger Corbin, 80 rue Auguste Renoir, 78400 Chatou\n\nStages Batucada pour débutants :\n• Samedi 5 décembre — 15h30 à 16h30, TUESG, 11 rue Armagis, 78100 Saint-Germain-en-Laye\n• Dimanche 6 décembre — 15h30 à 16h30, Complexe Sportif Roger Corbin, 80 rue Auguste Renoir, 78400 Chatou\n\nTarif Batucada : forfait 15€ pour 2 stages pour les adhérents non capoeiristes (les stages de batucada sont inclus pour les adhérents capoeiristes inscrits à l'évènement).",
+    date: "2026-12-05",
+    endDate: "2026-12-06",
+    time: "10:00",
+    endTime: "16:30",
+    location: "TUESG / La CLEF (Saint-Germain-en-Laye) – Complexe Sportif Roger Corbin (Chatou)",
+    address: "11 rue Armagis, 78100 Saint-Germain-en-Laye / 46 rue de Mareil, 78100 Saint-Germain-en-Laye / 80 rue Auguste Renoir, 78400 Chatou",
+    category: "Stage",
+    price: null,
+    capacity: null,
+    registered: null,
+    image: "/images/events/eu-quero-aprender-decembre-2026.jpeg",
+    featured: true,
+    tags: ["stage", "capoeira", "batucada", "cria da casa", "eu quero aprender", "sonic", "bolo"],
+    organizer: "Grupo Senzala 78",
+    externalLink: "https://capoeira-senzala-78.assoconnect.com/collect/description/762718-i-inscription-eu-quero-aprender-les-5-et-6-decembre-2026"
+  },
+  {
     id: 15,
     title: "Oficina de Capoeira com Mestre Negoativo",
     description: "Oficina de capoeira avec Mestre Negoativo. Deux jours de stage ouverts à toutes et tous !",
