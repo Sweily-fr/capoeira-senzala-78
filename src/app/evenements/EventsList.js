@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -71,7 +71,7 @@ export default function EventsList() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             Événements à venir
           </motion.h2>
@@ -79,7 +79,7 @@ export default function EventsList() {
             className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             Rejoignez-nous pour nos prochains événements, stages et célébrations de la capoeira.
           </motion.p>
@@ -109,15 +109,18 @@ export default function EventsList() {
             className="mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
           >
             <Card className="bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-48 sm:h-64 md:h-auto">
-                  <img
+                  <Image
                     src={featuredEvent.image}
                     alt={featuredEvent.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    sizes="(min-width: 768px) 640px, 100vw"
+                    className="object-cover"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
                     <Badge className="bg-primary-500/20 text-primary-500 hover:bg-primary-500/30 border border-primary-500/30">
@@ -191,7 +194,7 @@ export default function EventsList() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
           {regularEvents.map((event, index) => {
             const status = getEventStatus(event);
@@ -202,8 +205,9 @@ export default function EventsList() {
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                transition={{ duration: 0.4, delay: 0.05 * (index % 3) }}
                 className="bg-transparent"
               >
                 {event.externalLink && !past ? (
@@ -211,10 +215,12 @@ export default function EventsList() {
                 <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/10 group cursor-pointer">
                   {/* Background Image */}
                   <div className="absolute inset-0">
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      fill
+                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   </div>
@@ -292,10 +298,10 @@ export default function EventsList() {
                           {event.price}
                         </div>
                         <Button asChild size="sm" className="bg-primary-500 text-darker-blue hover:bg-primary-600">
-                          <a href={event.externalLink} target="_blank" rel="noopener noreferrer">
-                            S'inscrire
+                          <span>
+                            S&apos;inscrire
                             <ArrowRight className="w-4 h-4 ml-1" />
-                          </a>
+                          </span>
                         </Button>
                       </div>
                     </div>
@@ -305,10 +311,12 @@ export default function EventsList() {
                 ) : (
                 <div className={`relative aspect-[4/5] overflow-hidden rounded-xl border border-white/10 ${past ? 'grayscale opacity-50 cursor-not-allowed' : 'group'}`}>
                   <div className="absolute inset-0">
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
-                      className={`w-full h-full object-cover ${!past ? 'group-hover:scale-110 transition-transform duration-500' : ''}`}
+                      fill
+                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                      className={`object-cover ${!past ? 'group-hover:scale-110 transition-transform duration-500' : ''}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   </div>

@@ -23,7 +23,7 @@ export default function LegalPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Éditeur</h2>
               <p>
-                Le site internet www.capoeirasenzala78.fr est édité et diffusé par <a href="https://www.sweily.fr" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:underline">Sweily</a> en
+                Le site internet www.capoeirasenzala78.fr est édité et diffusé par <a href="https://newbi.fr" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:underline">Newbi</a> en
                 collaboration avec l&apos;Association Capoeira Saint Germain (ou Association Escola
                 de Capoeira Grupo Senzala).
               </p>
